@@ -16,6 +16,7 @@
 		7C74CED52060B7B5004595A5 /* PickupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED42060B7B5004595A5 /* PickupsVC.swift */; };
 		7C74CED72060BC17004595A5 /* PickupCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED62060BC17004595A5 /* PickupCustomCell.swift */; };
 		7C74CED92060CAA1004595A5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED82060CAA1004595A5 /* Helper.swift */; };
+		7C74CEDB2060CBB5004595A5 /* ParserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CEDA2060CBB5004595A5 /* ParserJSON.swift */; };
 		7C7BF994205A49B3005FFAE6 /* LoginActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7BF993205A49B3005FFAE6 /* LoginActionVC.swift */; };
 		7C7BF997205A5791005FFAE6 /* TextViewWithLeftImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7BF996205A5791005FFAE6 /* TextViewWithLeftImage.swift */; };
 		7C7BF99C205A7B18005FFAE6 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C1E6B7B205A2A510078E66C /* Quicksand-Bold.ttf */; };
@@ -53,6 +54,7 @@
 		7C74CED42060B7B5004595A5 /* PickupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupsVC.swift; sourceTree = "<group>"; };
 		7C74CED62060BC17004595A5 /* PickupCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupCustomCell.swift; sourceTree = "<group>"; };
 		7C74CED82060CAA1004595A5 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		7C74CEDA2060CBB5004595A5 /* ParserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserJSON.swift; sourceTree = "<group>"; };
 		7C7BF993205A49B3005FFAE6 /* LoginActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginActionVC.swift; sourceTree = "<group>"; };
 		7C7BF996205A5791005FFAE6 /* TextViewWithLeftImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithLeftImage.swift; sourceTree = "<group>"; };
 		7C7BF9A0205B8288005FFAE6 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		7C1E6B7D205A2A5B0078E66C /* Parser */ = {
 			isa = PBXGroup;
 			children = (
+				7C74CEDA2060CBB5004595A5 /* ParserJSON.swift */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				7C7BF994205A49B3005FFAE6 /* LoginActionVC.swift in Sources */,
 				7C74CED52060B7B5004595A5 /* PickupsVC.swift in Sources */,
 				7C1E6B75205A2A030078E66C /* LoginVC.swift in Sources */,
+				7C74CEDB2060CBB5004595A5 /* ParserJSON.swift in Sources */,
 				7C7BF9A1205B8288005FFAE6 /* CreateAccountVC.swift in Sources */,
 				7C08690A205A0B58009F2DE6 /* AppDelegate.swift in Sources */,
 				7C74CED72060BC17004595A5 /* PickupCustomCell.swift in Sources */,
