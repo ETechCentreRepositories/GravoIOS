@@ -12,6 +12,7 @@
 		7C086911205A0B58009F2DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C086910205A0B58009F2DE6 /* Assets.xcassets */; };
 		7C086914205A0B58009F2DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C086912205A0B58009F2DE6 /* LaunchScreen.storyboard */; };
 		7C08691F205A0B58009F2DE6 /* GravosCollectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C08691E205A0B58009F2DE6 /* GravosCollectorTests.swift */; };
+		7C1D34392063569800CF8644 /* entPickUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D34382063569800CF8644 /* entPickUpItem.swift */; };
 		7C1E6B75205A2A030078E66C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1E6B74205A2A030078E66C /* LoginVC.swift */; };
 		7C74CED52060B7B5004595A5 /* PickupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED42060B7B5004595A5 /* PickupsVC.swift */; };
 		7C74CED72060BC17004595A5 /* PickupCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED62060BC17004595A5 /* PickupCustomCell.swift */; };
@@ -46,6 +47,7 @@
 		7C08691A205A0B58009F2DE6 /* GravosCollectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GravosCollectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C08691E205A0B58009F2DE6 /* GravosCollectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravosCollectorTests.swift; sourceTree = "<group>"; };
 		7C086920205A0B58009F2DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C1D34382063569800CF8644 /* entPickUpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = entPickUpItem.swift; sourceTree = "<group>"; };
 		7C1E6B74205A2A030078E66C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7C1E6B79205A2A510078E66C /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
 		7C1E6B7A205A2A510078E66C /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		7C086908205A0B58009F2DE6 /* GravosCollector */ = {
 			isa = PBXGroup;
 			children = (
+				7C1D34372063535000CF8644 /* Entity */,
 				7C7BF995205A5758005FFAE6 /* Custom Classes */,
 				7C1E6B7F205A2A720078E66C /* Utilities */,
 				7C1E6B7E205A2A630078E66C /* DataHandler */,
@@ -121,6 +124,14 @@
 				7C086920205A0B58009F2DE6 /* Info.plist */,
 			);
 			path = GravosCollectorTests;
+			sourceTree = "<group>";
+		};
+		7C1D34372063535000CF8644 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7C1D34382063569800CF8644 /* entPickUpItem.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		7C1E6B73205A29CC0078E66C /* ViewControllers */ = {
@@ -316,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C1D34392063569800CF8644 /* entPickUpItem.swift in Sources */,
 				7C7BF997205A5791005FFAE6 /* TextViewWithLeftImage.swift in Sources */,
 				7C7BF994205A49B3005FFAE6 /* LoginActionVC.swift in Sources */,
 				7C74CED52060B7B5004595A5 /* PickupsVC.swift in Sources */,

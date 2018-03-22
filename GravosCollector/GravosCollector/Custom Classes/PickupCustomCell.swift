@@ -13,6 +13,9 @@ class PickupCustomCell: UITableViewCell
 
     @IBOutlet weak var lblPickup: UILabel!
     @IBOutlet weak var lblLocation: UILabel!
+    @IBOutlet weak var btnNavigate: UIButton!
+    @IBOutlet weak var btnSetStatus: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

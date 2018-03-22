@@ -8,6 +8,7 @@
 
 import UIKit
 
-class ParserJSON: NSObject {
+class ParserJSON: NSObject
+{
 
 }
