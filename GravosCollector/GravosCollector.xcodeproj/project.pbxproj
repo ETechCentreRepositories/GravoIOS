@@ -18,6 +18,7 @@
 		7C74CED72060BC17004595A5 /* PickupCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED62060BC17004595A5 /* PickupCustomCell.swift */; };
 		7C74CED92060CAA1004595A5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED82060CAA1004595A5 /* Helper.swift */; };
 		7C74CEDB2060CBB5004595A5 /* ParserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CEDA2060CBB5004595A5 /* ParserJSON.swift */; };
+		7C7A78A72068E23400912BDD /* Loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7C7A78A62068E23300912BDD /* Loader.gif */; };
 		7C7BF994205A49B3005FFAE6 /* LoginActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7BF993205A49B3005FFAE6 /* LoginActionVC.swift */; };
 		7C7BF997205A5791005FFAE6 /* TextViewWithLeftImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7BF996205A5791005FFAE6 /* TextViewWithLeftImage.swift */; };
 		7C7BF99C205A7B18005FFAE6 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C1E6B7B205A2A510078E66C /* Quicksand-Bold.ttf */; };
@@ -25,6 +26,10 @@
 		7C7BF99E205A7B18005FFAE6 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C1E6B7A205A2A510078E66C /* Quicksand-Medium.ttf */; };
 		7C7BF99F205A7B18005FFAE6 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C1E6B7C205A2A510078E66C /* Quicksand-Regular.ttf */; };
 		7C7BF9A1205B8288005FFAE6 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7BF9A0205B8288005FFAE6 /* CreateAccountVC.swift */; };
+		7C88CEE12068927A00251CC0 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C88CEE02068927A00251CC0 /* TransactionVC.swift */; };
+		7C88CEE52068CE4A00251CC0 /* TransactionCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C88CEE42068CE4A00251CC0 /* TransactionCustomCell.swift */; };
+		84863A69B7E12BA07EAFA7FE /* Pods_GravosCollector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1975A0AE7AEFA0382B072E9 /* Pods_GravosCollector.framework */; };
+		99E5F48909FACB9E926BBF1F /* Pods_GravosCollectorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250D3D7BB48FFFE91469AB83 /* Pods_GravosCollectorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		250D3D7BB48FFFE91469AB83 /* Pods_GravosCollectorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GravosCollectorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BAF7AC9D9A4BBA862977F20 /* Pods-GravosCollector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosCollector.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravosCollector/Pods-GravosCollector.release.xcconfig"; sourceTree = "<group>"; };
+		692E9F11887D55BEA28E9F45 /* Pods-GravosCollectorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosCollectorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GravosCollectorTests/Pods-GravosCollectorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C086906205A0B58009F2DE6 /* GravosCollector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GravosCollector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C086909205A0B58009F2DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C08690E205A0B58009F2DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,9 +65,15 @@
 		7C74CED62060BC17004595A5 /* PickupCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupCustomCell.swift; sourceTree = "<group>"; };
 		7C74CED82060CAA1004595A5 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		7C74CEDA2060CBB5004595A5 /* ParserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserJSON.swift; sourceTree = "<group>"; };
+		7C7A78A62068E23300912BDD /* Loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loader.gif; sourceTree = "<group>"; };
 		7C7BF993205A49B3005FFAE6 /* LoginActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginActionVC.swift; sourceTree = "<group>"; };
 		7C7BF996205A5791005FFAE6 /* TextViewWithLeftImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithLeftImage.swift; sourceTree = "<group>"; };
 		7C7BF9A0205B8288005FFAE6 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		7C88CEE02068927A00251CC0 /* TransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
+		7C88CEE42068CE4A00251CC0 /* TransactionCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCustomCell.swift; sourceTree = "<group>"; };
+		B35080C9C3EEA49844B698DB /* Pods-GravosCollectorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosCollectorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravosCollectorTests/Pods-GravosCollectorTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1975A0AE7AEFA0382B072E9 /* Pods_GravosCollector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GravosCollector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7696F68D677841E9B3716E3 /* Pods-GravosCollector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosCollector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GravosCollector/Pods-GravosCollector.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84863A69B7E12BA07EAFA7FE /* Pods_GravosCollector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E5F48909FACB9E926BBF1F /* Pods_GravosCollectorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +102,8 @@
 				7C086908205A0B58009F2DE6 /* GravosCollector */,
 				7C08691D205A0B58009F2DE6 /* GravosCollectorTests */,
 				7C086907205A0B58009F2DE6 /* Products */,
+				8DE304A158D4481D80152197 /* Pods */,
+				FE51D9A11834F5A2068796BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +155,7 @@
 		7C1E6B73205A29CC0078E66C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7C88CEDF2068914B00251CC0 /* Transaction */,
 				7C74CED32060B762004595A5 /* DailyPickups */,
 				7C1E6B80205A2A800078E66C /* Login */,
 			);
@@ -146,6 +165,7 @@
 		7C1E6B76205A2A270078E66C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7C7A78A62068E23300912BDD /* Loader.gif */,
 				7C1E6B78205A2A410078E66C /* Images */,
 				7C1E6B77205A2A310078E66C /* Fonts */,
 			);
@@ -216,8 +236,37 @@
 			children = (
 				7C7BF996205A5791005FFAE6 /* TextViewWithLeftImage.swift */,
 				7C74CED62060BC17004595A5 /* PickupCustomCell.swift */,
+				7C88CEE42068CE4A00251CC0 /* TransactionCustomCell.swift */,
 			);
 			path = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		7C88CEDF2068914B00251CC0 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				7C88CEE02068927A00251CC0 /* TransactionVC.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		8DE304A158D4481D80152197 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7696F68D677841E9B3716E3 /* Pods-GravosCollector.debug.xcconfig */,
+				3BAF7AC9D9A4BBA862977F20 /* Pods-GravosCollector.release.xcconfig */,
+				692E9F11887D55BEA28E9F45 /* Pods-GravosCollectorTests.debug.xcconfig */,
+				B35080C9C3EEA49844B698DB /* Pods-GravosCollectorTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE51D9A11834F5A2068796BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1975A0AE7AEFA0382B072E9 /* Pods_GravosCollector.framework */,
+				250D3D7BB48FFFE91469AB83 /* Pods_GravosCollectorTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,9 +276,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C086923205A0B58009F2DE6 /* Build configuration list for PBXNativeTarget "GravosCollector" */;
 			buildPhases = (
+				2FB98CA1E58D4851C449F285 /* [CP] Check Pods Manifest.lock */,
 				7C086902205A0B58009F2DE6 /* Sources */,
 				7C086903205A0B58009F2DE6 /* Frameworks */,
 				7C086904205A0B58009F2DE6 /* Resources */,
+				185ED24BAF4C5F02B928A0FE /* [CP] Embed Pods Frameworks */,
+				EA20CCF30370E73E669EB085 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,9 +296,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C086926205A0B58009F2DE6 /* Build configuration list for PBXNativeTarget "GravosCollectorTests" */;
 			buildPhases = (
+				4E8554C8436F82AE0572F12E /* [CP] Check Pods Manifest.lock */,
 				7C086916205A0B58009F2DE6 /* Sources */,
 				7C086917205A0B58009F2DE6 /* Frameworks */,
 				7C086918205A0B58009F2DE6 /* Resources */,
+				459F5209CF9810E1536DCD3F /* [CP] Embed Pods Frameworks */,
+				701F999C1A8ADEDEA4B41E00 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,6 +363,7 @@
 				7C7BF99E205A7B18005FFAE6 /* Quicksand-Medium.ttf in Resources */,
 				7C7BF99F205A7B18005FFAE6 /* Quicksand-Regular.ttf in Resources */,
 				7C086914205A0B58009F2DE6 /* LaunchScreen.storyboard in Resources */,
+				7C7A78A72068E23400912BDD /* Loader.gif in Resources */,
 				7C086911205A0B58009F2DE6 /* Assets.xcassets in Resources */,
 				7C08690F205A0B58009F2DE6 /* Main.storyboard in Resources */,
 			);
@@ -322,6 +378,110 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		185ED24BAF4C5F02B928A0FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GravosCollector/Pods-GravosCollector-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravosCollector/Pods-GravosCollector-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FB98CA1E58D4851C449F285 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GravosCollector-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		459F5209CF9810E1536DCD3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravosCollectorTests/Pods-GravosCollectorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E8554C8436F82AE0572F12E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GravosCollectorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		701F999C1A8ADEDEA4B41E00 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravosCollectorTests/Pods-GravosCollectorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA20CCF30370E73E669EB085 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravosCollector/Pods-GravosCollector-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C086902205A0B58009F2DE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -334,7 +494,9 @@
 				7C1E6B75205A2A030078E66C /* LoginVC.swift in Sources */,
 				7C74CEDB2060CBB5004595A5 /* ParserJSON.swift in Sources */,
 				7C7BF9A1205B8288005FFAE6 /* CreateAccountVC.swift in Sources */,
+				7C88CEE52068CE4A00251CC0 /* TransactionCustomCell.swift in Sources */,
 				7C08690A205A0B58009F2DE6 /* AppDelegate.swift in Sources */,
+				7C88CEE12068927A00251CC0 /* TransactionVC.swift in Sources */,
 				7C74CED72060BC17004595A5 /* PickupCustomCell.swift in Sources */,
 				7C74CED92060CAA1004595A5 /* Helper.swift in Sources */,
 			);
@@ -487,6 +649,7 @@
 		};
 		7C086924205A0B58009F2DE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7696F68D677841E9B3716E3 /* Pods-GravosCollector.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -503,6 +666,7 @@
 		};
 		7C086925205A0B58009F2DE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BAF7AC9D9A4BBA862977F20 /* Pods-GravosCollector.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -519,6 +683,7 @@
 		};
 		7C086927205A0B58009F2DE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 692E9F11887D55BEA28E9F45 /* Pods-GravosCollectorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -535,6 +700,7 @@
 		};
 		7C086928205A0B58009F2DE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B35080C9C3EEA49844B698DB /* Pods-GravosCollectorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

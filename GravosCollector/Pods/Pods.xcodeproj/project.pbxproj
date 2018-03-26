@@ -1,0 +1,899 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0239E4A7C2EE504DC270ACEF99DAADA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		098714C4F7DD93AB483735FF9E37C7A9 /* GMStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49476FA0CAA2666A4BF256E7683C2821 /* GMStepper.swift */; };
+		2DC39B104226BCB51A493691B1FD2017 /* SwiftyGif.h in Headers */ = {isa = PBXBuildFile; fileRef = D69854E593BB7DD7AE983DFDFB8C8429 /* SwiftyGif.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A352A04D2493A50A1950E5DC41AABC0 /* SwiftyGif-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E4EC3CC27D6B20CD5C9D9AFF0057E95 /* SwiftyGif-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6454636D0DDEA17BF09891777CC3A145 /* Pods-GravosCollectorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A623DBE78938AE985FCDF649972F4B62 /* Pods-GravosCollectorTests-dummy.m */; };
+		6CDEB95A4B2FE8E70A1C27FB588CADA2 /* GMStepper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98A322FE887C120EF27612CE05F3D8D5 /* GMStepper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A716B19C23D597C2169755760DC6430 /* SwiftyGifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BE42B979104A7A3BA89199DEA8625C /* SwiftyGifManager.swift */; };
+		877C0C77DBDF9F993B7E2DAC9639B942 /* SwiftyGif-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3582D53BFEAAC41DCC6947660895C69E /* SwiftyGif-dummy.m */; };
+		898F6B09EE2A5388ED982CEC7C02CC6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A4E305EB962DA6D3AF7D7BF9EB3AAB8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A5105AC1D51E1E7C1FA244D8EF426A22 /* Pods-GravosCollectorTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B049F9EF82E0979F43ABB75F2485D68 /* Pods-GravosCollectorTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AABF434DDF14EA7512522060BB2985D8 /* Pods-GravosCollector-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4506B3C01B2CE1F841823E1E0392BC91 /* Pods-GravosCollector-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF36309D5BC96F75E90B88372B98B549 /* GMStepper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7ED04A7B64DF8BE62B372457491E23A /* GMStepper-dummy.m */; };
+		B61A3BE086F8A45B10D1CC4676F707F5 /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8769BB2A0E0C412EE1B5C92137AE12 /* UIImageView+SwiftyGif.swift */; };
+		C00327E925D40A4E613BB3AF0DC9D1C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		C6AB5D9D55B8BB51DC8A19C4FBE7423B /* Pods-GravosCollector-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DB9F1E2B0822E2D5CC44F6B3419144 /* Pods-GravosCollector-dummy.m */; };
+		DF0DF6B3D221C1F56D4AF7403637FA00 /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B6100E900A5B34171DB6AA2BB034 /* UIImage+SwiftyGif.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A120775BCD5A1FA16163D5CE73CDEA6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DB34ADEAC543008FDA771D13AE6F534;
+			remoteInfo = GMStepper;
+		};
+		C12B7031805300FB2C3F8DDC3F031D0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1177453FAACF5DDD444736CE14B5767;
+			remoteInfo = SwiftyGif;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		024B24BCD21541147095663B8226C59D /* GMStepper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GMStepper.xcconfig; sourceTree = "<group>"; };
+		07814D6E013AF2227AC313DC171EFDC0 /* Pods-GravosCollector-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GravosCollector-frameworks.sh"; sourceTree = "<group>"; };
+		0B049F9EF82E0979F43ABB75F2485D68 /* Pods-GravosCollectorTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GravosCollectorTests-umbrella.h"; sourceTree = "<group>"; };
+		0DACB66B1E222F5BABB58EA59BFA6D38 /* Pods-GravosCollectorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GravosCollectorTests.release.xcconfig"; sourceTree = "<group>"; };
+		0F669B1072133BE9C22A68109FFE0ADD /* Pods-GravosCollector.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GravosCollector.modulemap"; sourceTree = "<group>"; };
+		2348D4AFBA57F1EB0246B444FB739F7D /* GMStepper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GMStepper.modulemap; sourceTree = "<group>"; };
+		25ED14080C93F772D851D3294CA1893B /* SwiftyGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyGif.framework; path = SwiftyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29BE42B979104A7A3BA89199DEA8625C /* SwiftyGifManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyGifManager.swift; path = SwiftyGif/SwiftyGifManager.swift; sourceTree = "<group>"; };
+		2AF6CCA7799CAB6F0E2B2AC37C7AC2A3 /* Pods-GravosCollectorTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GravosCollectorTests-frameworks.sh"; sourceTree = "<group>"; };
+		2C13CBD2652E89CCE2535316E7460C53 /* Pods-GravosCollector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GravosCollector.release.xcconfig"; sourceTree = "<group>"; };
+		2E4EC3CC27D6B20CD5C9D9AFF0057E95 /* SwiftyGif-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-umbrella.h"; sourceTree = "<group>"; };
+		3357BAF7BE4F040CCD21B95E7E435D11 /* GMStepper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GMStepper-prefix.pch"; sourceTree = "<group>"; };
+		340DCF46A9562C97F860C17ED57C80A9 /* Pods-GravosCollectorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GravosCollectorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3582D53BFEAAC41DCC6947660895C69E /* SwiftyGif-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyGif-dummy.m"; sourceTree = "<group>"; };
+		359E4D5EDC499552CC313E92F3B85017 /* Pods-GravosCollectorTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GravosCollectorTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		37AA6212DEE4381E4103EA85D82D8B36 /* Pods-GravosCollector-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GravosCollector-acknowledgements.plist"; sourceTree = "<group>"; };
+		39DB9F1E2B0822E2D5CC44F6B3419144 /* Pods-GravosCollector-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GravosCollector-dummy.m"; sourceTree = "<group>"; };
+		4506B3C01B2CE1F841823E1E0392BC91 /* Pods-GravosCollector-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GravosCollector-umbrella.h"; sourceTree = "<group>"; };
+		49476FA0CAA2666A4BF256E7683C2821 /* GMStepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GMStepper.swift; path = GMStepper/GMStepper.swift; sourceTree = "<group>"; };
+		4DF2785C375D962E08D32AB644455A19 /* Pods-GravosCollectorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GravosCollectorTests.modulemap"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6BCABA8E3070BC3B16FFB2F4CDF4BE17 /* Pods-GravosCollectorTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GravosCollectorTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7779C3BDD41EDC53487DEFE4DA35D2DF /* SwiftyGif-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-prefix.pch"; sourceTree = "<group>"; };
+		7AE55CBC4BF956C3B9B27CA71539509C /* GMStepper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GMStepper.framework; path = GMStepper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CA23976A4CBD8778710B8A5D945337E /* Pods-GravosCollector-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GravosCollector-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9768EC082397674FB2D93B6ABF36DEB7 /* Pods-GravosCollector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GravosCollector.debug.xcconfig"; sourceTree = "<group>"; };
+		98A322FE887C120EF27612CE05F3D8D5 /* GMStepper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GMStepper-umbrella.h"; sourceTree = "<group>"; };
+		A3D341A164E927545CFA7D7DA0511490 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A623DBE78938AE985FCDF649972F4B62 /* Pods-GravosCollectorTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GravosCollectorTests-dummy.m"; sourceTree = "<group>"; };
+		ABEF9B49126A4FD43E56AA55B087EC86 /* Pods_GravosCollectorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GravosCollectorTests.framework; path = "Pods-GravosCollectorTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD8769BB2A0E0C412EE1B5C92137AE12 /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+SwiftyGif.swift"; path = "SwiftyGif/UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
+		B2D9393B162DAC03AB6BF186ADA1EB72 /* Pods_GravosCollector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GravosCollector.framework; path = "Pods-GravosCollector.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A22EC18775D9AD27374C28F6905759 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC23DFF19DE9234E78D6F2E8B62D4C6F /* SwiftyGif.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyGif.modulemap; sourceTree = "<group>"; };
+		D2812F4239C00E1E373C224ECB235ACC /* Pods-GravosCollector-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GravosCollector-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D69854E593BB7DD7AE983DFDFB8C8429 /* SwiftyGif.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyGif.h; path = SwiftyGif/SwiftyGif.h; sourceTree = "<group>"; };
+		E27C859E45D00178903262CE892A2CEB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA3A03F28C03E61F7863DCA1C16C3257 /* SwiftyGif.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyGif.xcconfig; sourceTree = "<group>"; };
+		F0976152EC533F6916D95FAC2120D721 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F1B6100E900A5B34171DB6AA2BB034 /* UIImage+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+SwiftyGif.swift"; path = "SwiftyGif/UIImage+SwiftyGif.swift"; sourceTree = "<group>"; };
+		F7ED04A7B64DF8BE62B372457491E23A /* GMStepper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GMStepper-dummy.m"; sourceTree = "<group>"; };
+		FB498CCCA286617B10F6DFBB418A02D0 /* Pods-GravosCollectorTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GravosCollectorTests-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03EFB40E21845387AC598A90F5D3755D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E305EB962DA6D3AF7D7BF9EB3AAB8A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26FAB8EDE117815E511499E6A38D0BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0239E4A7C2EE504DC270ACEF99DAADA4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B4A6345387744368D86EB57779E6EB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				898F6B09EE2A5388ED982CEC7C02CC6C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC33EE8D89C31CA3A4E1F0096FEE04D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C00327E925D40A4E613BB3AF0DC9D1C7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06B2160E584402BF56AA4B27211C43E3 /* GMStepper */ = {
+			isa = PBXGroup;
+			children = (
+				49476FA0CAA2666A4BF256E7683C2821 /* GMStepper.swift */,
+				AB8F0E1DA698C7ED5F657238F400A65C /* Support Files */,
+			);
+			name = GMStepper;
+			path = GMStepper;
+			sourceTree = "<group>";
+		};
+		318A81400BA8F587F1E4DD43D4AC075F /* Pods-GravosCollectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				E27C859E45D00178903262CE892A2CEB /* Info.plist */,
+				4DF2785C375D962E08D32AB644455A19 /* Pods-GravosCollectorTests.modulemap */,
+				6BCABA8E3070BC3B16FFB2F4CDF4BE17 /* Pods-GravosCollectorTests-acknowledgements.markdown */,
+				359E4D5EDC499552CC313E92F3B85017 /* Pods-GravosCollectorTests-acknowledgements.plist */,
+				A623DBE78938AE985FCDF649972F4B62 /* Pods-GravosCollectorTests-dummy.m */,
+				2AF6CCA7799CAB6F0E2B2AC37C7AC2A3 /* Pods-GravosCollectorTests-frameworks.sh */,
+				FB498CCCA286617B10F6DFBB418A02D0 /* Pods-GravosCollectorTests-resources.sh */,
+				0B049F9EF82E0979F43ABB75F2485D68 /* Pods-GravosCollectorTests-umbrella.h */,
+				340DCF46A9562C97F860C17ED57C80A9 /* Pods-GravosCollectorTests.debug.xcconfig */,
+				0DACB66B1E222F5BABB58EA59BFA6D38 /* Pods-GravosCollectorTests.release.xcconfig */,
+			);
+			name = "Pods-GravosCollectorTests";
+			path = "Target Support Files/Pods-GravosCollectorTests";
+			sourceTree = "<group>";
+		};
+		6A590AE824DFBB8AABC32E8D7CD8FA58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06B2160E584402BF56AA4B27211C43E3 /* GMStepper */,
+				739006E08DBA8F4FC306192407F3715E /* SwiftyGif */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		739006E08DBA8F4FC306192407F3715E /* SwiftyGif */ = {
+			isa = PBXGroup;
+			children = (
+				D69854E593BB7DD7AE983DFDFB8C8429 /* SwiftyGif.h */,
+				29BE42B979104A7A3BA89199DEA8625C /* SwiftyGifManager.swift */,
+				F4F1B6100E900A5B34171DB6AA2BB034 /* UIImage+SwiftyGif.swift */,
+				AD8769BB2A0E0C412EE1B5C92137AE12 /* UIImageView+SwiftyGif.swift */,
+				F371CD06CF19999DFA91800CD43CF844 /* Support Files */,
+			);
+			name = SwiftyGif;
+			path = SwiftyGif;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				6A590AE824DFBB8AABC32E8D7CD8FA58 /* Pods */,
+				E266436F8DC385F49490854768FA567B /* Products */,
+				DB82029D730F95A4FD7153232ED7BF24 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9E5C74FD3C8939AEB4EC6096A1502B0B /* Pods-GravosCollector */ = {
+			isa = PBXGroup;
+			children = (
+				B4A22EC18775D9AD27374C28F6905759 /* Info.plist */,
+				0F669B1072133BE9C22A68109FFE0ADD /* Pods-GravosCollector.modulemap */,
+				D2812F4239C00E1E373C224ECB235ACC /* Pods-GravosCollector-acknowledgements.markdown */,
+				37AA6212DEE4381E4103EA85D82D8B36 /* Pods-GravosCollector-acknowledgements.plist */,
+				39DB9F1E2B0822E2D5CC44F6B3419144 /* Pods-GravosCollector-dummy.m */,
+				07814D6E013AF2227AC313DC171EFDC0 /* Pods-GravosCollector-frameworks.sh */,
+				7CA23976A4CBD8778710B8A5D945337E /* Pods-GravosCollector-resources.sh */,
+				4506B3C01B2CE1F841823E1E0392BC91 /* Pods-GravosCollector-umbrella.h */,
+				9768EC082397674FB2D93B6ABF36DEB7 /* Pods-GravosCollector.debug.xcconfig */,
+				2C13CBD2652E89CCE2535316E7460C53 /* Pods-GravosCollector.release.xcconfig */,
+			);
+			name = "Pods-GravosCollector";
+			path = "Target Support Files/Pods-GravosCollector";
+			sourceTree = "<group>";
+		};
+		AB8F0E1DA698C7ED5F657238F400A65C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2348D4AFBA57F1EB0246B444FB739F7D /* GMStepper.modulemap */,
+				024B24BCD21541147095663B8226C59D /* GMStepper.xcconfig */,
+				F7ED04A7B64DF8BE62B372457491E23A /* GMStepper-dummy.m */,
+				3357BAF7BE4F040CCD21B95E7E435D11 /* GMStepper-prefix.pch */,
+				98A322FE887C120EF27612CE05F3D8D5 /* GMStepper-umbrella.h */,
+				A3D341A164E927545CFA7D7DA0511490 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GMStepper";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DB82029D730F95A4FD7153232ED7BF24 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E5C74FD3C8939AEB4EC6096A1502B0B /* Pods-GravosCollector */,
+				318A81400BA8F587F1E4DD43D4AC075F /* Pods-GravosCollectorTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E266436F8DC385F49490854768FA567B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AE55CBC4BF956C3B9B27CA71539509C /* GMStepper.framework */,
+				B2D9393B162DAC03AB6BF186ADA1EB72 /* Pods_GravosCollector.framework */,
+				ABEF9B49126A4FD43E56AA55B087EC86 /* Pods_GravosCollectorTests.framework */,
+				25ED14080C93F772D851D3294CA1893B /* SwiftyGif.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F371CD06CF19999DFA91800CD43CF844 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0976152EC533F6916D95FAC2120D721 /* Info.plist */,
+				BC23DFF19DE9234E78D6F2E8B62D4C6F /* SwiftyGif.modulemap */,
+				EA3A03F28C03E61F7863DCA1C16C3257 /* SwiftyGif.xcconfig */,
+				3582D53BFEAAC41DCC6947660895C69E /* SwiftyGif-dummy.m */,
+				7779C3BDD41EDC53487DEFE4DA35D2DF /* SwiftyGif-prefix.pch */,
+				2E4EC3CC27D6B20CD5C9D9AFF0057E95 /* SwiftyGif-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyGif";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		07D192F5A5C7C70AEB3BFB6D353269F5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABF434DDF14EA7512522060BB2985D8 /* Pods-GravosCollector-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F7758D24F1C25904D9559F874517B54 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A352A04D2493A50A1950E5DC41AABC0 /* SwiftyGif-umbrella.h in Headers */,
+				2DC39B104226BCB51A493691B1FD2017 /* SwiftyGif.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D03B2ABE8F1F640EEEDCD8A87104BFC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CDEB95A4B2FE8E70A1C27FB588CADA2 /* GMStepper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2C76558E4F842DD1EFB2A1ACDB64201 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5105AC1D51E1E7C1FA244D8EF426A22 /* Pods-GravosCollectorTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		55DD2FBF182192BEB0E29FE746298096 /* Pods-GravosCollectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36C08D9BB9C21B73F566C216ECC5AD3D /* Build configuration list for PBXNativeTarget "Pods-GravosCollectorTests" */;
+			buildPhases = (
+				C95E3B79ACED74334F925EEB3CED2FDC /* Sources */,
+				03EFB40E21845387AC598A90F5D3755D /* Frameworks */,
+				B2C76558E4F842DD1EFB2A1ACDB64201 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GravosCollectorTests";
+			productName = "Pods-GravosCollectorTests";
+			productReference = ABEF9B49126A4FD43E56AA55B087EC86 /* Pods_GravosCollectorTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6DB34ADEAC543008FDA771D13AE6F534 /* GMStepper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9893C6E2447721A89CADFE69A1831E9 /* Build configuration list for PBXNativeTarget "GMStepper" */;
+			buildPhases = (
+				5518B22CBCC6C7324B20386255E5C2D6 /* Sources */,
+				8B4A6345387744368D86EB57779E6EB5 /* Frameworks */,
+				5D03B2ABE8F1F640EEEDCD8A87104BFC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GMStepper;
+			productName = GMStepper;
+			productReference = 7AE55CBC4BF956C3B9B27CA71539509C /* GMStepper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		78D5A9BCFC1F7B079BC0F3465ACA2C20 /* Pods-GravosCollector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A01B1BCAC7B9C3D26B9DA24DFD9FEC2 /* Build configuration list for PBXNativeTarget "Pods-GravosCollector" */;
+			buildPhases = (
+				68744DF42FACCC685A8E8ECF1437AFBA /* Sources */,
+				26FAB8EDE117815E511499E6A38D0BAF /* Frameworks */,
+				07D192F5A5C7C70AEB3BFB6D353269F5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76F2D3D63C29FC5EF503295F60C6EBF1 /* PBXTargetDependency */,
+				5762F2ADD766BACE31E994A2FED6D18A /* PBXTargetDependency */,
+			);
+			name = "Pods-GravosCollector";
+			productName = "Pods-GravosCollector";
+			productReference = B2D9393B162DAC03AB6BF186ADA1EB72 /* Pods_GravosCollector.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E1177453FAACF5DDD444736CE14B5767 /* SwiftyGif */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F99205CEA860E522600851BFCE1B947 /* Build configuration list for PBXNativeTarget "SwiftyGif" */;
+			buildPhases = (
+				8915106F6EA8E0E0D362CDE00DCF4A8B /* Sources */,
+				BBC33EE8D89C31CA3A4E1F0096FEE04D /* Frameworks */,
+				0F7758D24F1C25904D9559F874517B54 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyGif;
+			productName = SwiftyGif;
+			productReference = 25ED14080C93F772D851D3294CA1893B /* SwiftyGif.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = E266436F8DC385F49490854768FA567B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6DB34ADEAC543008FDA771D13AE6F534 /* GMStepper */,
+				78D5A9BCFC1F7B079BC0F3465ACA2C20 /* Pods-GravosCollector */,
+				55DD2FBF182192BEB0E29FE746298096 /* Pods-GravosCollectorTests */,
+				E1177453FAACF5DDD444736CE14B5767 /* SwiftyGif */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5518B22CBCC6C7324B20386255E5C2D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF36309D5BC96F75E90B88372B98B549 /* GMStepper-dummy.m in Sources */,
+				098714C4F7DD93AB483735FF9E37C7A9 /* GMStepper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68744DF42FACCC685A8E8ECF1437AFBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6AB5D9D55B8BB51DC8A19C4FBE7423B /* Pods-GravosCollector-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8915106F6EA8E0E0D362CDE00DCF4A8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877C0C77DBDF9F993B7E2DAC9639B942 /* SwiftyGif-dummy.m in Sources */,
+				7A716B19C23D597C2169755760DC6430 /* SwiftyGifManager.swift in Sources */,
+				DF0DF6B3D221C1F56D4AF7403637FA00 /* UIImage+SwiftyGif.swift in Sources */,
+				B61A3BE086F8A45B10D1CC4676F707F5 /* UIImageView+SwiftyGif.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C95E3B79ACED74334F925EEB3CED2FDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6454636D0DDEA17BF09891777CC3A145 /* Pods-GravosCollectorTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5762F2ADD766BACE31E994A2FED6D18A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyGif;
+			target = E1177453FAACF5DDD444736CE14B5767 /* SwiftyGif */;
+			targetProxy = C12B7031805300FB2C3F8DDC3F031D0F /* PBXContainerItemProxy */;
+		};
+		76F2D3D63C29FC5EF503295F60C6EBF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GMStepper;
+			target = 6DB34ADEAC543008FDA771D13AE6F534 /* GMStepper */;
+			targetProxy = A120775BCD5A1FA16163D5CE73CDEA6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0127833D1E1651C3BD89B27F1ACBB45D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA3A03F28C03E61F7863DCA1C16C3257 /* SwiftyGif.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyGif/SwiftyGif-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyGif/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyGif/SwiftyGif.modulemap";
+				PRODUCT_NAME = SwiftyGif;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		323A24856F1A4871A780301AF5C02A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		37AB02FE9A33A98F9D2300559A41E9A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 024B24BCD21541147095663B8226C59D /* GMStepper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GMStepper/GMStepper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GMStepper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GMStepper/GMStepper.modulemap";
+				PRODUCT_NAME = GMStepper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		42CE51B9FB251BCA21B7DF257E4109EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340DCF46A9562C97F860C17ED57C80A9 /* Pods-GravosCollectorTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GravosCollectorTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GravosCollectorTests/Pods-GravosCollectorTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GravosCollectorTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8124B509F1D3EA450F3BA215A76557CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 024B24BCD21541147095663B8226C59D /* GMStepper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GMStepper/GMStepper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GMStepper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GMStepper/GMStepper.modulemap";
+				PRODUCT_NAME = GMStepper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8901BAF46A88717B5BB4DC72FDA6FD43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9768EC082397674FB2D93B6ABF36DEB7 /* Pods-GravosCollector.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GravosCollector/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GravosCollector/Pods-GravosCollector.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GravosCollector;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9D1E1B7A5E8C17BF2F0A4F35019996CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA3A03F28C03E61F7863DCA1C16C3257 /* SwiftyGif.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyGif/SwiftyGif-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyGif/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyGif/SwiftyGif.modulemap";
+				PRODUCT_NAME = SwiftyGif;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A63CA40EB3E87D319E759EC55037D8CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DACB66B1E222F5BABB58EA59BFA6D38 /* Pods-GravosCollectorTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GravosCollectorTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GravosCollectorTests/Pods-GravosCollectorTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GravosCollectorTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B8F04774D81BFC10E4616156C9A75F23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C13CBD2652E89CCE2535316E7460C53 /* Pods-GravosCollector.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GravosCollector/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GravosCollector/Pods-GravosCollector.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GravosCollector;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA33F186435244FD0FD5B7325332656C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A01B1BCAC7B9C3D26B9DA24DFD9FEC2 /* Build configuration list for PBXNativeTarget "Pods-GravosCollector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8901BAF46A88717B5BB4DC72FDA6FD43 /* Debug */,
+				B8F04774D81BFC10E4616156C9A75F23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				323A24856F1A4871A780301AF5C02A2A /* Debug */,
+				CA33F186435244FD0FD5B7325332656C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36C08D9BB9C21B73F566C216ECC5AD3D /* Build configuration list for PBXNativeTarget "Pods-GravosCollectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42CE51B9FB251BCA21B7DF257E4109EE /* Debug */,
+				A63CA40EB3E87D319E759EC55037D8CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F99205CEA860E522600851BFCE1B947 /* Build configuration list for PBXNativeTarget "SwiftyGif" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D1E1B7A5E8C17BF2F0A4F35019996CE /* Debug */,
+				0127833D1E1651C3BD89B27F1ACBB45D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9893C6E2447721A89CADFE69A1831E9 /* Build configuration list for PBXNativeTarget "GMStepper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37AB02FE9A33A98F9D2300559A41E9A5 /* Debug */,
+				8124B509F1D3EA450F3BA215A76557CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -7,15 +7,16 @@
 //
 
 import UIKit
-
+import SwiftyGif
 class LoginActionVC: UIViewController {
 
     @IBOutlet weak var txtUsername: TextViewWithLeftImage!
     @IBOutlet weak var txtPassword: TextViewWithLeftImage!
+    @IBOutlet weak var imgTest: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -42,9 +43,16 @@ class LoginActionVC: UIViewController {
     }
     */
 
+    @IBAction func performLogin(_ sender: Any)
+    {
+        Helper.showLoader(onView: self.view)
+        // Helper.hideLoader(fromView: self.view)
+    }
+    
     @IBAction func dismissViewController(_ sender: Any)
     {
         self.dismiss(animated: true, completion: nil)
+       
     }
     
 }

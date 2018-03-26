@@ -60,7 +60,10 @@ class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
             UIApplication.shared.openURL(url!)
         }
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return 1
     }
     
@@ -73,5 +76,13 @@ class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            UIView.animate(withDuration: 0.3, animations: {
+                cell.contentView.backgroundColor = UIColor.lightText
+            })
+        }
     }
 }
