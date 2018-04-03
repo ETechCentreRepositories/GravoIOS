@@ -14,6 +14,11 @@
 		7C08691F205A0B58009F2DE6 /* GravosCollectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C08691E205A0B58009F2DE6 /* GravosCollectorTests.swift */; };
 		7C1D34392063569800CF8644 /* entPickUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D34382063569800CF8644 /* entPickUpItem.swift */; };
 		7C1E6B75205A2A030078E66C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1E6B74205A2A030078E66C /* LoginVC.swift */; };
+		7C4308CD206A0C8E00385696 /* recycle_cinemagraph_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7C4308CC206A0C8E00385696 /* recycle_cinemagraph_2.gif */; };
+		7C43091F206C7A4B00385696 /* entTransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C43091E206C7A4B00385696 /* entTransactionItem.swift */; };
+		7C430921206C8C9100385696 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C430920206C8C9100385696 /* AddItemVC.swift */; };
+		7C430927206CA8AC00385696 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C430926206CA8AC00385696 /* DataHandler.swift */; };
+		7C4309292073165000385696 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4309282073165000385696 /* Constants.swift */; };
 		7C74CED52060B7B5004595A5 /* PickupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED42060B7B5004595A5 /* PickupsVC.swift */; };
 		7C74CED72060BC17004595A5 /* PickupCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED62060BC17004595A5 /* PickupCustomCell.swift */; };
 		7C74CED92060CAA1004595A5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED82060CAA1004595A5 /* Helper.swift */; };
@@ -61,6 +66,11 @@
 		7C1E6B7A205A2A510078E66C /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		7C1E6B7B205A2A510078E66C /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		7C1E6B7C205A2A510078E66C /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		7C4308CC206A0C8E00385696 /* recycle_cinemagraph_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = recycle_cinemagraph_2.gif; sourceTree = "<group>"; };
+		7C43091E206C7A4B00385696 /* entTransactionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = entTransactionItem.swift; sourceTree = "<group>"; };
+		7C430920206C8C9100385696 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
+		7C430926206CA8AC00385696 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		7C4309282073165000385696 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7C74CED42060B7B5004595A5 /* PickupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupsVC.swift; sourceTree = "<group>"; };
 		7C74CED62060BC17004595A5 /* PickupCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupCustomCell.swift; sourceTree = "<group>"; };
 		7C74CED82060CAA1004595A5 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -148,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				7C1D34382063569800CF8644 /* entPickUpItem.swift */,
+				7C43091E206C7A4B00385696 /* entTransactionItem.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 		7C1E6B76205A2A270078E66C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7C4308CC206A0C8E00385696 /* recycle_cinemagraph_2.gif */,
 				7C7A78A62068E23300912BDD /* Loader.gif */,
 				7C1E6B78205A2A410078E66C /* Images */,
 				7C1E6B77205A2A310078E66C /* Fonts */,
@@ -201,6 +213,7 @@
 		7C1E6B7E205A2A630078E66C /* DataHandler */ = {
 			isa = PBXGroup;
 			children = (
+				7C430926206CA8AC00385696 /* DataHandler.swift */,
 			);
 			path = DataHandler;
 			sourceTree = "<group>";
@@ -209,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				7C74CED82060CAA1004595A5 /* Helper.swift */,
+				7C4309282073165000385696 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -245,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				7C88CEE02068927A00251CC0 /* TransactionVC.swift */,
+				7C430920206C8C9100385696 /* AddItemVC.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -358,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4308CD206A0C8E00385696 /* recycle_cinemagraph_2.gif in Resources */,
 				7C7BF99C205A7B18005FFAE6 /* Quicksand-Bold.ttf in Resources */,
 				7C7BF99D205A7B18005FFAE6 /* Quicksand-Light.ttf in Resources */,
 				7C7BF99E205A7B18005FFAE6 /* Quicksand-Medium.ttf in Resources */,
@@ -386,11 +402,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GravosCollector/Pods-GravosCollector-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 			);
@@ -488,10 +506,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C1D34392063569800CF8644 /* entPickUpItem.swift in Sources */,
+				7C43091F206C7A4B00385696 /* entTransactionItem.swift in Sources */,
 				7C7BF997205A5791005FFAE6 /* TextViewWithLeftImage.swift in Sources */,
 				7C7BF994205A49B3005FFAE6 /* LoginActionVC.swift in Sources */,
+				7C430927206CA8AC00385696 /* DataHandler.swift in Sources */,
 				7C74CED52060B7B5004595A5 /* PickupsVC.swift in Sources */,
 				7C1E6B75205A2A030078E66C /* LoginVC.swift in Sources */,
+				7C4309292073165000385696 /* Constants.swift in Sources */,
 				7C74CEDB2060CBB5004595A5 /* ParserJSON.swift in Sources */,
 				7C7BF9A1205B8288005FFAE6 /* CreateAccountVC.swift in Sources */,
 				7C88CEE52068CE4A00251CC0 /* TransactionCustomCell.swift in Sources */,
@@ -499,6 +520,7 @@
 				7C88CEE12068927A00251CC0 /* TransactionVC.swift in Sources */,
 				7C74CED72060BC17004595A5 /* PickupCustomCell.swift in Sources */,
 				7C74CED92060CAA1004595A5 /* Helper.swift in Sources */,
+				7C430921206C8C9100385696 /* AddItemVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

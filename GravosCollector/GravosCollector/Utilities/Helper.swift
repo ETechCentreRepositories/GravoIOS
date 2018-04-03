@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyGif
+
 class Helper: NSObject
 {
 

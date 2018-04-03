@@ -45,7 +45,7 @@ class LoginActionVC: UIViewController {
 
     @IBAction func performLogin(_ sender: Any)
     {
-        Helper.showLoader(onView: self.view)
+        //Helper.showLoader(onView: self.view)
         // Helper.hideLoader(fromView: self.view)
     }
     

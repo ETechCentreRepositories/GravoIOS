@@ -84,5 +84,12 @@ class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
                 cell.contentView.backgroundColor = UIColor.lightText
             })
         }
+        
+        if let transactionVC = self.storyboard?.instantiateViewController(withIdentifier: "TransactionVC")
+        {
+            self.navigationController?.pushViewController(transactionVC, animated: true)
+        }
+    
+        
     }
 }

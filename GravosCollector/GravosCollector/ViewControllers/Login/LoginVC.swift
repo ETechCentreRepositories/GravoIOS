@@ -7,19 +7,31 @@
 //
 
 import UIKit
+import SwiftyGif
 
 class LoginVC: UIViewController,UIScrollViewDelegate {
 
     @IBOutlet weak var pgCtrlLogin: UIPageControl!
     @IBOutlet weak var scrollLoginBanner: UIScrollView!
     @IBOutlet weak var viewScrollContent: UIView!
+    @IBOutlet weak var imgBackground: UIImageView!
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        var contentWidth: CGFloat = 0.0
         scrollLoginBanner.delegate = self
+        // Do any additional setup after loading the view.
+    }
+
+    override func viewWillAppear(_ animated: Bool)
+    {
+        
+        self.customiseInterface()
+    }
+    func customiseInterface()
+    {
+        var contentWidth: CGFloat = 0.0
         for label in 0...2
         {
             let lblDesc = UILabel()
@@ -35,11 +47,11 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
             scrollLoginBanner.addSubview(lblDesc)
             lblDesc.frame = CGRect(x: xCordinate - 120, y: (viewScrollContent.frame.height/2) - 50, width: viewScrollContent.frame.width * 0.7, height: 120)
         }
-        
         scrollLoginBanner.contentSize = CGSize(width: contentWidth, height: viewScrollContent.frame.height)
-        // Do any additional setup after loading the view.
+        
+        //let imgLoginBg = UIImage(gifName: "recycle_cinemagraph_2.gif")
+        //self.imgBackground.setGifImage(imgLoginBg)
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
