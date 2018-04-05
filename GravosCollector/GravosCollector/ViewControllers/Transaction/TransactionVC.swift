@@ -8,13 +8,15 @@
 
 import UIKit
 
-class TransactionVC: UIViewController, UITableViewDataSource,UITableViewDelegate,UITableViewDataSourcePrefetching
+class TransactionVC: UIViewController, UITableViewDataSource,UITableViewDelegate,UITableViewDataSourcePrefetching,AddItemDelegate
 {
+   
+    
     @IBOutlet weak var tblTransactionItems: UITableView!
     @IBOutlet weak var lblTotalWeight: UILabel!
     @IBOutlet weak var lblTotalValue: UILabel!
     
-    var arrTransactions : [entTransactionItem]?
+    var arrTransactions = [entTransactionItem]()
     var arrCatagories = [Category]()
     
     
@@ -22,7 +24,7 @@ class TransactionVC: UIViewController, UITableViewDataSource,UITableViewDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+         initDemoArray()
         // Do any additional setup after loading the view.
     }
     
@@ -33,8 +35,10 @@ class TransactionVC: UIViewController, UITableViewDataSource,UITableViewDelegate
         tblTransactionItems.estimatedRowHeight = UITableViewAutomaticDimension
         tblTransactionItems.rowHeight = UITableViewAutomaticDimension
         tblTransactionItems.tableFooterView = UIView()
-        
-        self.fetchCatagories()
+        //--------------
+        self.title = "Transaction: #0123"
+        self.navigationController?.navigationBar.barTintColor = Constants.themeGreen
+        fetchCatagories()
         
     }
     override func didReceiveMemoryWarning() {
@@ -67,18 +71,37 @@ class TransactionVC: UIViewController, UITableViewDataSource,UITableViewDelegate
      }
      */
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        return "my dear address"
+    }
+    
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath])
     {
         //--
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        if self.arrTransactions.count != 0
+        {
+            return arrTransactions.count
+        }
+        else
+        {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCustomCell", for: indexPath) as! TransactionCustomCell
+        let item = self.arrTransactions[indexPath.row]
+        
+        cell.lblTitle.text = item.strItemType.map { $0.rawValue }
+        cell.lblWeight.text = item.strRate
+        cell.lblItemPrice.text = item.strPrice
+        cell.stepperWeight.value = (item.strItemWeight! as NSString).doubleValue
         
         //cell.btnNavigate.addTarget(self, action: #selector(self.performNavigation)    , for: .touchUpInside)
         
@@ -89,12 +112,11 @@ class TransactionVC: UIViewController, UITableViewDataSource,UITableViewDelegate
     {
         let addItemVC = self.storyboard?.instantiateViewController(withIdentifier: "AddItemVC") as! AddItemVC
         addItemVC.arrCategories = self.arrCatagories
+        addItemVC.delegate = self
         self.addChildViewController(addItemVC)
         addItemVC.view.frame = self.view.frame
         self.view.addSubview(addItemVC.view)
         addItemVC.didMove(toParentViewController: self)
-        
-        
     }
     
     @IBAction func addRecipitant(_ sender: Any)
@@ -127,4 +149,23 @@ class TransactionVC: UIViewController, UITableViewDataSource,UITableViewDelegate
         
     }
     
+    func initDemoArray()
+    {
+        let objTran  = entTransactionItem()
+        objTran.iItemID = 3
+        objTran.strItemType = EWasteItem.Cardboard
+        objTran.strItemWeight = "3.0"
+        objTran.strPrice = "SGD 6"
+        objTran.strRate = "0.2/kg"
+        self.arrTransactions.append(objTran)
+        self.tblTransactionItems.reloadData()
+    }
+    
+    func itemAdded(transactionItem: entTransactionItem)
+    {
+        self.arrTransactions.append(transactionItem)
+        tblTransactionItems.beginUpdates()
+        tblTransactionItems.insertRows(at: [IndexPath(row: (arrTransactions.count)-1, section: 0)], with: .automatic)
+        tblTransactionItems.endUpdates()
+    }
 }

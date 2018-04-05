@@ -8,10 +8,15 @@
 
 import UIKit
 import GMStepper
+
+protocol AddItemDelegate
+{
+    func itemAdded(transactionItem: entTransactionItem)
+}
+
 class AddItemVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
-    
-
+    @IBOutlet weak var lblCatagory: UILabel!
     @IBOutlet weak var btnAddCatagory: UIButton!
     @IBOutlet weak var lblRate: UILabel!
     @IBOutlet weak var stepperWeight: GMStepper!
@@ -19,13 +24,14 @@ class AddItemVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     @IBOutlet weak var viwCatagorySelection: UIView!
     @IBOutlet weak var pickCatagory: UIPickerView!
     
+     var delegate: AddItemDelegate?
+    
     var arrCategories = [Category]()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
-        self.showAnimate()
+       
         // Do any additional setup after loading the view.
     }
 
@@ -36,6 +42,13 @@ class AddItemVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     }
     
 
+    override func viewWillAppear(_ animated: Bool)
+    {
+        stepperWeight.addTarget(self, action: #selector(self.stepperValueChanged), for: .valueChanged)
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        self.navigationController?.navigationBar.barTintColor = Constants.themeGreen
+        self.showAnimate()
+    }
     /*
     // MARK: - Navigation
 
@@ -75,6 +88,13 @@ class AddItemVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     }
     @IBAction func submitAddItem(_ sender: Any)
     {
+        let objTran  = entTransactionItem()
+        objTran.iItemID = 4
+        objTran.strItemType = EWasteItem.Cardboard
+        objTran.strItemWeight = String(self.stepperWeight.value)
+        objTran.strPrice = lblPrice.text
+        objTran.strRate = lblRate.text
+        delegate?.itemAdded(transactionItem:objTran)
         self.removeAnimate()
     }
     
@@ -86,8 +106,12 @@ class AddItemVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     {
         let selectedCatagory = self.arrCategories[self.pickCatagory.selectedRow(inComponent: 0)]
         self.lblRate.text = selectedCatagory.rate
-        self.btnAddCatagory.setTitle(selectedCatagory.type, for: .normal)
+        self.lblCatagory.text = selectedCatagory.type
         self.viwCatagorySelection.isHidden = true
+        
+        //Reset Stepper
+        self.stepperWeight.value = 0.0
+        lblPrice.text = "-"
     }
     @IBAction func cancelSelection(_ sender: Any)
     {
@@ -116,7 +140,24 @@ class AddItemVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         return attributedString
     }
     
-    
+    @objc func stepperValueChanged(stepper: GMStepper)
+    {
+        print(stepper.value, terminator: "")
+        
+        if stepper.value == 0
+        {
+            lblPrice.text = "-"
+        }
+        else
+        {
+            if let strRate  = self.lblRate.text
+            {
+                let subSeq = strRate.dropLast(4)
+                lblPrice.text  = "SGD " +  String(Double(String(describing: subSeq))! * stepper.value)
+               
+            }
+        }
+    }
     
     
 }

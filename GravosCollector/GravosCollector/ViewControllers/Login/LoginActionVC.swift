@@ -26,6 +26,8 @@ class LoginActionVC: UIViewController {
                                                                attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         txtPassword.attributedPlaceholder = NSAttributedString(string: "Enter Password",
                                                                attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        
+         self.navigationController?.navigationBar.barTintColor = UIColor.black
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

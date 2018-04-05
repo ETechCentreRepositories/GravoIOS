@@ -13,11 +13,12 @@ class TransactionCustomCell: UITableViewCell
 {
 
     @IBOutlet weak var imgItem: UIImageView!
-    @IBOutlet weak var lblItemTitle: NSLayoutConstraint!
     @IBOutlet weak var lblItemPrice: UILabel!
     @IBOutlet weak var btnDeleteItem: UIButton!
     @IBOutlet weak var stepperWeight: GMStepper!
-    @IBOutlet weak var lblWeight: NSLayoutConstraint!
+    @IBOutlet weak var lblWeight: UILabel!
+    @IBOutlet weak var lblTitle: UILabel!
+    
     
     
     override func awakeFromNib() {

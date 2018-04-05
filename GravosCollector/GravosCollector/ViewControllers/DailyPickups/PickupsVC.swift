@@ -32,6 +32,8 @@ class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         tblPickUp.estimatedRowHeight = UITableViewAutomaticDimension
         tblPickUp.rowHeight = UITableViewAutomaticDimension
         tblPickUp.tableFooterView = UIView()
+        lblTitleTop.text = "Pickups for today: " + formatDate()
+        self.navigationController?.navigationBar.barTintColor = Constants.themeGreen
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -39,6 +41,14 @@ class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
 
+    func formatDate() ->  String
+    {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        let result = formatter.string(from: date)
+        return result
+    }
     /*
     // MARK: - Navigation
 
@@ -62,6 +72,8 @@ class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     
+    
+   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return 1

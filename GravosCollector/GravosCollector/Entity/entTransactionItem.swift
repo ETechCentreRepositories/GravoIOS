@@ -14,6 +14,7 @@ class entTransactionItem: NSObject
     var strItemType : EWasteItem?
     var strItemWeight : String?
     var strPrice : String?
+    var strRate : String?
 }
 
 enum EWasteItem : String

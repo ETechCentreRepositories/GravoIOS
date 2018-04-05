@@ -29,6 +29,7 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         self.customiseUserInterface()
+        self.navigationController?.navigationBar.barTintColor = UIColor.black
     }
 
     override func didReceiveMemoryWarning() {

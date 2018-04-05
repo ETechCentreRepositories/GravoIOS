@@ -22,12 +22,12 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
         super.viewDidLoad()
         scrollLoginBanner.delegate = self
         // Do any additional setup after loading the view.
+        self.customiseInterface()
     }
 
     override func viewWillAppear(_ animated: Bool)
     {
-        
-        self.customiseInterface()
+         scrollLoginBanner.reloadInputViews()
     }
     func customiseInterface()
     {
@@ -48,6 +48,7 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
             lblDesc.frame = CGRect(x: xCordinate - 120, y: (viewScrollContent.frame.height/2) - 50, width: viewScrollContent.frame.width * 0.7, height: 120)
         }
         scrollLoginBanner.contentSize = CGSize(width: contentWidth, height: viewScrollContent.frame.height)
+       
         
         //let imgLoginBg = UIImage(gifName: "recycle_cinemagraph_2.gif")
         //self.imgBackground.setGifImage(imgLoginBg)

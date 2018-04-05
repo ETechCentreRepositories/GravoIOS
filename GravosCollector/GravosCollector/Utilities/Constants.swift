@@ -7,8 +7,9 @@
 //
 
 import Foundation
-
+import UIKit
 struct Constants
 {
     static let kRemoteAddress = "http://greenravolution.com/API/"
+    static let themeGreen = UIColor.init(red: 66.0/255.0, green: 187.0/255.0, blue: 142.0/255.0, alpha: 1)
 }
