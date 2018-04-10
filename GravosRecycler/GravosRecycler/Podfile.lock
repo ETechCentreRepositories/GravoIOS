@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.7.0)
+  - GMStepper (2.1)
+  - SwiftyGif (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - GMStepper
+  - SwiftyGif
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  GMStepper: 8994824040d57d952134e409b7724d05a1a41c18
+  SwiftyGif: d36c6dfb52e2ca1e48fe349d225f50ec4123ec85
+
+PODFILE CHECKSUM: 4849e995e0aa742043dcfb45e33a1c001b2e0eb9
+
+COCOAPODS: 1.4.0

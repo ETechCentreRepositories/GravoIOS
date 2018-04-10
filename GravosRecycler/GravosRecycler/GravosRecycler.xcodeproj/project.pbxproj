@@ -1,0 +1,785 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		571B1A4E01AB6A539D198EA7 /* Pods_GravosRecyclerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF79EB3E9F980F0DE3AD6850 /* Pods_GravosRecyclerTests.framework */; };
+		7C8FA098207C4734009FA8E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA097207C4734009FA8E6 /* AppDelegate.swift */; };
+		7C8FA09A207C4734009FA8E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA099207C4734009FA8E6 /* ViewController.swift */; };
+		7C8FA09D207C4734009FA8E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA09B207C4734009FA8E6 /* Main.storyboard */; };
+		7C8FA09F207C4734009FA8E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA09E207C4734009FA8E6 /* Assets.xcassets */; };
+		7C8FA0A2207C4734009FA8E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA0A0207C4734009FA8E6 /* LaunchScreen.storyboard */; };
+		7C8FA0AD207C4736009FA8E6 /* GravosRecyclerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0AC207C4736009FA8E6 /* GravosRecyclerTests.swift */; };
+		7C8FA0D7207C4A5C009FA8E6 /* PickupCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0B8207C4A5A009FA8E6 /* PickupCustomCell.swift */; };
+		7C8FA0D8207C4A5C009FA8E6 /* TextViewWithLeftImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0B9207C4A5A009FA8E6 /* TextViewWithLeftImage.swift */; };
+		7C8FA0D9207C4A5C009FA8E6 /* TransactionCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0BA207C4A5A009FA8E6 /* TransactionCustomCell.swift */; };
+		7C8FA0DA207C4A5C009FA8E6 /* entPickUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0BC207C4A5A009FA8E6 /* entPickUpItem.swift */; };
+		7C8FA0DB207C4A5C009FA8E6 /* entTransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0BD207C4A5A009FA8E6 /* entTransactionItem.swift */; };
+		7C8FA0DC207C4A5C009FA8E6 /* ParserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0BF207C4A5B009FA8E6 /* ParserJSON.swift */; };
+		7C8FA0DD207C4A5C009FA8E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0C1207C4A5B009FA8E6 /* Constants.swift */; };
+		7C8FA0DE207C4A5C009FA8E6 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0C2207C4A5B009FA8E6 /* Helper.swift */; };
+		7C8FA0DF207C4A5C009FA8E6 /* PickupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0C5207C4A5B009FA8E6 /* PickupsVC.swift */; };
+		7C8FA0E0207C4A5C009FA8E6 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0C7207C4A5B009FA8E6 /* CreateAccountVC.swift */; };
+		7C8FA0E1207C4A5C009FA8E6 /* LoginActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0C8207C4A5B009FA8E6 /* LoginActionVC.swift */; };
+		7C8FA0E2207C4A5C009FA8E6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0C9207C4A5B009FA8E6 /* LoginVC.swift */; };
+		7C8FA0E3207C4A5C009FA8E6 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0CB207C4A5B009FA8E6 /* AddItemVC.swift */; };
+		7C8FA0E4207C4A5C009FA8E6 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0CC207C4A5B009FA8E6 /* TransactionVC.swift */; };
+		7C8FA0E5207C4A5C009FA8E6 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA0CF207C4A5B009FA8E6 /* Quicksand-Bold.ttf */; };
+		7C8FA0E6207C4A5C009FA8E6 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA0D0207C4A5B009FA8E6 /* Quicksand-Light.ttf */; };
+		7C8FA0E7207C4A5C009FA8E6 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA0D1207C4A5B009FA8E6 /* Quicksand-Medium.ttf */; };
+		7C8FA0E8207C4A5C009FA8E6 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA0D2207C4A5B009FA8E6 /* Quicksand-Regular.ttf */; };
+		7C8FA0E9207C4A5C009FA8E6 /* Loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA0D3207C4A5B009FA8E6 /* Loader.gif */; };
+		7C8FA0EA207C4A5C009FA8E6 /* recycle_cinemagraph_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA0D4207C4A5B009FA8E6 /* recycle_cinemagraph_2.gif */; };
+		7C8FA0EB207C4A5C009FA8E6 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0D6207C4A5B009FA8E6 /* DataHandler.swift */; };
+		7C8FA0EE207C71EE009FA8E6 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0ED207C71EE009FA8E6 /* HomeVC.swift */; };
+		7C8FA0F0207C7405009FA8E6 /* HomeCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0EF207C7405009FA8E6 /* HomeCollCell.swift */; };
+		CF0EF9F9C6154D26FC16F08E /* Pods_GravosRecycler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD077130F7AA4E36A5E77111 /* Pods_GravosRecycler.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C8FA0A9207C4736009FA8E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C8FA08C207C4733009FA8E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C8FA093207C4733009FA8E6;
+			remoteInfo = GravosRecycler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		731D3B472538AAC8CC2C637C /* Pods-GravosRecyclerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosRecyclerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravosRecyclerTests/Pods-GravosRecyclerTests.release.xcconfig"; sourceTree = "<group>"; };
+		7C8FA094207C4733009FA8E6 /* GravosRecycler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GravosRecycler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C8FA097207C4734009FA8E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7C8FA099207C4734009FA8E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7C8FA09C207C4734009FA8E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7C8FA09E207C4734009FA8E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7C8FA0A1207C4734009FA8E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7C8FA0A3207C4734009FA8E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C8FA0A8207C4736009FA8E6 /* GravosRecyclerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GravosRecyclerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C8FA0AC207C4736009FA8E6 /* GravosRecyclerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravosRecyclerTests.swift; sourceTree = "<group>"; };
+		7C8FA0AE207C4736009FA8E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C8FA0B8207C4A5A009FA8E6 /* PickupCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupCustomCell.swift; sourceTree = "<group>"; };
+		7C8FA0B9207C4A5A009FA8E6 /* TextViewWithLeftImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewWithLeftImage.swift; sourceTree = "<group>"; };
+		7C8FA0BA207C4A5A009FA8E6 /* TransactionCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCustomCell.swift; sourceTree = "<group>"; };
+		7C8FA0BC207C4A5A009FA8E6 /* entPickUpItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = entPickUpItem.swift; sourceTree = "<group>"; };
+		7C8FA0BD207C4A5A009FA8E6 /* entTransactionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = entTransactionItem.swift; sourceTree = "<group>"; };
+		7C8FA0BF207C4A5B009FA8E6 /* ParserJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserJSON.swift; sourceTree = "<group>"; };
+		7C8FA0C1207C4A5B009FA8E6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7C8FA0C2207C4A5B009FA8E6 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		7C8FA0C5207C4A5B009FA8E6 /* PickupsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupsVC.swift; sourceTree = "<group>"; };
+		7C8FA0C7207C4A5B009FA8E6 /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		7C8FA0C8207C4A5B009FA8E6 /* LoginActionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginActionVC.swift; sourceTree = "<group>"; };
+		7C8FA0C9207C4A5B009FA8E6 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		7C8FA0CB207C4A5B009FA8E6 /* AddItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
+		7C8FA0CC207C4A5B009FA8E6 /* TransactionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
+		7C8FA0CF207C4A5B009FA8E6 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		7C8FA0D0207C4A5B009FA8E6 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		7C8FA0D1207C4A5B009FA8E6 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		7C8FA0D2207C4A5B009FA8E6 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		7C8FA0D3207C4A5B009FA8E6 /* Loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loader.gif; sourceTree = "<group>"; };
+		7C8FA0D4207C4A5B009FA8E6 /* recycle_cinemagraph_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = recycle_cinemagraph_2.gif; sourceTree = "<group>"; };
+		7C8FA0D6207C4A5B009FA8E6 /* DataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		7C8FA0ED207C71EE009FA8E6 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		7C8FA0EF207C7405009FA8E6 /* HomeCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollCell.swift; sourceTree = "<group>"; };
+		A2DE92211024511A7F886301 /* Pods-GravosRecycler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosRecycler.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler.release.xcconfig"; sourceTree = "<group>"; };
+		AA60D27FD922661EAE0ACA36 /* Pods-GravosRecycler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosRecycler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler.debug.xcconfig"; sourceTree = "<group>"; };
+		C2D5128A8BF0616419971801 /* Pods-GravosRecyclerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosRecyclerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GravosRecyclerTests/Pods-GravosRecyclerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD077130F7AA4E36A5E77111 /* Pods_GravosRecycler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GravosRecycler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF79EB3E9F980F0DE3AD6850 /* Pods_GravosRecyclerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GravosRecyclerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7C8FA091207C4733009FA8E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0EF9F9C6154D26FC16F08E /* Pods_GravosRecycler.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C8FA0A5207C4736009FA8E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				571B1A4E01AB6A539D198EA7 /* Pods_GravosRecyclerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F66BAE509C25C4B942E070A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA60D27FD922661EAE0ACA36 /* Pods-GravosRecycler.debug.xcconfig */,
+				A2DE92211024511A7F886301 /* Pods-GravosRecycler.release.xcconfig */,
+				C2D5128A8BF0616419971801 /* Pods-GravosRecyclerTests.debug.xcconfig */,
+				731D3B472538AAC8CC2C637C /* Pods-GravosRecyclerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C8FA08B207C4732009FA8E6 = {
+			isa = PBXGroup;
+			children = (
+				7C8FA096207C4733009FA8E6 /* GravosRecycler */,
+				7C8FA0AB207C4736009FA8E6 /* GravosRecyclerTests */,
+				7C8FA095207C4733009FA8E6 /* Products */,
+				0F66BAE509C25C4B942E070A /* Pods */,
+				81E1205EB6FEE5825D03EAF4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7C8FA095207C4733009FA8E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA094207C4733009FA8E6 /* GravosRecycler.app */,
+				7C8FA0A8207C4736009FA8E6 /* GravosRecyclerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C8FA096207C4733009FA8E6 /* GravosRecycler */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0B7207C4A5A009FA8E6 /* Custom Classes */,
+				7C8FA0D5207C4A5B009FA8E6 /* DataHandler */,
+				7C8FA0BB207C4A5A009FA8E6 /* Entity */,
+				7C8FA0BE207C4A5B009FA8E6 /* Parser */,
+				7C8FA0CD207C4A5B009FA8E6 /* Resources */,
+				7C8FA0C0207C4A5B009FA8E6 /* Utilities */,
+				7C8FA0C3207C4A5B009FA8E6 /* ViewControllers */,
+				7C8FA097207C4734009FA8E6 /* AppDelegate.swift */,
+				7C8FA099207C4734009FA8E6 /* ViewController.swift */,
+				7C8FA09B207C4734009FA8E6 /* Main.storyboard */,
+				7C8FA09E207C4734009FA8E6 /* Assets.xcassets */,
+				7C8FA0A0207C4734009FA8E6 /* LaunchScreen.storyboard */,
+				7C8FA0A3207C4734009FA8E6 /* Info.plist */,
+			);
+			path = GravosRecycler;
+			sourceTree = "<group>";
+		};
+		7C8FA0AB207C4736009FA8E6 /* GravosRecyclerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0AC207C4736009FA8E6 /* GravosRecyclerTests.swift */,
+				7C8FA0AE207C4736009FA8E6 /* Info.plist */,
+			);
+			path = GravosRecyclerTests;
+			sourceTree = "<group>";
+		};
+		7C8FA0B7207C4A5A009FA8E6 /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0B8207C4A5A009FA8E6 /* PickupCustomCell.swift */,
+				7C8FA0B9207C4A5A009FA8E6 /* TextViewWithLeftImage.swift */,
+				7C8FA0BA207C4A5A009FA8E6 /* TransactionCustomCell.swift */,
+				7C8FA0EF207C7405009FA8E6 /* HomeCollCell.swift */,
+			);
+			path = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		7C8FA0BB207C4A5A009FA8E6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0BC207C4A5A009FA8E6 /* entPickUpItem.swift */,
+				7C8FA0BD207C4A5A009FA8E6 /* entTransactionItem.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		7C8FA0BE207C4A5B009FA8E6 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0BF207C4A5B009FA8E6 /* ParserJSON.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		7C8FA0C0207C4A5B009FA8E6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0C1207C4A5B009FA8E6 /* Constants.swift */,
+				7C8FA0C2207C4A5B009FA8E6 /* Helper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7C8FA0C3207C4A5B009FA8E6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0EC207C71BA009FA8E6 /* Home */,
+				7C8FA0C4207C4A5B009FA8E6 /* DailyPickups */,
+				7C8FA0C6207C4A5B009FA8E6 /* Login */,
+				7C8FA0CA207C4A5B009FA8E6 /* Transaction */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7C8FA0C4207C4A5B009FA8E6 /* DailyPickups */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0C5207C4A5B009FA8E6 /* PickupsVC.swift */,
+			);
+			path = DailyPickups;
+			sourceTree = "<group>";
+		};
+		7C8FA0C6207C4A5B009FA8E6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0C7207C4A5B009FA8E6 /* CreateAccountVC.swift */,
+				7C8FA0C8207C4A5B009FA8E6 /* LoginActionVC.swift */,
+				7C8FA0C9207C4A5B009FA8E6 /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7C8FA0CA207C4A5B009FA8E6 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0CB207C4A5B009FA8E6 /* AddItemVC.swift */,
+				7C8FA0CC207C4A5B009FA8E6 /* TransactionVC.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		7C8FA0CD207C4A5B009FA8E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0CE207C4A5B009FA8E6 /* Fonts */,
+				7C8FA0D3207C4A5B009FA8E6 /* Loader.gif */,
+				7C8FA0D4207C4A5B009FA8E6 /* recycle_cinemagraph_2.gif */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7C8FA0CE207C4A5B009FA8E6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0CF207C4A5B009FA8E6 /* Quicksand-Bold.ttf */,
+				7C8FA0D0207C4A5B009FA8E6 /* Quicksand-Light.ttf */,
+				7C8FA0D1207C4A5B009FA8E6 /* Quicksand-Medium.ttf */,
+				7C8FA0D2207C4A5B009FA8E6 /* Quicksand-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7C8FA0D5207C4A5B009FA8E6 /* DataHandler */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0D6207C4A5B009FA8E6 /* DataHandler.swift */,
+			);
+			path = DataHandler;
+			sourceTree = "<group>";
+		};
+		7C8FA0EC207C71BA009FA8E6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7C8FA0ED207C71EE009FA8E6 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		81E1205EB6FEE5825D03EAF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD077130F7AA4E36A5E77111 /* Pods_GravosRecycler.framework */,
+				EF79EB3E9F980F0DE3AD6850 /* Pods_GravosRecyclerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7C8FA093207C4733009FA8E6 /* GravosRecycler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C8FA0B1207C4736009FA8E6 /* Build configuration list for PBXNativeTarget "GravosRecycler" */;
+			buildPhases = (
+				B2164FC404DD9971C6F611DF /* [CP] Check Pods Manifest.lock */,
+				7C8FA090207C4733009FA8E6 /* Sources */,
+				7C8FA091207C4733009FA8E6 /* Frameworks */,
+				7C8FA092207C4733009FA8E6 /* Resources */,
+				DF84CAA518E95A6398FDD56C /* [CP] Embed Pods Frameworks */,
+				D0E033EC5B4124EB991FA466 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GravosRecycler;
+			productName = GravosRecycler;
+			productReference = 7C8FA094207C4733009FA8E6 /* GravosRecycler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7C8FA0A7207C4736009FA8E6 /* GravosRecyclerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C8FA0B4207C4736009FA8E6 /* Build configuration list for PBXNativeTarget "GravosRecyclerTests" */;
+			buildPhases = (
+				1AE3464B18D585E22D413655 /* [CP] Check Pods Manifest.lock */,
+				7C8FA0A4207C4736009FA8E6 /* Sources */,
+				7C8FA0A5207C4736009FA8E6 /* Frameworks */,
+				7C8FA0A6207C4736009FA8E6 /* Resources */,
+				D87873439F1730DE962C4F57 /* [CP] Embed Pods Frameworks */,
+				49A99C5A62A791C0DBC8446F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C8FA0AA207C4736009FA8E6 /* PBXTargetDependency */,
+			);
+			name = GravosRecyclerTests;
+			productName = GravosRecyclerTests;
+			productReference = 7C8FA0A8207C4736009FA8E6 /* GravosRecyclerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C8FA08C207C4733009FA8E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Abhijit;
+				TargetAttributes = {
+					7C8FA093207C4733009FA8E6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+					7C8FA0A7207C4736009FA8E6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7C8FA093207C4733009FA8E6;
+					};
+				};
+			};
+			buildConfigurationList = 7C8FA08F207C4733009FA8E6 /* Build configuration list for PBXProject "GravosRecycler" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7C8FA08B207C4732009FA8E6;
+			productRefGroup = 7C8FA095207C4733009FA8E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7C8FA093207C4733009FA8E6 /* GravosRecycler */,
+				7C8FA0A7207C4736009FA8E6 /* GravosRecyclerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7C8FA092207C4733009FA8E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C8FA0EA207C4A5C009FA8E6 /* recycle_cinemagraph_2.gif in Resources */,
+				7C8FA0A2207C4734009FA8E6 /* LaunchScreen.storyboard in Resources */,
+				7C8FA09F207C4734009FA8E6 /* Assets.xcassets in Resources */,
+				7C8FA0E8207C4A5C009FA8E6 /* Quicksand-Regular.ttf in Resources */,
+				7C8FA09D207C4734009FA8E6 /* Main.storyboard in Resources */,
+				7C8FA0E5207C4A5C009FA8E6 /* Quicksand-Bold.ttf in Resources */,
+				7C8FA0E9207C4A5C009FA8E6 /* Loader.gif in Resources */,
+				7C8FA0E6207C4A5C009FA8E6 /* Quicksand-Light.ttf in Resources */,
+				7C8FA0E7207C4A5C009FA8E6 /* Quicksand-Medium.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C8FA0A6207C4736009FA8E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AE3464B18D585E22D413655 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GravosRecyclerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49A99C5A62A791C0DBC8446F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecyclerTests/Pods-GravosRecyclerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2164FC404DD9971C6F611DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GravosRecycler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0E033EC5B4124EB991FA466 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D87873439F1730DE962C4F57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecyclerTests/Pods-GravosRecyclerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF84CAA518E95A6398FDD56C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C8FA090207C4733009FA8E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C8FA0D8207C4A5C009FA8E6 /* TextViewWithLeftImage.swift in Sources */,
+				7C8FA09A207C4734009FA8E6 /* ViewController.swift in Sources */,
+				7C8FA0E2207C4A5C009FA8E6 /* LoginVC.swift in Sources */,
+				7C8FA0EE207C71EE009FA8E6 /* HomeVC.swift in Sources */,
+				7C8FA0E0207C4A5C009FA8E6 /* CreateAccountVC.swift in Sources */,
+				7C8FA0DC207C4A5C009FA8E6 /* ParserJSON.swift in Sources */,
+				7C8FA0D9207C4A5C009FA8E6 /* TransactionCustomCell.swift in Sources */,
+				7C8FA0E1207C4A5C009FA8E6 /* LoginActionVC.swift in Sources */,
+				7C8FA0EB207C4A5C009FA8E6 /* DataHandler.swift in Sources */,
+				7C8FA098207C4734009FA8E6 /* AppDelegate.swift in Sources */,
+				7C8FA0DB207C4A5C009FA8E6 /* entTransactionItem.swift in Sources */,
+				7C8FA0DA207C4A5C009FA8E6 /* entPickUpItem.swift in Sources */,
+				7C8FA0E3207C4A5C009FA8E6 /* AddItemVC.swift in Sources */,
+				7C8FA0DE207C4A5C009FA8E6 /* Helper.swift in Sources */,
+				7C8FA0D7207C4A5C009FA8E6 /* PickupCustomCell.swift in Sources */,
+				7C8FA0F0207C7405009FA8E6 /* HomeCollCell.swift in Sources */,
+				7C8FA0E4207C4A5C009FA8E6 /* TransactionVC.swift in Sources */,
+				7C8FA0DF207C4A5C009FA8E6 /* PickupsVC.swift in Sources */,
+				7C8FA0DD207C4A5C009FA8E6 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C8FA0A4207C4736009FA8E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C8FA0AD207C4736009FA8E6 /* GravosRecyclerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7C8FA0AA207C4736009FA8E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C8FA093207C4733009FA8E6 /* GravosRecycler */;
+			targetProxy = 7C8FA0A9207C4736009FA8E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7C8FA09B207C4734009FA8E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C8FA09C207C4734009FA8E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7C8FA0A0207C4734009FA8E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C8FA0A1207C4734009FA8E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7C8FA0AF207C4736009FA8E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7C8FA0B0207C4736009FA8E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7C8FA0B2207C4736009FA8E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA60D27FD922661EAE0ACA36 /* Pods-GravosRecycler.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = GravosRecycler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.etechnologycentre.GravosRecycler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7C8FA0B3207C4736009FA8E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2DE92211024511A7F886301 /* Pods-GravosRecycler.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = GravosRecycler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.etechnologycentre.GravosRecycler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7C8FA0B5207C4736009FA8E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2D5128A8BF0616419971801 /* Pods-GravosRecyclerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GravosRecyclerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.etechnologycentre.GravosRecyclerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GravosRecycler.app/GravosRecycler";
+			};
+			name = Debug;
+		};
+		7C8FA0B6207C4736009FA8E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 731D3B472538AAC8CC2C637C /* Pods-GravosRecyclerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GravosRecyclerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.etechnologycentre.GravosRecyclerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GravosRecycler.app/GravosRecycler";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7C8FA08F207C4733009FA8E6 /* Build configuration list for PBXProject "GravosRecycler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C8FA0AF207C4736009FA8E6 /* Debug */,
+				7C8FA0B0207C4736009FA8E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C8FA0B1207C4736009FA8E6 /* Build configuration list for PBXNativeTarget "GravosRecycler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C8FA0B2207C4736009FA8E6 /* Debug */,
+				7C8FA0B3207C4736009FA8E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C8FA0B4207C4736009FA8E6 /* Build configuration list for PBXNativeTarget "GravosRecyclerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C8FA0B5207C4736009FA8E6 /* Debug */,
+				7C8FA0B6207C4736009FA8E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7C8FA08C207C4733009FA8E6 /* Project object */;
+}
