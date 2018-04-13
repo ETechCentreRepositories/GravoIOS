@@ -16,6 +16,7 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var lblProfileName: UILabel!
     @IBOutlet weak var imgProfile: UIImageView!
     
+     var selectedMenuItem : Int = 0
     let arrSideMenuTitle = ["Home","Notifications","Transactions","Calender","Settings"]
     let arrSideMenuIcons = ["Icon_Home","Icon_Notifications","Icon_Transactions","Icon_Calender","Icon_Settings"]
     override func viewDidLoad()
@@ -28,7 +29,9 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewWillAppear(_ animated: Bool)
     {
         self.imgProfile.makeRounded()
-        
+        // Preserve selection between presentations
+        self.tblSideMenu.clearsContextBeforeDrawing = true
+        tblSideMenu.selectRow(at: IndexPath(row: selectedMenuItem, section: 0), animated: false, scrollPosition: .middle)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -61,6 +64,36 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         cell.imgIcon.image = UIImage(named: arrSideMenuIcons[indexPath.row])
         cell.lblTitle.text = arrSideMenuTitle[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        if (indexPath.row == selectedMenuItem) {
+            return
+        }
+        
+        selectedMenuItem = indexPath.row
+        
+        //Present new view controller
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        var destViewController : UIViewController
+        switch (indexPath.row) {
+        case 0:
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeVC")
+            break
+        case 1:
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "NotificationsVC")
+            break
+        case 2:
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "NotificationsVC")
+            break
+        default:
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "NotificationsVC")
+            break
+        }
+        sideMenuController()?.setContentViewController(destViewController)
+    
+        
     }
     
 }

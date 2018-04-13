@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GravosRecycler/ViewControllers/Home/HomeVC.swift"
-            timestampString = "545029003.059877"
+            filePath = "GravosRecycler/ViewControllers/SideMenu/MenuViewController.swift"
+            timestampString = "545212218.9714561"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

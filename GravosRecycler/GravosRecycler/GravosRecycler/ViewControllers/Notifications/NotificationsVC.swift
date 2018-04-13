@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
 {
     
@@ -37,6 +36,11 @@ class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         self.tblNotifications.layer.masksToBounds = true
         self.view.addSubview(containerView)
         containerView.addSubview(self.tblNotifications)
+        
+        
+        let sideMenu  = UIBarButtonItem(image: UIImage(named:"Icon_SideMenu"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
+        sideMenu.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = sideMenu
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -59,6 +63,10 @@ class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
     }
     */
 
+    @IBAction func toggleSideMenu(_ sender: Any)
+    {
+        toggleSideMenuView()
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return 3
@@ -67,12 +75,21 @@ class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "notificationcell", for: indexPath)
-        cell.textLabel?.text = "This is row \(indexPath.row)"
+        
         
         if indexPath.row != 0
         {
             cell.backgroundColor = UIColor.white
+            cell.textLabel?.text = "This is row \(indexPath.row)"
+        }
+        else
+        {
+            let lblTotalNotifications = UILabel(frame: CGRect(x: tblNotifications.center.x - 30, y: cell.contentView.center.y - 10, width: cell.frame.width, height: 24))
+            cell.contentView.addSubview(lblTotalNotifications)
+            lblTotalNotifications.text = "2 New"
+            lblTotalNotifications.textColor = UIColor.white
         }
         return cell
     }
+    
 }

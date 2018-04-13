@@ -143,11 +143,8 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Cart" id="u7D-0f-8Dt">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="f7z-Mq-xzK" kind="show" id="kHk-mA-orc"/>
-                                </connections>
                             </barButtonItem>
-                            <barButtonItem title="?" id="vvO-ZD-gUJ">
+                            <barButtonItem title="Help" id="vvO-ZD-gUJ">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="moy-Bt-uar" kind="show" id="4L7-dO-uSS"/>
@@ -166,13 +163,13 @@
         <!--Notifications-->
         <scene sceneID="DRq-ve-w5L">
             <objects>
-                <viewController storyboardIdentifier="NotificationsVC" title="Notifications" id="f7z-Mq-xzK" customClass="NotificationsVC" customModule="GravosRecycler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationsVC" title="Notifications" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f7z-Mq-xzK" customClass="NotificationsVC" customModule="GravosRecycler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9LN-ko-5Dz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IS-g9-aNE">
-                                <rect key="frame" x="20" y="84" width="335" height="300"/>
+                                <rect key="frame" x="20" y="64" width="335" height="300"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CL5-aZ-45Z">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="300"/>
@@ -209,7 +206,7 @@
                         <constraints>
                             <constraint firstItem="PZz-DV-vWv" firstAttribute="trailing" secondItem="0IS-g9-aNE" secondAttribute="trailing" constant="20" id="Gmd-iN-UP1"/>
                             <constraint firstItem="0IS-g9-aNE" firstAttribute="leading" secondItem="PZz-DV-vWv" secondAttribute="leading" constant="20" id="In3-Dn-D8R"/>
-                            <constraint firstItem="0IS-g9-aNE" firstAttribute="top" secondItem="PZz-DV-vWv" secondAttribute="top" constant="20" id="L3d-EO-lyW"/>
+                            <constraint firstItem="0IS-g9-aNE" firstAttribute="top" secondItem="PZz-DV-vWv" secondAttribute="top" constant="44" id="L3d-EO-lyW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PZz-DV-vWv"/>
                     </view>
