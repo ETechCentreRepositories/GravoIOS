@@ -8,7 +8,9 @@
 
 import UIKit
 import SwiftyGif
-class LoginActionVC: UIViewController {
+import ENSwiftSideMenu
+
+class LoginActionVC: UIViewController,ENSideMenuDelegate {
 
     @IBOutlet weak var txtUsername: TextViewWithLeftImage!
     @IBOutlet weak var txtPassword: TextViewWithLeftImage!
@@ -16,8 +18,8 @@ class LoginActionVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+        self.sideMenuController()?.sideMenu?.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool)
@@ -47,6 +49,10 @@ class LoginActionVC: UIViewController {
 
     @IBAction func performLogin(_ sender: Any)
     {
+        /*if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC")
+        {
+            self.present(homeVC, animated: true)
+        }*/
         //Helper.showLoader(onView: self.view)
         // Helper.hideLoader(fromView: self.view)
     }
@@ -55,6 +61,29 @@ class LoginActionVC: UIViewController {
     {
         self.dismiss(animated: true, completion: nil)
        
+    }
+    
+    
+    // MARK: - ENSideMenu Delegate
+    func sideMenuWillOpen() {
+        print("sideMenuWillOpen")
+    }
+    
+    func sideMenuWillClose() {
+        print("sideMenuWillClose")
+    }
+    
+    func sideMenuShouldOpenSideMenu() -> Bool {
+        print("sideMenuShouldOpenSideMenu")
+        return true
+    }
+    
+    func sideMenuDidClose() {
+        print("sideMenuDidClose")
+    }
+    
+    func sideMenuDidOpen() {
+        print("sideMenuDidOpen")
     }
     
 }

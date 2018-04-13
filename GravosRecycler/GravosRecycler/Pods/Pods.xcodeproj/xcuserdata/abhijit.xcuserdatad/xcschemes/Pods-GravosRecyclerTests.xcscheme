@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E6572881A35AA97D3F5C7875C613841F"
+               BlueprintIdentifier = "17D6FB5EE4DEBD4B526673722939983D"
                BuildableName = "Pods_GravosRecyclerTests.framework"
                BlueprintName = "Pods-GravosRecyclerTests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E6572881A35AA97D3F5C7875C613841F"
+            BlueprintIdentifier = "17D6FB5EE4DEBD4B526673722939983D"
             BuildableName = "Pods_GravosRecyclerTests.framework"
             BlueprintName = "Pods-GravosRecyclerTests"
             ReferencedContainer = "container:Pods.xcodeproj">

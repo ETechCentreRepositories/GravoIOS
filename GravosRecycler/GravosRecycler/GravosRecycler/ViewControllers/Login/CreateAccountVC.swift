@@ -22,6 +22,8 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
     @IBOutlet weak var txtViewContent: UIScrollView!
     
     var isTermsChecked = false
+    var activeField: UITextField?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,14 +32,55 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
     override func viewWillAppear(_ animated: Bool) {
         self.customiseUserInterface()
         self.navigationController?.navigationBar.barTintColor = UIColor.black
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(aNotification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(aNotification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    @objc func keyboardWillBeHidden(aNotification: NSNotification) {
+        let contentInsets: UIEdgeInsets = UIEdgeInsets.zero
+        self.txtViewContent.contentInset = contentInsets
+        self.txtViewContent.scrollIndicatorInsets = contentInsets
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        activeField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        activeField = nil
+    }
+    
+    @objc func keyboardWillShow(aNotification: NSNotification)
+    {
+        if let keyboardFrame: NSValue = aNotification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue
+        {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let kbSize: CGSize =  keyboardRectangle.size
+            let contentInsets: UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0)
+            txtViewContent.contentInset = contentInsets
+            txtViewContent.scrollIndicatorInsets = contentInsets
+            var aRect: CGRect = self.view.frame
+            aRect.size.height -= kbSize.height
+            if !aRect.contains(activeField!.frame.origin) {
+                self.txtViewContent.scrollRectToVisible(activeField!.frame, animated: true)
+            }
+             self.txtViewContent.scrollRectToVisible(activeField!.frame, animated: true)
+        }
+        
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -121,8 +164,12 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
         default:
             textField.resignFirstResponder()
         }
-       
-
+        return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
+    {
+        txtViewContent.setContentOffset(textField.bounds.origin, animated: true)
         return true
     }
     

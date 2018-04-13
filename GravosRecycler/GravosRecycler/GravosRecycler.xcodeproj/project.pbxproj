@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		571B1A4E01AB6A539D198EA7 /* Pods_GravosRecyclerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF79EB3E9F980F0DE3AD6850 /* Pods_GravosRecyclerTests.framework */; };
+		7C3F5BF4208050BC00B9619D /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F5BF3208050BC00B9619D /* SideMenuCell.swift */; };
+		7C3F5BF72080859900B9619D /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F5BF62080859800B9619D /* HelpVC.swift */; };
+		7C3F5BFA2080923300B9619D /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F5BF92080923300B9619D /* NotificationsVC.swift */; };
 		7C8FA098207C4734009FA8E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA097207C4734009FA8E6 /* AppDelegate.swift */; };
 		7C8FA09A207C4734009FA8E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA099207C4734009FA8E6 /* ViewController.swift */; };
 		7C8FA09D207C4734009FA8E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA09B207C4734009FA8E6 /* Main.storyboard */; };
@@ -37,6 +40,9 @@
 		7C8FA0EB207C4A5C009FA8E6 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0D6207C4A5B009FA8E6 /* DataHandler.swift */; };
 		7C8FA0EE207C71EE009FA8E6 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0ED207C71EE009FA8E6 /* HomeVC.swift */; };
 		7C8FA0F0207C7405009FA8E6 /* HomeCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0EF207C7405009FA8E6 /* HomeCollCell.swift */; };
+		7CFA63BE207F42F5005CC1A9 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA63BD207F42F4005CC1A9 /* MyNavigationController.swift */; };
+		7CFA63C0207F4798005CC1A9 /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA63BF207F4798005CC1A9 /* MyMenuTableViewController.swift */; };
+		7CFA63C2207F50FA005CC1A9 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA63C1207F50FA005CC1A9 /* SideMenuVC.swift */; };
 		CF0EF9F9C6154D26FC16F08E /* Pods_GravosRecycler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD077130F7AA4E36A5E77111 /* Pods_GravosRecycler.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +58,9 @@
 
 /* Begin PBXFileReference section */
 		731D3B472538AAC8CC2C637C /* Pods-GravosRecyclerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosRecyclerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravosRecyclerTests/Pods-GravosRecyclerTests.release.xcconfig"; sourceTree = "<group>"; };
+		7C3F5BF3208050BC00B9619D /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		7C3F5BF62080859800B9619D /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		7C3F5BF92080923300B9619D /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
 		7C8FA094207C4733009FA8E6 /* GravosRecycler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GravosRecycler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8FA097207C4734009FA8E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C8FA099207C4734009FA8E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +94,9 @@
 		7C8FA0D6207C4A5B009FA8E6 /* DataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		7C8FA0ED207C71EE009FA8E6 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7C8FA0EF207C7405009FA8E6 /* HomeCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollCell.swift; sourceTree = "<group>"; };
+		7CFA63BD207F42F4005CC1A9 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		7CFA63BF207F4798005CC1A9 /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
+		7CFA63C1207F50FA005CC1A9 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		A2DE92211024511A7F886301 /* Pods-GravosRecycler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosRecycler.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler.release.xcconfig"; sourceTree = "<group>"; };
 		AA60D27FD922661EAE0ACA36 /* Pods-GravosRecycler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosRecycler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler.debug.xcconfig"; sourceTree = "<group>"; };
 		C2D5128A8BF0616419971801 /* Pods-GravosRecyclerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosRecyclerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GravosRecyclerTests/Pods-GravosRecyclerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +135,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7C3F5BF52080856600B9619D /* Help Center */ = {
+			isa = PBXGroup;
+			children = (
+				7C3F5BF62080859800B9619D /* HelpVC.swift */,
+			);
+			path = "Help Center";
+			sourceTree = "<group>";
+		};
+		7C3F5BF8208091FB00B9619D /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				7C3F5BF92080923300B9619D /* NotificationsVC.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		7C8FA08B207C4732009FA8E6 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +161,7 @@
 				81E1205EB6FEE5825D03EAF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		7C8FA095207C4733009FA8E6 /* Products */ = {
 			isa = PBXGroup;
@@ -179,6 +208,7 @@
 				7C8FA0B9207C4A5A009FA8E6 /* TextViewWithLeftImage.swift */,
 				7C8FA0BA207C4A5A009FA8E6 /* TransactionCustomCell.swift */,
 				7C8FA0EF207C7405009FA8E6 /* HomeCollCell.swift */,
+				7C3F5BF3208050BC00B9619D /* SideMenuCell.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -212,6 +242,9 @@
 		7C8FA0C3207C4A5B009FA8E6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7C3F5BF8208091FB00B9619D /* Notifications */,
+				7C3F5BF52080856600B9619D /* Help Center */,
+				7CFA63B8207F3261005CC1A9 /* SideMenu */,
 				7C8FA0EC207C71BA009FA8E6 /* Home */,
 				7C8FA0C4207C4A5B009FA8E6 /* DailyPickups */,
 				7C8FA0C6207C4A5B009FA8E6 /* Login */,
@@ -284,6 +317,16 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		7CFA63B8207F3261005CC1A9 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7CFA63BF207F4798005CC1A9 /* MyMenuTableViewController.swift */,
+				7CFA63BD207F42F4005CC1A9 /* MyNavigationController.swift */,
+				7CFA63C1207F50FA005CC1A9 /* SideMenuVC.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
 		81E1205EB6FEE5825D03EAF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,7 +348,6 @@
 				7C8FA091207C4733009FA8E6 /* Frameworks */,
 				7C8FA092207C4733009FA8E6 /* Resources */,
 				DF84CAA518E95A6398FDD56C /* [CP] Embed Pods Frameworks */,
-				D0E033EC5B4124EB991FA466 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,8 +366,6 @@
 				7C8FA0A4207C4736009FA8E6 /* Sources */,
 				7C8FA0A5207C4736009FA8E6 /* Frameworks */,
 				7C8FA0A6207C4736009FA8E6 /* Resources */,
-				D87873439F1730DE962C4F57 /* [CP] Embed Pods Frameworks */,
-				49A99C5A62A791C0DBC8446F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -349,7 +389,7 @@
 				TargetAttributes = {
 					7C8FA093207C4733009FA8E6 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					7C8FA0A7207C4736009FA8E6 = {
 						CreatedOnToolsVersion = 9.2;
@@ -422,21 +462,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		49A99C5A62A791C0DBC8446F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecyclerTests/Pods-GravosRecyclerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B2164FC404DD9971C6F611DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -455,36 +480,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D0E033EC5B4124EB991FA466 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D87873439F1730DE962C4F57 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecyclerTests/Pods-GravosRecyclerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DF84CAA518E95A6398FDD56C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,12 +488,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ENSwiftSideMenu/ENSwiftSideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ENSwiftSideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 			);
@@ -518,12 +515,16 @@
 				7C8FA09A207C4734009FA8E6 /* ViewController.swift in Sources */,
 				7C8FA0E2207C4A5C009FA8E6 /* LoginVC.swift in Sources */,
 				7C8FA0EE207C71EE009FA8E6 /* HomeVC.swift in Sources */,
+				7CFA63C0207F4798005CC1A9 /* MyMenuTableViewController.swift in Sources */,
 				7C8FA0E0207C4A5C009FA8E6 /* CreateAccountVC.swift in Sources */,
 				7C8FA0DC207C4A5C009FA8E6 /* ParserJSON.swift in Sources */,
 				7C8FA0D9207C4A5C009FA8E6 /* TransactionCustomCell.swift in Sources */,
 				7C8FA0E1207C4A5C009FA8E6 /* LoginActionVC.swift in Sources */,
+				7C3F5BF72080859900B9619D /* HelpVC.swift in Sources */,
 				7C8FA0EB207C4A5C009FA8E6 /* DataHandler.swift in Sources */,
+				7CFA63C2207F50FA005CC1A9 /* SideMenuVC.swift in Sources */,
 				7C8FA098207C4734009FA8E6 /* AppDelegate.swift in Sources */,
+				7CFA63BE207F42F5005CC1A9 /* MyNavigationController.swift in Sources */,
 				7C8FA0DB207C4A5C009FA8E6 /* entTransactionItem.swift in Sources */,
 				7C8FA0DA207C4A5C009FA8E6 /* entPickUpItem.swift in Sources */,
 				7C8FA0E3207C4A5C009FA8E6 /* AddItemVC.swift in Sources */,
@@ -531,8 +532,10 @@
 				7C8FA0D7207C4A5C009FA8E6 /* PickupCustomCell.swift in Sources */,
 				7C8FA0F0207C7405009FA8E6 /* HomeCollCell.swift in Sources */,
 				7C8FA0E4207C4A5C009FA8E6 /* TransactionVC.swift in Sources */,
+				7C3F5BFA2080923300B9619D /* NotificationsVC.swift in Sources */,
 				7C8FA0DF207C4A5C009FA8E6 /* PickupsVC.swift in Sources */,
 				7C8FA0DD207C4A5C009FA8E6 /* Constants.swift in Sources */,
+				7C3F5BF4208050BC00B9619D /* SideMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,8 +689,9 @@
 			baseConfigurationReference = AA60D27FD922661EAE0ACA36 /* Pods-GravosRecycler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2X8GU4BVVX;
 				INFOPLIST_FILE = GravosRecycler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etechnologycentre.GravosRecycler;
@@ -703,8 +707,9 @@
 			baseConfigurationReference = A2DE92211024511A7F886301 /* Pods-GravosRecycler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2X8GU4BVVX;
 				INFOPLIST_FILE = GravosRecycler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etechnologycentre.GravosRecycler;

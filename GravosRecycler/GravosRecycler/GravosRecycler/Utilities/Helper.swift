@@ -9,6 +9,15 @@
 import UIKit
 import SwiftyGif
 
+extension UIImageView {
+    
+    func makeRounded() {
+        let radius = self.frame.width/2.0
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+    }
+}
+
 class Helper: NSObject
 {
 
