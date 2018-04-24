@@ -50,8 +50,8 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
         scrollLoginBanner.contentSize = CGSize(width: contentWidth, height: viewScrollContent.frame.height)
        
         
-        //let imgLoginBg = UIImage(gifName: "recycle_cinemagraph_2.gif")
-        //self.imgBackground.setGifImage(imgLoginBg)
+        let imgLoginBg = UIImage(gifName: "recycle_cinemagraph_2.gif")
+        self.imgBackground.setGifImage(imgLoginBg)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

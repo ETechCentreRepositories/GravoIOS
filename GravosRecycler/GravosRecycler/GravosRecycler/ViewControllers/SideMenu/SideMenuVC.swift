@@ -49,6 +49,13 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     */
 
+    @IBAction func showProfile(_ sender: Any)
+    {
+         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+         var destViewController : UIViewController
+         destViewController = mainStoryboard.instantiateViewController(withIdentifier: "ProfileVC")
+         sideMenuController()?.setContentViewController(destViewController)
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60.0
     }
@@ -85,10 +92,13 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
             destViewController = mainStoryboard.instantiateViewController(withIdentifier: "NotificationsVC")
             break
         case 2:
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "NotificationsVC")
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "TransactionVC")
+            break
+        case 3:
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "CalenderVC")
             break
         default:
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "NotificationsVC")
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "SettingsVC")
             break
         }
         sideMenuController()?.setContentViewController(destViewController)

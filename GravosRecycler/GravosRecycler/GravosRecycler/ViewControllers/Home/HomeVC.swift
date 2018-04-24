@@ -49,6 +49,9 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
         
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        
         
     }
     /*
@@ -90,14 +93,15 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             cell.imgCellType.image = UIImage(named: "Icon_Screws")
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[0]
-            cell.backgroundColor = UIColor.orange
+            cell.backgroundColor = UIColor(red: 244/255, green: 96/255, blue: 46/255, alpha: 1)
         }
         if (indexPath.row == 2)
         {
             cell.imgCellType.image = UIImage(named: "Icon_EWaste")
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[0]
-            cell.backgroundColor = UIColor.purple
+            cell.backgroundColor = UIColor(red: 107/255, green: 69/255, blue: 163/255, alpha: 1)
+            
         }
         if (indexPath.row == 3)
         {
@@ -108,14 +112,22 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             cell.backgroundColor = UIColor.cyan
         }
         
-        cell.contentView.layer.shadowColor = UIColor.black.cgColor
-        cell.contentView.layer.shadowOpacity = 1
-        cell.contentView.layer.shadowOffset = CGSize.zero
-        cell.contentView.layer.shadowRadius = 10
+       // cell.contentView.layer.shadowColor = UIColor.black.cgColor
+       // cell.contentView.layer.shadowOpacity = 1
+        //cell.contentView.layer.shadowOffset = CGSize.zero
+       // cell.contentView.layer.shadowRadius = 10
         
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        let pagingVC = self.storyboard?.instantiateViewController(withIdentifier: "PagingVC") as! PagingVC
+        
+        pagingVC.selecedIndex = indexPath.row
+        
+        self.present(pagingVC, animated: true, completion: nil)
+    }
     @IBAction func showMenu(_ sender: Any)
     {
         toggleSideMenuView()

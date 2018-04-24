@@ -69,7 +69,7 @@ class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -80,14 +80,15 @@ class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         if indexPath.row != 0
         {
             cell.backgroundColor = UIColor.white
-            cell.textLabel?.text = "This is row \(indexPath.row)"
+            cell.textLabel?.text = "Notificaion \(indexPath.row)"
         }
         else
         {
-            let lblTotalNotifications = UILabel(frame: CGRect(x: tblNotifications.center.x - 30, y: cell.contentView.center.y - 10, width: cell.frame.width, height: 24))
+            let lblTotalNotifications = UILabel(frame: CGRect(x: tblNotifications.center.x - 40, y: cell.contentView.center.y - 10, width: cell.frame.width, height: 24))
             cell.contentView.addSubview(lblTotalNotifications)
-            lblTotalNotifications.text = "2 New"
+            lblTotalNotifications.text = "No Notifications"
             lblTotalNotifications.textColor = UIColor.white
+            cell.backgroundColor = Constants.themeGreen
         }
         return cell
     }

@@ -21,15 +21,24 @@ class HelpVC: UIViewController,UITextViewDelegate
     {
         super.viewDidLoad()
 
+        let sideMenu  = UIBarButtonItem(image: UIImage(named:"BackArrow"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
+        sideMenu.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = sideMenu
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
+       
         // Dispose of any resources that can be recreated.
     }
     
 
+    @objc func toggleSideMenu(_ sender: Any)
+    {
+        self.navigationController?.popViewController(animated: true)
+    }
     override func viewWillAppear(_ animated: Bool)
     {
         self.txtViwMessage.text = "Message"

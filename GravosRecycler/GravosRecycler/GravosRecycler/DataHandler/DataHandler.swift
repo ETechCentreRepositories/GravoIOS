@@ -7,15 +7,14 @@
 //
 
 import UIKit
-import Alamofire
 
 class DataHandler: NSObject
 {
-    let parameters: Parameters = [:]
+    //let parameters: Parameters = [:]
     
     func fetchRemoteData(inputAddress: String, completion: @escaping (_ result: Any) -> Void)
     {
-        let dynamicAddress =  Constants.kRemoteAddress + inputAddress + ".php"
+        /*let dynamicAddress =  Constants.kRemoteAddress + inputAddress + ".php"
         
         Alamofire.request(
             URL(string: dynamicAddress)!,
@@ -46,12 +45,12 @@ class DataHandler: NSObject
                 let result = self.doCodable(inputData: response.data!, inputAdress: inputAddress)
                 completion(result)
                 
-        }
+        }*/
     }
     
     func postRemoteData(inputAddress: String, completion: @escaping (_ result: Any) -> Void)
     {
-        let dynamicAddress =  Constants.kRemoteAddress + inputAddress + ".php"
+       /* let dynamicAddress =  Constants.kRemoteAddress + inputAddress + ".php"
         
         Alamofire.request(
             URL(string: dynamicAddress)!,
@@ -82,7 +81,7 @@ class DataHandler: NSObject
                 let result = self.doCodable(inputData: response.data!, inputAdress: inputAddress)
                 completion(result)
                 
-        }
+        }*/
     }
     
     

@@ -76,13 +76,13 @@
                                 <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already a driver..?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6N5-19-oeL">
-                                        <rect key="frame" x="126" y="90.5" width="122" height="19"/>
+                                        <rect key="frame" x="126" y="91" width="122" height="19"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9T-QY-0Of">
-                                        <rect key="frame" x="65" y="124.5" width="244" height="40"/>
+                                        <rect key="frame" x="65" y="125" width="244" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="8Lw-Ug-VML"/>
                                         </constraints>
@@ -95,7 +95,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLZ-qR-f8z">
-                                        <rect key="frame" x="65" y="35.5" width="244" height="40"/>
+                                        <rect key="frame" x="65" y="36" width="244" height="40"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
                                         <state key="normal" title="Log In" backgroundImage="WhiteButton_Large">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -201,7 +201,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1x-Uz-aCF">
-                                        <rect key="frame" x="115.5" y="265" width="143" height="29"/>
+                                        <rect key="frame" x="119.5" y="265" width="135" height="28"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="13"/>
                                         <state key="normal" title="Forgot your password?">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -417,43 +417,43 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paper | Recycled Paper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYw-fC-ugd">
-                                                            <rect key="frame" x="109" y="10" width="150" height="17.5"/>
+                                                            <rect key="frame" x="109" y="10" width="147" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4.6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeD-eN-KNA">
-                                                            <rect key="frame" x="109" y="29.5" width="36" height="21.5"/>
+                                                            <rect key="frame" x="109" y="28.5" width="33.5" height="20"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight(kg)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVh-Il-VF0">
-                                                            <rect key="frame" x="109" y="63" width="72.5" height="17.5"/>
+                                                            <rect key="frame" x="109" y="65" width="66" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 0.2(kg)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4b-US-NQH">
-                                                            <rect key="frame" x="302.5" y="92.5" width="57.5" height="17.5"/>
+                                                            <rect key="frame" x="306" y="93.5" width="54" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate(amount/kg)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms5-87-yx8">
-                                                            <rect key="frame" x="109" y="92.5" width="115" height="17.5"/>
+                                                            <rect key="frame" x="109" y="93.5" width="104" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq1-af-yZK">
-                                                            <rect key="frame" x="337" y="8" width="23" height="23"/>
+                                                            <rect key="frame" x="337" y="7.5" width="23" height="23"/>
                                                             <state key="normal" backgroundImage="Icon_Cross"/>
                                                             <state key="selected" backgroundImage="Icon_Cross_Red"/>
                                                             <state key="highlighted" backgroundImage="Icon_Cross_Red"/>
                                                         </button>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEl-2j-yGc" customClass="GMStepper" customModule="GMStepper">
-                                                            <rect key="frame" x="265" y="59" width="100" height="25.5"/>
+                                                            <rect key="frame" x="265" y="60.5" width="100" height="25.5"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="7T0-N0-k5F"/>
@@ -756,7 +756,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbA-X5-c1H">
-                                                <rect key="frame" x="121" y="15" width="74" height="21"/>
+                                                <rect key="frame" x="123" y="15" width="69.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Otx-r8-Ulf"/>
                                                     <constraint firstAttribute="height" constant="21" id="XdY-41-O6b"/>
@@ -830,50 +830,50 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b60-Yj-Nr3">
-                                        <rect key="frame" x="189.5" y="92.5" width="110.5" height="34"/>
+                                        <rect key="frame" x="189.5" y="93.5" width="110.5" height="32"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="17"/>
                                         <connections>
                                             <action selector="showCatagory:" destination="oQn-r7-lVg" eventType="touchUpInside" id="nVy-Vc-KAh"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATAGORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49W-Ve-omX">
-                                        <rect key="frame" x="15" y="100" width="169.5" height="19"/>
+                                        <rect key="frame" x="15" y="100" width="169.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WEIGHT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcQ-tI-NSl">
-                                        <rect key="frame" x="15" y="178" width="58" height="19"/>
+                                        <rect key="frame" x="15" y="175" width="58" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fju-Vj-us1">
-                                        <rect key="frame" x="15" y="139" width="37" height="19"/>
+                                        <rect key="frame" x="15" y="137.5" width="37" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8x-Un-VtB">
-                                        <rect key="frame" x="294" y="139" width="6" height="19"/>
+                                        <rect key="frame" x="294" y="137.5" width="6" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdc-kt-1fw">
-                                        <rect key="frame" x="15" y="217" width="41.5" height="19"/>
+                                        <rect key="frame" x="15" y="212.5" width="44" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywI-JM-qF6">
-                                        <rect key="frame" x="294" y="217" width="6" height="19"/>
+                                        <rect key="frame" x="294" y="212.5" width="6" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLZ-3D-XBa" customClass="GMStepper" customModule="GMStepper">
-                                        <rect key="frame" x="200" y="175.5" width="100" height="25.5"/>
+                                        <rect key="frame" x="200" y="171.5" width="100" height="25.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="EbI-kR-Q9K"/>
@@ -1225,7 +1225,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="319" height="517.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms and Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBy-ss-06s">
-                                                <rect key="frame" x="74" y="10" width="170" height="21"/>
+                                                <rect key="frame" x="76" y="10" width="166" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="TpK-cY-1gP"/>
                                                 </constraints>
