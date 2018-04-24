@@ -11,6 +11,8 @@ import UIKit
 class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource
 {
     @IBOutlet weak var tblTransactionlist: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +29,6 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         self.navigationItem.setHidesBackButton(true, animated: true)
         
-        tblTransactionlist.tableFooterView = UIView()
     }
     
     @objc func toggleSideMenu(_ sender: Any)
@@ -50,38 +51,64 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     */
 
+    func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return 2
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        if tableView == tblTransactionlist
+
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        if section == 0
         {
-            return 2
+            return "Transaction: #0334564458"
         }
         else
         {
-            return 2
+            return "Transaction: #0337896865"
         }
     }
     
+    
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-       
-        if tableView == tblTransactionlist
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionListCell", for: indexPath) as! TransactionListCell
+        
+        
+        if indexPath.section == 0
         {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionTblCell", for: indexPath) as! TransactionTblCell
-            
-            cell.tblItems.delegate = self
-            cell.tblItems.dataSource = self
-            return cell
-            
+            cell.contentView.backgroundColor = UIColor.white
+            cell.btnStatus.setTitle("WAITING FOR COLLECTION", for: .normal)
+            cell.lblScheduleDate.text = "26 Apr 2018"
+            cell.btnStatus.backgroundColor = UIColor.lightGray
+            cell.btnStatus.setTitleColor(UIColor.white, for: .normal)
         }
         else
         {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionItemCell", for: indexPath) as! TransactionItemCell
-        
-            return cell
-            
+            cell.contentView.backgroundColor = Constants.themeGreen
+            cell.btnStatus.setTitle("Completed", for: .normal)
+            cell.btnStatus.backgroundColor = UIColor.white
+            cell.btnStatus.setTitleColor(Constants.themeGreen, for: .normal)
+            cell.lblScheduleDate.text = "20 Apr 2018"
         }
         
-        
+        cell.bottomView.backgroundColor = cell.contentView.backgroundColor
+       
+        return cell
+    }
+
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        if let transactionDetails = self.storyboard?.instantiateViewController(withIdentifier: "TransactionDetails")
+        {
+            self.navigationController?.pushViewController(transactionDetails, animated: true)
+        }
     }
 }

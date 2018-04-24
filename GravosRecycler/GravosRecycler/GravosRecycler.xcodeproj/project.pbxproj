@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		571B1A4E01AB6A539D198EA7 /* Pods_GravosRecyclerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF79EB3E9F980F0DE3AD6850 /* Pods_GravosRecyclerTests.framework */; };
 		7C342060208EEAD80022A929 /* TransactionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34205F208EEAD80022A929 /* TransactionItemCell.swift */; };
+		7C342065208EF1CB0022A929 /* ENSwiftSideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C342066208EF1CB0022A929 /* ENSwiftSideMenu.framework */; };
+		7C342068208F31650022A929 /* TransactionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C342067208F31650022A929 /* TransactionListCell.swift */; };
 		7C3F5BF4208050BC00B9619D /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F5BF3208050BC00B9619D /* SideMenuCell.swift */; };
 		7C3F5BF72080859900B9619D /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F5BF62080859800B9619D /* HelpVC.swift */; };
 		7C3F5BFA2080923300B9619D /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F5BF92080923300B9619D /* NotificationsVC.swift */; };
@@ -83,9 +85,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7C342064208EF1210022A929 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		731D3B472538AAC8CC2C637C /* Pods-GravosRecyclerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosRecyclerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravosRecyclerTests/Pods-GravosRecyclerTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C34205F208EEAD80022A929 /* TransactionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemCell.swift; sourceTree = "<group>"; };
+		7C342066208EF1CB0022A929 /* ENSwiftSideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ENSwiftSideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C342067208F31650022A929 /* TransactionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListCell.swift; sourceTree = "<group>"; };
 		7C3F5BF3208050BC00B9619D /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		7C3F5BF62080859800B9619D /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		7C3F5BF92080923300B9619D /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
@@ -163,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C342065208EF1CB0022A929 /* ENSwiftSideMenu.framework in Frameworks */,
 				CF0EF9F9C6154D26FC16F08E /* Pods_GravosRecycler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +322,7 @@
 				7C4F291E2089B553006B9A30 /* CalenderCell.swift */,
 				7C4F29202089D317006B9A30 /* TransactionScheduleCell.swift */,
 				7C34205F208EEAD80022A929 /* TransactionItemCell.swift */,
+				7C342067208F31650022A929 /* TransactionListCell.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -443,6 +462,7 @@
 		81E1205EB6FEE5825D03EAF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C342066208EF1CB0022A929 /* ENSwiftSideMenu.framework */,
 				CD077130F7AA4E36A5E77111 /* Pods_GravosRecycler.framework */,
 				EF79EB3E9F980F0DE3AD6850 /* Pods_GravosRecyclerTests.framework */,
 			);
@@ -461,6 +481,7 @@
 				7C8FA091207C4733009FA8E6 /* Frameworks */,
 				7C8FA092207C4733009FA8E6 /* Resources */,
 				DF84CAA518E95A6398FDD56C /* [CP] Embed Pods Frameworks */,
+				7C342064208EF1210022A929 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -657,6 +678,7 @@
 				7CFA63BE207F42F5005CC1A9 /* MyNavigationController.swift in Sources */,
 				7C4F291F2089B553006B9A30 /* CalenderCell.swift in Sources */,
 				7C4F290F20898814006B9A30 /* BulkChildVC.swift in Sources */,
+				7C342068208F31650022A929 /* TransactionListCell.swift in Sources */,
 				7C3F5C362085A28F00B9619D /* ChildPageVC.swift in Sources */,
 				7C8FA0DB207C4A5C009FA8E6 /* entTransactionItem.swift in Sources */,
 				7C8FA0DA207C4A5C009FA8E6 /* entPickUpItem.swift in Sources */,

@@ -37,6 +37,10 @@ class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         self.view.addSubview(containerView)
         containerView.addSubview(self.tblNotifications)
         
+        tblNotifications.estimatedRowHeight = UITableViewAutomaticDimension
+        tblNotifications.rowHeight = UITableViewAutomaticDimension
+        tblNotifications.tableFooterView = UIView()
+        
         
         let sideMenu  = UIBarButtonItem(image: UIImage(named:"Icon_SideMenu"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
         sideMenu.tintColor = UIColor.black
@@ -69,7 +73,7 @@ class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -80,11 +84,11 @@ class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         if indexPath.row != 0
         {
             cell.backgroundColor = UIColor.white
-            cell.textLabel?.text = "Notificaion \(indexPath.row)"
+            cell.textLabel?.text = " "
         }
         else
         {
-            let lblTotalNotifications = UILabel(frame: CGRect(x: tblNotifications.center.x - 40, y: cell.contentView.center.y - 10, width: cell.frame.width, height: 24))
+            let lblTotalNotifications = UILabel(frame: CGRect(x: tblNotifications.center.x - 50, y: cell.contentView.center.y - 10, width: cell.frame.width, height: 24))
             cell.contentView.addSubview(lblTotalNotifications)
             lblTotalNotifications.text = "No Notifications"
             lblTotalNotifications.textColor = UIColor.white

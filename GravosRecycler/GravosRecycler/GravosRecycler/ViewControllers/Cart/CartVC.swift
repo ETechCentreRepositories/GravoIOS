@@ -38,9 +38,15 @@ class CartVC: UIViewController, UITableViewDataSource,UITableViewDelegate
         self.navigationController?.popViewController(animated: true)
     }
 
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+            return "Others"
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell

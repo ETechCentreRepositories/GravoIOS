@@ -32,6 +32,7 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         // Preserve selection between presentations
         self.tblSideMenu.clearsContextBeforeDrawing = true
         tblSideMenu.selectRow(at: IndexPath(row: selectedMenuItem, section: 0), animated: false, scrollPosition: .middle)
+        tblSideMenu.tableFooterView = UIView()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -23,4 +23,16 @@ class TransactionTblCell: UITableViewCell
         // Configure the view for the selected state
     }
 
+
+}
+
+extension TransactionTblCell
+{
+    func setTableviewDataSourceDelegate<D: UITableViewDelegate & UITableViewDataSource>(_ dataSouceDelegate: D, forRow row :Int)
+    {
+        tblItems.delegate = dataSouceDelegate
+        tblItems.dataSource = dataSouceDelegate
+        
+        tblItems.reloadData()
+    }
 }

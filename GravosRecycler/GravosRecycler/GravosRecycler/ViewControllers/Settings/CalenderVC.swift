@@ -34,7 +34,7 @@ class CalenderVC: UIViewController,JBDatePickerViewDelegate,UITableViewDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     override func viewWillAppear(_ animated: Bool)
     {
         let sideMenu  = UIBarButtonItem(image: UIImage(named:"Icon_SideMenu"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))

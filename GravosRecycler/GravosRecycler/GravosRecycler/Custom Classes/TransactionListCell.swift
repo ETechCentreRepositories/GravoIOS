@@ -1,5 +1,5 @@
 //
-//  TransactionItemCell.swift
+//  TransactionListCell.swift
 //  GravosRecycler
 //
 //  Created by Abhijit on 24/4/18.
@@ -8,10 +8,12 @@
 
 import UIKit
 
-class TransactionItemCell: UITableViewCell
+class TransactionListCell: UITableViewCell
 {
 
     @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var lblScheduleDate: UILabel!
+    @IBOutlet weak var btnStatus: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
