@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,11 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="n0P-wE-L9W">
-                                <rect key="frame" x="49" y="278" width="277" height="112"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="gravo ios black.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="n0P-wE-L9W">
+                                <rect key="frame" x="87.5" y="234" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Z9J-IN-fvz"/>
+                                    <constraint firstAttribute="height" constant="200" id="glS-Xt-q2K"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.16282719373703003" green="0.16298320889472961" blue="0.16285133361816406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="n0P-wE-L9W" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1G5-oM-6ms"/>
                             <constraint firstItem="n0P-wE-L9W" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7p2-id-Qlu"/>
@@ -36,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LoginLogo" width="277" height="112"/>
+        <image name="gravo ios black.jpg" width="1024" height="1024"/>
     </resources>
 </document>

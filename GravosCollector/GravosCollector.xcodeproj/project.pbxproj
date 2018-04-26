@@ -14,6 +14,7 @@
 		7C08691F205A0B58009F2DE6 /* GravosCollectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C08691E205A0B58009F2DE6 /* GravosCollectorTests.swift */; };
 		7C1D34392063569800CF8644 /* entPickUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D34382063569800CF8644 /* entPickUpItem.swift */; };
 		7C1E6B75205A2A030078E66C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1E6B74205A2A030078E66C /* LoginVC.swift */; };
+		7C3C291A2091B81C007C31B4 /* gravo ios black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C3C29192091B81B007C31B4 /* gravo ios black.jpg */; };
 		7C4308CD206A0C8E00385696 /* recycle_cinemagraph_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7C4308CC206A0C8E00385696 /* recycle_cinemagraph_2.gif */; };
 		7C43091F206C7A4B00385696 /* entTransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C43091E206C7A4B00385696 /* entTransactionItem.swift */; };
 		7C430921206C8C9100385696 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C430920206C8C9100385696 /* AddItemVC.swift */; };
@@ -66,6 +67,7 @@
 		7C1E6B7A205A2A510078E66C /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		7C1E6B7B205A2A510078E66C /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		7C1E6B7C205A2A510078E66C /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		7C3C29192091B81B007C31B4 /* gravo ios black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gravo ios black.jpg"; sourceTree = "<group>"; };
 		7C4308CC206A0C8E00385696 /* recycle_cinemagraph_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = recycle_cinemagraph_2.gif; sourceTree = "<group>"; };
 		7C43091E206C7A4B00385696 /* entTransactionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = entTransactionItem.swift; sourceTree = "<group>"; };
 		7C430920206C8C9100385696 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		7C1E6B76205A2A270078E66C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7C3C29192091B81B007C31B4 /* gravo ios black.jpg */,
 				7C4308CC206A0C8E00385696 /* recycle_cinemagraph_2.gif */,
 				7C7A78A62068E23300912BDD /* Loader.gif */,
 				7C1E6B78205A2A410078E66C /* Images */,
@@ -376,6 +379,7 @@
 				7C4308CD206A0C8E00385696 /* recycle_cinemagraph_2.gif in Resources */,
 				7C7BF99C205A7B18005FFAE6 /* Quicksand-Bold.ttf in Resources */,
 				7C7BF99D205A7B18005FFAE6 /* Quicksand-Light.ttf in Resources */,
+				7C3C291A2091B81C007C31B4 /* gravo ios black.jpg in Resources */,
 				7C7BF99E205A7B18005FFAE6 /* Quicksand-Medium.ttf in Resources */,
 				7C7BF99F205A7B18005FFAE6 /* Quicksand-Regular.ttf in Resources */,
 				7C086914205A0B58009F2DE6 /* LaunchScreen.storyboard in Resources */,

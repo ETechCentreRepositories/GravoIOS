@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -278,7 +277,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="INs-aM-uGN">
-                                <rect key="frame" x="0.0" y="99" width="375" height="518"/>
+                                <rect key="frame" x="0.0" y="99" width="375" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pickupCustomCell" rowHeight="100" id="auL-eT-X12" customClass="PickupCustomCell" customModule="GravosCollector" customModuleProvider="target">
@@ -354,11 +353,16 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXG-Kx-AyQ">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Transaction: #123" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylo-iH-Byp">
-                                        <rect key="frame" x="8" y="8" width="359" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Weight: 100KG" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylo-iH-Byp">
+                                        <rect key="frame" x="8" y="12" width="359" height="19"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Estimated Price: $126" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-HL-Kr0">
+                                        <rect key="frame" x="8" y="33" width="359" height="19"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -366,7 +370,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.25882352941176467" green="0.73333333333333328" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hZ5-8q-vqI"/>
+                                    <constraint firstItem="wbx-HL-Kr0" firstAttribute="top" secondItem="ylo-iH-Byp" secondAttribute="bottom" constant="2" id="2jp-L4-vKC"/>
+                                    <constraint firstItem="ylo-iH-Byp" firstAttribute="leading" secondItem="qXG-Kx-AyQ" secondAttribute="leading" constant="8" id="I8t-Sw-OgD"/>
+                                    <constraint firstAttribute="bottom" secondItem="wbx-HL-Kr0" secondAttribute="bottom" constant="8" id="OsX-jF-CAF"/>
+                                    <constraint firstItem="wbx-HL-Kr0" firstAttribute="leading" secondItem="qXG-Kx-AyQ" secondAttribute="leading" constant="8" id="eAc-vj-hqA"/>
+                                    <constraint firstItem="ylo-iH-Byp" firstAttribute="top" secondItem="qXG-Kx-AyQ" secondAttribute="top" constant="12" id="ga1-3Z-DUJ"/>
+                                    <constraint firstAttribute="height" constant="60" id="hZ5-8q-vqI"/>
+                                    <constraint firstAttribute="trailing" secondItem="wbx-HL-Kr0" secondAttribute="trailing" constant="8" id="rf6-2D-jJ7"/>
+                                    <constraint firstAttribute="trailing" secondItem="ylo-iH-Byp" secondAttribute="trailing" constant="8" id="upq-qg-X6l"/>
                                 </constraints>
                             </view>
                         </subviews>
