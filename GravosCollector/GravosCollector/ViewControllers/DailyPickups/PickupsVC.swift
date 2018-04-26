@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyGif
 class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
 {
     
@@ -34,6 +34,7 @@ class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         tblPickUp.tableFooterView = UIView()
         lblTitleTop.text = "Pickups for today: " + formatDate()
         self.navigationController?.navigationBar.barTintColor = Constants.themeGreen
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -76,16 +77,41 @@ class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1
+        return 3
     }
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCell(withIdentifier: "pickupCustomCell", for: indexPath) as! PickupCustomCell
+        cell.btnNavigate.addTarget(self, action: #selector(self.performNavigation)    , for: .touchUpInside)
         
-        cell.btnNavigate.addTarget(self, action: #selector(self.performNavigation)	, for: .touchUpInside)
+        if indexPath.row == 0
+        {
+            cell.lblPickup.text = "Pickup 1"
+            cell.contentView.backgroundColor = UIColor.white
+            cell.btnNavigate.isHidden = false
+            cell.btnSetStatus.isHidden = false
+        }
+        else if indexPath.row == 1
+        {
+             cell.lblPickup.text = "Pickup 2(Collected)"
+             cell.btnNavigate.isHidden = true
+             cell.btnSetStatus.isHidden = true
+             cell.contentView.backgroundColor = UIColor.lightGray
+             cell.lblPickup.textColor = UIColor.white
+             cell.lblLocation.textColor = UIColor.white
+        }
+        else
+        {
+             cell.lblPickup.text = "Pickup 3(Bulk)"
+             cell.contentView.backgroundColor = UIColor.white
+             cell.btnNavigate.isHidden = false
+             cell.btnSetStatus.isHidden = false
+        }
         
+        
+       
         
         return cell
     }

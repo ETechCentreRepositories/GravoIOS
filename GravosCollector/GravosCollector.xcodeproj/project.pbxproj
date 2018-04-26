@@ -340,7 +340,7 @@
 				TargetAttributes = {
 					7C086905205A0B58009F2DE6 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					7C086919205A0B58009F2DE6 = {
 						CreatedOnToolsVersion = 9.2;
@@ -674,9 +674,11 @@
 			baseConfigurationReference = D7696F68D677841E9B3716E3 /* Pods-GravosCollector.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2X8GU4BVVX;
 				INFOPLIST_FILE = GravosCollector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etechnologycentre.GravosCollector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -691,9 +693,11 @@
 			baseConfigurationReference = 3BAF7AC9D9A4BBA862977F20 /* Pods-GravosCollector.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2X8GU4BVVX;
 				INFOPLIST_FILE = GravosCollector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etechnologycentre.GravosCollector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
