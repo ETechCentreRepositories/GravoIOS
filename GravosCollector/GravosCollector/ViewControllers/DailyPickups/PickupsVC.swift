@@ -34,7 +34,13 @@ class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         tblPickUp.tableFooterView = UIView()
         lblTitleTop.text = "Pickups for today: " + formatDate()
         self.navigationController?.navigationBar.barTintColor = Constants.themeGreen
+        self.tblPickUp.reloadData()
         
+        let sideMenu  = UIBarButtonItem(image: UIImage(named:"BackArrow"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
+        sideMenu.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem = sideMenu
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,6 +55,11 @@ class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         formatter.dateStyle = .medium
         let result = formatter.string(from: date)
         return result
+    }
+    
+    @objc func toggleSideMenu(_ sender: Any)
+    {
+        self.navigationController?.popViewController(animated: true)
     }
     /*
     // MARK: - Navigation
@@ -86,6 +97,9 @@ class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "pickupCustomCell", for: indexPath) as! PickupCustomCell
         cell.btnNavigate.addTarget(self, action: #selector(self.performNavigation)    , for: .touchUpInside)
         
+        cell.btnNavigate.layer.cornerRadius  = 8
+        cell.btnSetStatus.layer.cornerRadius  = 8
+        
         if indexPath.row == 0
         {
             cell.lblPickup.text = "Pickup 1"
@@ -116,18 +130,21 @@ class PickupsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) {
-            UIView.animate(withDuration: 0.3, animations: {
-                cell.contentView.backgroundColor = UIColor.lightText
-            })
-        }
-        
-        if let transactionVC = self.storyboard?.instantiateViewController(withIdentifier: "TransactionVC")
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        if indexPath.row == 0 || indexPath.row == 1
         {
-            self.navigationController?.pushViewController(transactionVC, animated: true)
+            if let transactionVC = self.storyboard?.instantiateViewController(withIdentifier: "TransactionVC")
+            {
+                self.navigationController?.pushViewController(transactionVC, animated: true)
+            }
         }
-    
-        
+        else
+        {
+            if let bulktransactionVC = self.storyboard?.instantiateViewController(withIdentifier: "BulkTransactionVC")
+            {
+                self.navigationController?.pushViewController(bulktransactionVC, animated: true)
+            }
+        }
     }
 }

@@ -15,6 +15,7 @@
 		7C1D34392063569800CF8644 /* entPickUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D34382063569800CF8644 /* entPickUpItem.swift */; };
 		7C1E6B75205A2A030078E66C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1E6B74205A2A030078E66C /* LoginVC.swift */; };
 		7C3C291A2091B81C007C31B4 /* gravo ios black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C3C29192091B81B007C31B4 /* gravo ios black.jpg */; };
+		7C3C291C2091CEA2007C31B4 /* BulkTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3C291B2091CEA2007C31B4 /* BulkTransactionVC.swift */; };
 		7C4308CD206A0C8E00385696 /* recycle_cinemagraph_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7C4308CC206A0C8E00385696 /* recycle_cinemagraph_2.gif */; };
 		7C43091F206C7A4B00385696 /* entTransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C43091E206C7A4B00385696 /* entTransactionItem.swift */; };
 		7C430921206C8C9100385696 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C430920206C8C9100385696 /* AddItemVC.swift */; };
@@ -68,6 +69,7 @@
 		7C1E6B7B205A2A510078E66C /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		7C1E6B7C205A2A510078E66C /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		7C3C29192091B81B007C31B4 /* gravo ios black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gravo ios black.jpg"; sourceTree = "<group>"; };
+		7C3C291B2091CEA2007C31B4 /* BulkTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkTransactionVC.swift; sourceTree = "<group>"; };
 		7C4308CC206A0C8E00385696 /* recycle_cinemagraph_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = recycle_cinemagraph_2.gif; sourceTree = "<group>"; };
 		7C43091E206C7A4B00385696 /* entTransactionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = entTransactionItem.swift; sourceTree = "<group>"; };
 		7C430920206C8C9100385696 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				7C88CEE02068927A00251CC0 /* TransactionVC.swift */,
 				7C430920206C8C9100385696 /* AddItemVC.swift */,
+				7C3C291B2091CEA2007C31B4 /* BulkTransactionVC.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				7C7BF994205A49B3005FFAE6 /* LoginActionVC.swift in Sources */,
 				7C430927206CA8AC00385696 /* DataHandler.swift in Sources */,
 				7C74CED52060B7B5004595A5 /* PickupsVC.swift in Sources */,
+				7C3C291C2091CEA2007C31B4 /* BulkTransactionVC.swift in Sources */,
 				7C1E6B75205A2A030078E66C /* LoginVC.swift in Sources */,
 				7C4309292073165000385696 /* Constants.swift in Sources */,
 				7C74CEDB2060CBB5004595A5 /* ParserJSON.swift in Sources */,
