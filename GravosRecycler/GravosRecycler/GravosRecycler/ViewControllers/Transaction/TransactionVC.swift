@@ -27,6 +27,10 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
         
+        let help  = UIBarButtonItem(image: UIImage(named:"Icon_Help"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.showHelp(_:)))
+        help.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem = help
+        
         self.navigationItem.setHidesBackButton(true, animated: true)
         
     }
@@ -34,6 +38,14 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     @objc func toggleSideMenu(_ sender: Any)
     {
         toggleSideMenuView()
+    }
+    
+    @objc func showHelp(_ sender: Any)
+    {
+        if let helpVC = self.storyboard?.instantiateViewController(withIdentifier: "HelpVC")
+        {
+            self.navigationController?.pushViewController(helpVC, animated: true)
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

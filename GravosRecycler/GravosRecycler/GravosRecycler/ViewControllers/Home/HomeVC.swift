@@ -13,6 +13,7 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     
     @IBOutlet weak var colViwHome: UICollectionView!
 
+    
     var screenSize: CGRect!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
@@ -81,26 +82,28 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollCell", for: indexPath) as! HomeCollCell
         
+        cell.backgroundColor = UIColor.white
+        
         if (indexPath.row == 0)
         {
             cell.imgCellType.image = UIImage(named: "Icon_Paper")
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[0]
-            cell.backgroundColor = Constants.themeYellow
+            cell.imgCellType.backgroundColor = Constants.themeYellow
         }
         if (indexPath.row == 1)
         {
             cell.imgCellType.image = UIImage(named: "Icon_Screws")
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[0]
-            cell.backgroundColor = UIColor(red: 244/255, green: 96/255, blue: 46/255, alpha: 1)
+            cell.imgCellType.backgroundColor = UIColor(red: 244/255, green: 96/255, blue: 46/255, alpha: 1)
         }
         if (indexPath.row == 2)
         {
             cell.imgCellType.image = UIImage(named: "Icon_EWaste")
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[0]
-            cell.backgroundColor = UIColor(red: 107/255, green: 69/255, blue: 163/255, alpha: 1)
+            cell.imgCellType.backgroundColor = UIColor(red: 107/255, green: 69/255, blue: 163/255, alpha: 1)
             
         }
         if (indexPath.row == 3)
@@ -109,13 +112,13 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[1]
             cell.lblCellSubTitle.textColor = UIColor.red
-            cell.backgroundColor = UIColor.cyan
+            cell.imgCellType.backgroundColor = UIColor.cyan
         }
         
-       // cell.contentView.layer.shadowColor = UIColor.black.cgColor
-       // cell.contentView.layer.shadowOpacity = 1
-        //cell.contentView.layer.shadowOffset = CGSize.zero
-       // cell.contentView.layer.shadowRadius = 10
+        cell.viwCollectionCell.layer.shadowColor = UIColor.black.cgColor
+        cell.viwCollectionCell.layer.shadowOpacity = 0.5
+        cell.viwCollectionCell.layer.shadowOffset = CGSize.zero
+        cell.viwCollectionCell.layer.shadowRadius = 2
         
         return cell
     }

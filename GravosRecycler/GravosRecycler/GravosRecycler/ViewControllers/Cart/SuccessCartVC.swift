@@ -17,15 +17,23 @@ class SuccessCartVC: UIViewController
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool)
+    {
+        let sideMenu  = UIBarButtonItem(image: UIImage(named:"BackArrow"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
+        sideMenu.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = sideMenu
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func dismissSelf(_ sender: Any)
+    
+    @objc func toggleSideMenu(_ sender: Any)
     {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
+    
     
     /*
     // MARK: - Navigation

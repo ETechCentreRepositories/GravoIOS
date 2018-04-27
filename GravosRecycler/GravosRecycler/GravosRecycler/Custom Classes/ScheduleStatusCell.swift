@@ -1,24 +1,18 @@
 //
-//  TransactionDetailCell.swift
+//  ScheduleStatusCell.swift
 //  GravosRecycler
 //
-//  Created by Abhijit on 20/4/18.
+//  Created by Abhijit on 26/4/18.
 //  Copyright © 2018 Abhijit. All rights reserved.
 //
 
 import UIKit
 
-class TransactionDetailCell: UITableViewCell {
+class ScheduleStatusCell: UITableViewCell {
 
-    @IBOutlet weak var tblScheduleStatus: UITableView!
-    
-    @IBOutlet weak var viwCover: UIView!
-    override func awakeFromNib()
-    {
+    override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        tblScheduleStatus.layer.cornerRadius = 8
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

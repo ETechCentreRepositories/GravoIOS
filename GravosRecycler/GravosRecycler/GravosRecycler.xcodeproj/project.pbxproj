@@ -11,6 +11,8 @@
 		7C342060208EEAD80022A929 /* TransactionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34205F208EEAD80022A929 /* TransactionItemCell.swift */; };
 		7C342065208EF1CB0022A929 /* ENSwiftSideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C342066208EF1CB0022A929 /* ENSwiftSideMenu.framework */; };
 		7C342068208F31650022A929 /* TransactionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C342067208F31650022A929 /* TransactionListCell.swift */; };
+		7C3C291E2091E378007C31B4 /* ScheduleStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3C291D2091E377007C31B4 /* ScheduleStatusCell.swift */; };
+		7C3C29202092C868007C31B4 /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3C291F2092C868007C31B4 /* AboutUsVC.swift */; };
 		7C3F5BF4208050BC00B9619D /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F5BF3208050BC00B9619D /* SideMenuCell.swift */; };
 		7C3F5BF72080859900B9619D /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F5BF62080859800B9619D /* HelpVC.swift */; };
 		7C3F5BFA2080923300B9619D /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F5BF92080923300B9619D /* NotificationsVC.swift */; };
@@ -103,6 +105,8 @@
 		7C34205F208EEAD80022A929 /* TransactionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemCell.swift; sourceTree = "<group>"; };
 		7C342066208EF1CB0022A929 /* ENSwiftSideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ENSwiftSideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C342067208F31650022A929 /* TransactionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListCell.swift; sourceTree = "<group>"; };
+		7C3C291D2091E377007C31B4 /* ScheduleStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleStatusCell.swift; sourceTree = "<group>"; };
+		7C3C291F2092C868007C31B4 /* AboutUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
 		7C3F5BF3208050BC00B9619D /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		7C3F5BF62080859800B9619D /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		7C3F5BF92080923300B9619D /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 				7C7C05ED20885A44004C556D /* SettingsVC.swift */,
 				7C7C05EF20886DA7004C556D /* AccountDetailsVC.swift */,
 				7CD01A7720889B61005EFBC1 /* CalenderVC.swift */,
+				7C3C291F2092C868007C31B4 /* AboutUsVC.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				7C4F29202089D317006B9A30 /* TransactionScheduleCell.swift */,
 				7C34205F208EEAD80022A929 /* TransactionItemCell.swift */,
 				7C342067208F31650022A929 /* TransactionListCell.swift */,
+				7C3C291D2091E377007C31B4 /* ScheduleStatusCell.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -657,6 +663,7 @@
 				7C4F291120898D2A006B9A30 /* ProfileCell.swift in Sources */,
 				7C8FA0D8207C4A5C009FA8E6 /* TextViewWithLeftImage.swift in Sources */,
 				7C4F29052088D264006B9A30 /* LeaderBoardVC.swift in Sources */,
+				7C3C291E2091E378007C31B4 /* ScheduleStatusCell.swift in Sources */,
 				7C4F29032088D1E2006B9A30 /* LeaderBoardCell.swift in Sources */,
 				7C8FA09A207C4734009FA8E6 /* ViewController.swift in Sources */,
 				7C8FA0E2207C4A5C009FA8E6 /* LoginVC.swift in Sources */,
@@ -675,6 +682,7 @@
 				7CD01A7820889B62005EFBC1 /* CalenderVC.swift in Sources */,
 				7C8FA098207C4734009FA8E6 /* AppDelegate.swift in Sources */,
 				7C342060208EEAD80022A929 /* TransactionItemCell.swift in Sources */,
+				7C3C29202092C868007C31B4 /* AboutUsVC.swift in Sources */,
 				7CFA63BE207F42F5005CC1A9 /* MyNavigationController.swift in Sources */,
 				7C4F291F2089B553006B9A30 /* CalenderCell.swift in Sources */,
 				7C4F290F20898814006B9A30 /* BulkChildVC.swift in Sources */,

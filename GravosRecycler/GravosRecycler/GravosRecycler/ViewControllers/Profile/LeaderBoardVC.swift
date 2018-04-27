@@ -12,7 +12,10 @@ class LeaderBoardVC: UIViewController,UITableViewDelegate,UITableViewDataSource
 {
    
     @IBOutlet weak var lblHead: UILabel!
-    @IBOutlet weak var lblSubHead: UILabel!
+
+    @IBOutlet weak var viwImageCover: UIView!
+    @IBOutlet weak var btnShare: UIButton!
+    @IBOutlet weak var btnInvite: UIButton!
     @IBOutlet weak var lblRank: UILabel!
     @IBOutlet weak var lblGravoPoints: UILabel!
     @IBOutlet weak var imgProfile: UIImageView!
@@ -37,11 +40,18 @@ class LeaderBoardVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
         self.navigationItem.setHidesBackButton(true, animated: true)
         
+        self.btnShare.layer.cornerRadius = 10
+        self.btnInvite.layer.cornerRadius = 10
         
         self.navigationItem.leftBarButtonItem = sideMenu
         
         
+        viwImageCover.addDiamondMask(cornerRadius: 1)
         imgProfile.addDiamondMask(cornerRadius: 1)
+        imgProfile.layer.borderWidth = 3
+        imgProfile.layer.masksToBounds = false
+        imgProfile.layer.borderColor = UIColor.black.cgColor
+        imgProfile.clipsToBounds = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -68,11 +78,16 @@ class LeaderBoardVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         return 3
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderBoardCell", for: indexPath) as! LeaderBoardCell
-        
-        
+        cell.viwProgress.layer.cornerRadius = 10
         return cell
     }
     
+    @IBAction func performShare(_ sender: Any) {
+    }
+   
+    @IBAction func performInvite(_ sender: Any) {
+    }
 }

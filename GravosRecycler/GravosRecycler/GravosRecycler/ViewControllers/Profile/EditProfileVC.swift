@@ -11,6 +11,7 @@ import UIKit
 class EditProfileVC: UIViewController
 {
 
+    @IBOutlet weak var imgProfile: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +20,13 @@ class EditProfileVC: UIViewController
 
     override func viewWillAppear(_ animated: Bool)
     {
+        
+        imgProfile.layer.borderWidth = 0.1
+        imgProfile.layer.masksToBounds = false
+        imgProfile.layer.borderColor = UIColor.black.cgColor
+        imgProfile.layer.cornerRadius = imgProfile.frame.height/2
+        imgProfile.clipsToBounds = true
+        
         let sideMenu  = UIBarButtonItem(image: UIImage(named:"BackArrow"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
         sideMenu.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem = sideMenu

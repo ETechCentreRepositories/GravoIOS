@@ -33,6 +33,12 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.tblSideMenu.clearsContextBeforeDrawing = true
         tblSideMenu.selectRow(at: IndexPath(row: selectedMenuItem, section: 0), animated: false, scrollPosition: .middle)
         tblSideMenu.tableFooterView = UIView()
+        
+        imgProfile.layer.borderWidth = 0.1
+        imgProfile.layer.masksToBounds = false
+        imgProfile.layer.borderColor = UIColor.black.cgColor
+        imgProfile.layer.cornerRadius = imgProfile.frame.height/2
+        imgProfile.clipsToBounds = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

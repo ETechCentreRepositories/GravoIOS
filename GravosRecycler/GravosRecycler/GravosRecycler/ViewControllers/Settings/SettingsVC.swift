@@ -88,9 +88,10 @@ class SettingsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
         else
         {
-            UIApplication.shared.open(URL(string : "http://greenravolution.com/")!, options: [:], completionHandler: { (status) in
-                
-            })
+            if let aboutUsVC = self.storyboard?.instantiateViewController(withIdentifier: "AboutUsVC")
+            {
+                self.navigationController?.pushViewController(aboutUsVC, animated: true)
+            }
         }
     }
 }

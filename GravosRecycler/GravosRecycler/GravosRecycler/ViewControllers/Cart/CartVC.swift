@@ -41,7 +41,7 @@ class CartVC: UIViewController, UITableViewDataSource,UITableViewDelegate
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
-            return "Others"
+            return "3 Itmes in your bag"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int

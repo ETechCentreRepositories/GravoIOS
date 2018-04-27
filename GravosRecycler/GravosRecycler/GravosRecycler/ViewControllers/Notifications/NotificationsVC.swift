@@ -41,6 +41,7 @@ class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         tblNotifications.rowHeight = UITableViewAutomaticDimension
         tblNotifications.tableFooterView = UIView()
         
+        tblNotifications.separatorStyle = .none
         
         let sideMenu  = UIBarButtonItem(image: UIImage(named:"Icon_SideMenu"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
         sideMenu.tintColor = UIColor.black

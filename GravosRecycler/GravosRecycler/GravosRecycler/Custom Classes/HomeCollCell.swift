@@ -11,6 +11,7 @@ import UIKit
 class HomeCollCell: UICollectionViewCell
 {
     
+    @IBOutlet weak var viwCollectionCell: UIView!
     @IBOutlet weak var imgCellType: UIImageView!
     @IBOutlet weak var lblCellTitle: UILabel!
     @IBOutlet weak var lblCellSubTitle: UILabel!

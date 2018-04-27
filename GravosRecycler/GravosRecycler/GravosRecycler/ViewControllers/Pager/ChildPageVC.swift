@@ -49,8 +49,23 @@ class ChildPageVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTypeCell", for: indexPath) as! HomeTypeCell
         
+        if self.title == "Paper"
+        {
+            cell.imgMaterialType.image = UIImage(named: "Icon_Newspaper")
+        }
+        else if self.title == "E-Waste"
+        {
+            cell.imgMaterialType.image = UIImage(named: "Icon_Laptop")
+        }
+        else if self.title == "Metals"
+        {
+            cell.imgMaterialType.image = UIImage(named: "Icon_Brass")
+        }
+        else
+        {
+             cell.imgMaterialType.image = UIImage(named: "Icon_Newspaper")
+        }
         cell.contentView.backgroundColor = self.view.backgroundColor
-       // cell.btnNavigate.addTarget(self, action: #selector(self.performNavigation)    , for: .touchUpInside)
         
         return cell
     }

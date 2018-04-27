@@ -8,8 +8,11 @@
 
 import UIKit
 
-class TransactionDetails: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class TransactionDetails: UIViewController,UITableViewDelegate,UITableViewDataSource
+{
 
+    @IBOutlet weak var tblTranDetails: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,38 +42,89 @@ class TransactionDetails: UIViewController,UITableViewDelegate,UITableViewDataSo
     {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        if tableView == tblTranDetails
+        {
+            if indexPath.row == 0
+            {
+                return 150
+            }
+            else if indexPath.row == 1
+            {
+               return 50
+            }
+            else if indexPath.row == 2
+            {
+                return 300
+            }
+            else if indexPath.row == 3
+            {
+                return 100
+            }
+            else
+            {
+                return 50
+            }
+        }
+        else
+        {
+            return 80
+        }
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 5
+        if tableView == tblTranDetails
+        {
+            return 5
+        }
+        else
+        {
+            return 2
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        if indexPath.row == 0
+        if tableView == tblTranDetails
         {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionTblCell", for: indexPath) as! TransactionTblCell
-            return cell
-        }
-        else if indexPath.row == 1
-        {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionScheduleCell", for: indexPath) as! TransactionScheduleCell
-            return cell
-        }
-        else if indexPath.row == 2
-        {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionDetailCell", for: indexPath) as! TransactionDetailCell
-            return cell
-        }
-        else if indexPath.row == 3
-        {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DeliveryAddressCell", for: indexPath) as! DeliveryAddressCell
-            return cell
+            if indexPath.row == 0
+            {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionTblCell", for: indexPath) as! TransactionTblCell
+                return cell
+            }
+            else if indexPath.row == 1
+            {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionScheduleCell", for: indexPath) as! TransactionScheduleCell
+                return cell
+            }
+            else if indexPath.row == 2
+            {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionDetailCell", for: indexPath) as! TransactionDetailCell
+                
+                
+                return cell
+            }
+            else if indexPath.row == 3
+            {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "DeliveryAddressCell", for: indexPath) as! DeliveryAddressCell
+                return cell
+            }
+            else
+            {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath)
+                return cell
+            }
         }
         else
         {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleStatusCell", for: indexPath) as! ScheduleStatusCell
+            
             return cell
         }
+        
         
         
     }

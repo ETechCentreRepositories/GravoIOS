@@ -60,7 +60,6 @@ class PagingVC: UIViewController
         
         pagingViewController.didMove(toParentViewController: self)
         
-        //pagingViewController.dataSource = self as! PagingViewControllerDataSource
         pagingViewController.select(index: selecedIndex)
     
         // Do any additional setup after loading the view.

@@ -15,9 +15,7 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
     @IBOutlet weak var txtFirstName: TextViewWithLeftImage!
     @IBOutlet weak var txtLastName: TextViewWithLeftImage!
     @IBOutlet weak var txtContactNumber: TextViewWithLeftImage!
-    @IBOutlet weak var txtNRIC: TextViewWithLeftImage!
     @IBOutlet weak var txtPassword: TextViewWithLeftImage!
-    @IBOutlet weak var txtVehicleNumber: TextViewWithLeftImage!
     @IBOutlet weak var imgViwCheckMark: UIImageView!
     @IBOutlet weak var txtViewContent: UIScrollView!
     
@@ -97,9 +95,7 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
         self.txtFirstName.delegate = self
         self.txtLastName.delegate = self
         self.txtPassword.delegate = self
-        self.txtNRIC.delegate = self
         self.txtContactNumber.delegate = self
-        self.txtVehicleNumber.delegate = self
     }
     
     
@@ -153,13 +149,7 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
             txtContactNumber.becomeFirstResponder()
             break
         case txtContactNumber:
-            txtNRIC.becomeFirstResponder()
-            break
-        case txtNRIC:
             txtPassword.becomeFirstResponder()
-            break
-        case txtPassword:
-            txtVehicleNumber.becomeFirstResponder()
             break
         default:
             textField.resignFirstResponder()

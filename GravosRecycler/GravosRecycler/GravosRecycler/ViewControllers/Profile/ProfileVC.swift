@@ -20,8 +20,8 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     let arrKey = ["Name","Email","Address"]
     let arrValue = ["Ryme Hobbs","abernathy_marty@hotmail.com","814 Halley Lang Apt 2014"]
     
-    let arrKeyOthers = ["Gravos","Settings","Logout"]
-    let arrValueOthers = ["Coins Earned: $4.0"," "," "]
+    let arrKeyOthers = ["Gravos","Logout"]
+    let arrValueOthers = ["Coins Earned: $4.0"," "]
     
     
     override func viewDidLoad() {
@@ -51,6 +51,13 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
         self.navigationItem.setHidesBackButton(true, animated: true)
+        
+        
+        imgDisplayPic.layer.borderWidth = 0.1
+        imgDisplayPic.layer.masksToBounds = false
+        imgDisplayPic.layer.borderColor = UIColor.black.cgColor
+        imgDisplayPic.layer.cornerRadius = imgDisplayPic.frame.height/2
+        imgDisplayPic.clipsToBounds = true
     }
     
     @objc func toggleSideMenu(_ sender: Any)
@@ -81,7 +88,14 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 3
+        if section == 0
+        {
+            return 3
+        }
+        else
+        {
+            return 2
+        }
         
     }
     
@@ -132,6 +146,11 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
                 var destViewController : UIViewController
                 destViewController = mainStoryboard.instantiateViewController(withIdentifier: "LeaderBoardVC")
                 self.navigationController?.pushViewController(destViewController, animated: true)
+            }
+            if indexPath.row == 1
+            {
+                self.navigationController?.popToRootViewController(animated: true)
+
             }
         }
     }
