@@ -8,8 +8,10 @@
 
 import UIKit
 
-class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource
+class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource
 {
+    
+    
     @IBOutlet weak var tblTransactionlist: UITableView!
     
     
@@ -73,7 +75,7 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         return 1
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    /*func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0
         {
             return "Transaction: #0334564458"
@@ -82,7 +84,7 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         {
             return "Transaction: #0337896865"
         }
-    }
+    }*/
     
     
     
@@ -91,6 +93,7 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionListCell", for: indexPath) as! TransactionListCell
         
+        cell.colItemsImages.dataSource = self 
         
         if indexPath.section == 0
         {
@@ -99,6 +102,8 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource
             cell.lblScheduleDate.text = "26 Apr 2018"
             cell.btnStatus.backgroundColor = UIColor.lightGray
             cell.btnStatus.setTitleColor(UIColor.white, for: .normal)
+            cell.colItemsImages.backgroundColor = UIColor.white
+            
         }
         else
         {
@@ -107,6 +112,7 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource
             cell.btnStatus.backgroundColor = UIColor.white
             cell.btnStatus.setTitleColor(Constants.themeGreen, for: .normal)
             cell.lblScheduleDate.text = "20 Apr 2018"
+            cell.colItemsImages.backgroundColor = Constants.themeGreen
         }
         
         cell.bottomView.backgroundColor = cell.contentView.backgroundColor
@@ -121,5 +127,18 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         {
             self.navigationController?.pushViewController(transactionDetails, animated: true)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TransItemImagesColCell", for: indexPath) as! TransItemImagesColCell
+        
+        
+        return cell
     }
 }

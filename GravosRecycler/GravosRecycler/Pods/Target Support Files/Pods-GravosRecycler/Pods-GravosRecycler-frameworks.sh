@@ -146,6 +146,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ENSwiftSideMenu/ENSwiftSideMenu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JBDatePicker/JBDatePicker.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JKSteppedProgressBar/JKSteppedProgressBar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework"
 fi
@@ -153,6 +154,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ENSwiftSideMenu/ENSwiftSideMenu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JBDatePicker/JBDatePicker.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JKSteppedProgressBar/JKSteppedProgressBar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework"
 fi

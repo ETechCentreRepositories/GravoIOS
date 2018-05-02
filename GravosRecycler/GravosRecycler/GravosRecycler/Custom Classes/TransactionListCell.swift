@@ -11,10 +11,11 @@ import UIKit
 class TransactionListCell: UITableViewCell
 {
 
+    @IBOutlet weak var lblTransactionNumber: UILabel!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var lblScheduleDate: UILabel!
     @IBOutlet weak var btnStatus: UIButton!
-    
+    @IBOutlet weak var colItemsImages: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

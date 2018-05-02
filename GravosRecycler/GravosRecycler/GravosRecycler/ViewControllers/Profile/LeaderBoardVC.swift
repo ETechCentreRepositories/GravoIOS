@@ -12,7 +12,7 @@ class LeaderBoardVC: UIViewController,UITableViewDelegate,UITableViewDataSource
 {
    
     @IBOutlet weak var lblHead: UILabel!
-
+    @IBOutlet weak var subViwImageCover: UIView!
     @IBOutlet weak var viwImageCover: UIView!
     @IBOutlet weak var btnShare: UIButton!
     @IBOutlet weak var btnInvite: UIButton!
@@ -45,13 +45,13 @@ class LeaderBoardVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         self.navigationItem.leftBarButtonItem = sideMenu
         
-        
         viwImageCover.addDiamondMask(cornerRadius: 1)
+        subViwImageCover.addDiamondMask(cornerRadius: 1)
         imgProfile.addDiamondMask(cornerRadius: 1)
-        imgProfile.layer.borderWidth = 3
-        imgProfile.layer.masksToBounds = false
-        imgProfile.layer.borderColor = UIColor.black.cgColor
-        imgProfile.clipsToBounds = true
+        //imgProfile.layer.borderWidth = 3
+        //imgProfile.layer.masksToBounds = false
+        //imgProfile.layer.borderColor = UIColor.black.cgColor
+        //imgProfile.clipsToBounds = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

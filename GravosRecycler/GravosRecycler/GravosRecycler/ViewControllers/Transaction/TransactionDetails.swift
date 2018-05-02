@@ -20,6 +20,11 @@ class TransactionDetails: UIViewController,UITableViewDelegate,UITableViewDataSo
         sideMenu.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem = sideMenu
         // Do any additional setup after loading the view.
+        
+        let help  = UIBarButtonItem(image: UIImage(named:"Icon_Help"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.showHelp(_:)))
+        help.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem = help
+        tblTranDetails.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +48,13 @@ class TransactionDetails: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.navigationController?.popViewController(animated: true)
     }
     
+    @objc func showHelp(_ sender: Any)
+    {
+        if let helpVC = self.storyboard?.instantiateViewController(withIdentifier: "HelpVC")
+        {
+            self.navigationController?.pushViewController(helpVC, animated: true)
+        }
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         if tableView == tblTranDetails
@@ -57,7 +69,7 @@ class TransactionDetails: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
             else if indexPath.row == 2
             {
-                return 300
+                return 200
             }
             else if indexPath.row == 3
             {
@@ -65,7 +77,7 @@ class TransactionDetails: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
             else
             {
-                return 50
+                return UITableViewAutomaticDimension
             }
         }
         else
@@ -81,7 +93,7 @@ class TransactionDetails: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
         else
         {
-            return 2
+            return 1
         }
         
     }

@@ -17,7 +17,7 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var imgProfile: UIImageView!
     
      var selectedMenuItem : Int = 0
-    let arrSideMenuTitle = ["Home","Notifications","Transactions","Calender","Settings"]
+    let arrSideMenuTitle = ["Home","Notifications","Transactions","Calender","About Us"]
     let arrSideMenuIcons = ["Icon_Home","Icon_Notifications","Icon_Transactions","Icon_Calender","Icon_Settings"]
     override func viewDidLoad()
     {
