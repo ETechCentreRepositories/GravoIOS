@@ -17,8 +17,8 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var imgProfile: UIImageView!
     
      var selectedMenuItem : Int = 0
-    let arrSideMenuTitle = ["Home","Notifications","Transactions","Calender","About Us"]
-    let arrSideMenuIcons = ["Icon_Home","Icon_Notifications","Icon_Transactions","Icon_Calender","Icon_Settings"]
+    let arrSideMenuTitle = ["Home","Notifications","Transactions","Calender","About Us","Share","Invite"]
+    let arrSideMenuIcons = ["Icon_Home","Icon_Notifications","Icon_Transactions","Icon_Calender","Icon_Settings","Icon_Settings","Icon_Settings"]
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -82,7 +82,8 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        if (indexPath.row == selectedMenuItem) {
+        if (indexPath.row == selectedMenuItem)
+        {
             return
         }
         

@@ -80,7 +80,7 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollCell", for: indexPath) as! HomeCollCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .homecell, for: indexPath) as! HomeCollCell
         
         cell.backgroundColor = UIColor.white
         
@@ -90,6 +90,7 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[0]
             cell.imgCellType.backgroundColor = Constants.themeYellow
+            return cell
         }
         if (indexPath.row == 1)
         {
@@ -97,6 +98,7 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[0]
             cell.imgCellType.backgroundColor = UIColor(red: 244/255, green: 96/255, blue: 46/255, alpha: 1)
+            return cell
         }
         if (indexPath.row == 2)
         {
@@ -104,6 +106,7 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[0]
             cell.imgCellType.backgroundColor = UIColor(red: 107/255, green: 69/255, blue: 163/255, alpha: 1)
+            return cell
             
         }
         if (indexPath.row == 3)
@@ -113,23 +116,21 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             cell.lblCellSubTitle.text = arrPaymentOpt[1]
             cell.lblCellSubTitle.textColor = UIColor.red
             cell.imgCellType.backgroundColor = UIColor.cyan
+            return cell
         }
         
-        cell.viwCollectionCell.layer.shadowColor = UIColor.black.cgColor
-        cell.viwCollectionCell.layer.shadowOpacity = 0.5
-        cell.viwCollectionCell.layer.shadowOffset = CGSize.zero
-        cell.viwCollectionCell.layer.shadowRadius = 2
         
         return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        let pagingVC = self.storyboard?.instantiateViewController(withIdentifier: "PagingVC") as! PagingVC
+        let pagingVC = self.storyboard?.instantiateViewController(withIdentifier: .pagingVC) as! PagingVC
         
         pagingVC.selecedIndex = indexPath.row
         
-        self.present(pagingVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(pagingVC, animated: true)
     }
     @IBAction func showMenu(_ sender: Any)
     {

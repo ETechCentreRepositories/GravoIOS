@@ -16,43 +16,58 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var viewScrollContent: UIView!
     @IBOutlet weak var imgBackground: UIImageView!
     
-    
+    lazy var totalBannerPages = 2
     override func viewDidLoad()
     {
         super.viewDidLoad()
         scrollLoginBanner.delegate = self
         // Do any additional setup after loading the view.
-        self.customiseInterface()
+        
     }
 
     override func viewWillAppear(_ animated: Bool)
     {
          scrollLoginBanner.reloadInputViews()
+         self.customiseInterface()
     }
+    
     func customiseInterface()
     {
+        self.setupBannerView()
+        self.setupGIFBackground()
+    }
+    
+    //Functipm to setup swipping bannerview
+    
+    func setupBannerView()
+    {
         var contentWidth: CGFloat = 0.0
-        for label in 0...2
+        
+        for label in 0...totalBannerPages
         {
             let lblDesc = UILabel()
-            lblDesc.text = "GRAVO is also a platform through which environmental information and educational material can be accessed with ease for all subscribers."
+            lblDesc.text = .loginBanner
             lblDesc.textColor = UIColor.white
-            lblDesc.font = UIFont(name: "Quicksand-Bold", size: 15)
+            lblDesc.font = UIFont(name: .quicksandF, size: 15)
             lblDesc.numberOfLines = 0
             lblDesc.textAlignment = .center
-            
-            
+            //--------------------------
             let xCordinate = viewScrollContent.frame.midX + viewScrollContent.frame.width * CGFloat(label)
             contentWidth += viewScrollContent.frame.width
             scrollLoginBanner.addSubview(lblDesc)
             lblDesc.frame = CGRect(x: xCordinate - 120, y: (viewScrollContent.frame.height/2) - 50, width: viewScrollContent.frame.width * 0.7, height: 120)
         }
         scrollLoginBanner.contentSize = CGSize(width: contentWidth, height: viewScrollContent.frame.height)
-       
-        
-        let imgLoginBg = UIImage(gifName: "recycle_cinemagraph_2.gif")
+    }
+    
+    //function to setup GIF background
+    
+    func setupGIFBackground()
+    {
+        let imgLoginBg = UIImage(gifName: .loginGIF)
         self.imgBackground.setGifImage(imgLoginBg)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -74,7 +89,7 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
     */
     @IBAction func performCreateAccount(_ sender: Any)
     {
-        if let createAccountVC = self.storyboard?.instantiateViewController(withIdentifier: "CreateAccountVC")
+        if let createAccountVC = self.storyboard?.instantiateViewController(withIdentifier: .createAccVC)
         {
             self.present(createAccountVC, animated: true)
         }

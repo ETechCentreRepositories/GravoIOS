@@ -18,9 +18,12 @@ class AboutUsVC: UIViewController,WKUIDelegate {
 
         wkviewAboutUs.uiDelegate = self
         
-        let abouturl = URL(string: "http://greenravolution.com/")
+        let abouturl = URL(string: "https://www.apple.com")
         let aboutRequest = URLRequest(url: abouturl!)
         wkviewAboutUs.load(aboutRequest)
+        
+        //add observer to get estimated progress value
+        self.wkviewAboutUs.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil);
         
         // Do any additional setup after loading the view.
         
@@ -29,6 +32,13 @@ class AboutUsVC: UIViewController,WKUIDelegate {
         self.navigationItem.leftBarButtonItem = sideMenu
     }
 
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress" {
+            print(self.wkviewAboutUs.estimatedProgress);
+           // self.progressView.progress = Float(self.webView.estimatedProgress);
+        }
+    }
     
     @objc func toggleSideMenu(_ sender: Any)
     {

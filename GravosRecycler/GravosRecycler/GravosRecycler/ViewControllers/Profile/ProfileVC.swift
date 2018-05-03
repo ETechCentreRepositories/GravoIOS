@@ -38,6 +38,10 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     override func viewWillAppear(_ animated: Bool)
     {
+        self.navigationController?.navigationBar.barTintColor  = UIColor.white
+        self.navigationController?.navigationBar.tintColor     = UIColor.black
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.black]
+        
         self.tblProfile.tableFooterView = UIView()
         let sideMenu  = UIBarButtonItem(image: UIImage(named:"Icon_SideMenu"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
         sideMenu.tintColor = UIColor.black
@@ -147,9 +151,9 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
                 destViewController = mainStoryboard.instantiateViewController(withIdentifier: "LeaderBoardVC")
                 self.navigationController?.pushViewController(destViewController, animated: true)
             }
-            if indexPath.row == 1
+            if indexPath.row == 1 //LOGOUT
             {
-                self.navigationController?.popToRootViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
 
             }
         }

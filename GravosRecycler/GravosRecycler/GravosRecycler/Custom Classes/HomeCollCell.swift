@@ -16,6 +16,24 @@ class HomeCollCell: UICollectionViewCell
     @IBOutlet weak var lblCellTitle: UILabel!
     @IBOutlet weak var lblCellSubTitle: UILabel!
     
+    
+    override func awakeFromNib()
+    {
+        super.awakeFromNib()
+        // Initialization code
+        
+        self.configureTitleProgressBar()
+    }
+    
+    
+    func configureTitleProgressBar()
+    {
+        self.viwCollectionCell.layer.shadowColor = UIColor.black.cgColor
+        self.viwCollectionCell.layer.shadowOpacity = 0.5
+        self.viwCollectionCell.layer.shadowOffset = CGSize.zero
+        self.viwCollectionCell.layer.shadowRadius = 2
+    
+    }
     /*required override init(frame: CGRect) {
         super.init(frame: frame)
         

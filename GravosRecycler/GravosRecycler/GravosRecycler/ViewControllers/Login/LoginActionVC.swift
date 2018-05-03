@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import SwiftyGif
-import ENSwiftSideMenu
 
-class LoginActionVC: UIViewController,ENSideMenuDelegate {
+class LoginActionVC: UIViewController {
 
     @IBOutlet weak var txtUsername: TextViewWithLeftImage!
     @IBOutlet weak var txtPassword: TextViewWithLeftImage!
@@ -19,14 +17,13 @@ class LoginActionVC: UIViewController,ENSideMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.sideMenuController()?.sideMenu?.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool)
     {
-        txtUsername.attributedPlaceholder = NSAttributedString(string: "Enter Email",
+        txtUsername.attributedPlaceholder = NSAttributedString(string: .placeEmail,
                                                                attributes: [NSAttributedStringKey.foregroundColor: UIColor.gray])
-        txtPassword.attributedPlaceholder = NSAttributedString(string: "Enter Password",
+        txtPassword.attributedPlaceholder = NSAttributedString(string: .placePass,
                                                                attributes: [NSAttributedStringKey.foregroundColor: UIColor.gray])
         
          self.navigationController?.navigationBar.barTintColor = UIColor.white
@@ -61,29 +58,6 @@ class LoginActionVC: UIViewController,ENSideMenuDelegate {
     {
         self.dismiss(animated: true, completion: nil)
        
-    }
-    
-    
-    // MARK: - ENSideMenu Delegate
-    func sideMenuWillOpen() {
-        print("sideMenuWillOpen")
-    }
-    
-    func sideMenuWillClose() {
-        print("sideMenuWillClose")
-    }
-    
-    func sideMenuShouldOpenSideMenu() -> Bool {
-        print("sideMenuShouldOpenSideMenu")
-        return true
-    }
-    
-    func sideMenuDidClose() {
-        print("sideMenuDidClose")
-    }
-    
-    func sideMenuDidOpen() {
-        print("sideMenuDidOpen")
     }
     
 }

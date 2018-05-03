@@ -12,8 +12,6 @@ import Parchment
 class PagingVC: UIViewController
 {
 
-    @IBOutlet weak var navItemPage: UINavigationItem!
-    @IBOutlet weak var navPage: UINavigationBar!
     
     var selecedIndex = 0
     
@@ -21,6 +19,19 @@ class PagingVC: UIViewController
     {
         super.viewDidLoad()
 
+        
+    
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
+    override func viewWillAppear(_ animated: Bool)
+    {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let firstViewController = storyboard.instantiateViewController(withIdentifier: "ChildPageVC")
         let secondViewController = storyboard.instantiateViewController(withIdentifier: "ChildPageVC")
@@ -61,24 +72,16 @@ class PagingVC: UIViewController
         pagingViewController.didMove(toParentViewController: self)
         
         pagingViewController.select(index: selecedIndex)
-    
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    override func viewWillAppear(_ animated: Bool)
-    {
-    
-        //let logo = UIImage(named: "NavLogo")
-        //let imageView = UIImageView(image:logo)
-        //self.navItemPage.titleView = imageView
+        
+        let sideMenu  = UIBarButtonItem(image: UIImage(named:"BackArrow"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
+        sideMenu.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = sideMenu
        
-        self.navItemPage.title = "Categories"
+    }
+    
+    @objc func toggleSideMenu(_ sender: Any)
+    {
+        self.navigationController?.popViewController(animated: true)
     }
     /*
     // MARK: - Navigation

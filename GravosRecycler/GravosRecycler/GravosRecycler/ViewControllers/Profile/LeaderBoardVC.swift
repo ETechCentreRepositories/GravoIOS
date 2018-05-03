@@ -25,21 +25,25 @@ class LeaderBoardVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
+    override func viewDidDisappear(_ animated: Bool)
+    {
+        
+    }
     override func viewWillAppear(_ animated: Bool)
     {
         
         self.tblLeaderBoard.tableFooterView = UIView()
         
         let sideMenu  = UIBarButtonItem(image: UIImage(named:"BackArrow"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
-        sideMenu.tintColor = UIColor.black
+
         self.navigationItem.leftBarButtonItem = sideMenu
-        self.navigationController?.navigationBar.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
         self.navigationItem.setHidesBackButton(true, animated: true)
-        
+    
         self.btnShare.layer.cornerRadius = 10
         self.btnInvite.layer.cornerRadius = 10
         
@@ -52,6 +56,15 @@ class LeaderBoardVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         //imgProfile.layer.masksToBounds = false
         //imgProfile.layer.borderColor = UIColor.black.cgColor
         //imgProfile.clipsToBounds = true
+        
+       self.navigationController?.navigationBar.barTintColor  = UIColor.black
+        //self.navigationController?.navigationBar.tintColor  = UIColor.white
+        
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = UIColor.white
+        navigationBarAppearace.barTintColor = UIColor.white
+        // change navigation item title color
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
