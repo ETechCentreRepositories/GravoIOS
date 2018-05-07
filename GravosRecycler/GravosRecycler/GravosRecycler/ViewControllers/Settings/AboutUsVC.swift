@@ -18,7 +18,7 @@ class AboutUsVC: UIViewController,WKUIDelegate {
 
         wkviewAboutUs.uiDelegate = self
         
-        let abouturl = URL(string: "https://www.apple.com")
+        let abouturl = URL(string: .aboutusURL)
         let aboutRequest = URLRequest(url: abouturl!)
         wkviewAboutUs.load(aboutRequest)
         

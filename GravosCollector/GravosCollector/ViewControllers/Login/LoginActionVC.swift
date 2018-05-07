@@ -14,7 +14,8 @@ class LoginActionVC: UIViewController {
     @IBOutlet weak var txtPassword: TextViewWithLeftImage!
     @IBOutlet weak var imgTest: UIImageView!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.

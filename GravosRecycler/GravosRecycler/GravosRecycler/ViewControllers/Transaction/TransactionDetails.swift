@@ -73,7 +73,7 @@ class TransactionDetails: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
             else if indexPath.row == 3
             {
-                return 100
+                return UITableViewAutomaticDimension
             }
             else
             {
@@ -89,7 +89,7 @@ class TransactionDetails: UIViewController,UITableViewDelegate,UITableViewDataSo
     {
         if tableView == tblTranDetails
         {
-            return 5
+            return 6
         }
         else
         {
@@ -124,11 +124,26 @@ class TransactionDetails: UIViewController,UITableViewDelegate,UITableViewDataSo
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DeliveryAddressCell", for: indexPath) as! DeliveryAddressCell
                 return cell
             }
-            else
+            else if indexPath.row == 4
             {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath)
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
+				cell.lblKey.text = "TOTAL WEIGHT"
+				cell.lblValue.text = "60 KG"
+				cell.lblKey.font =  UIFont(name: .quicksandReg, size: 14)!
+				cell.lblValue.font =  UIFont(name: .quicksandReg, size: 14)!
+				
                 return cell
             }
+			else
+			{
+				let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
+				cell.lblKey.text = "TOTAL EASTIMATED PRICE"
+				cell.lblValue.text = "$12.0"
+				
+				cell.lblKey.font =  UIFont(name: .quicksandReg, size: 14)!
+				cell.lblValue.font =  UIFont(name: .quicksandReg, size: 14)!
+				return cell
+			}
         }
         else
         {

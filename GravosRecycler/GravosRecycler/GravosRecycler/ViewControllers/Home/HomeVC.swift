@@ -20,14 +20,17 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     
     var arrTypeOfMaterials = ["Paper","Metals","E-Waste","Bulk Items"]
     var arrPaymentOpt = ["Get Paid", "Pay Us"]
+    
+    var isMenuOpen      = false
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height
         self.sideMenuController()?.sideMenu?.delegate = self
+    
         // Do any additional setup after loading the view.
     }
 
@@ -76,62 +79,89 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         return size
     }*/
     
-   
+	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
+	{
+		if let homeCell = cell as? HomeCollCell
+		{
+			cell.backgroundColor = UIColor.white
+			
+			if (indexPath.row == 0)
+			{
+				homeCell.imgCellType.image = UIImage(named: "Icon_Paper")
+				homeCell.imgCellType.backgroundColor = Constants.themeYellow
+			}
+			if (indexPath.row == 1)
+			{
+				homeCell.imgCellType.image = UIImage(named: "Icon_Screws")
+				homeCell.imgCellType.backgroundColor = Constants.themeOrange
+			}
+			if (indexPath.row == 2)
+			{
+				homeCell.imgCellType.image = UIImage(named: "Icon_EWaste")
+				homeCell.imgCellType.backgroundColor = Constants.themePurple
+				
+			}
+			if (indexPath.row == 3)
+			{
+				homeCell.imgCellType.image = UIImage(named: "Icon_BulkItems")
+				homeCell.lblCellSubTitle.textColor = UIColor.red
+				homeCell.imgCellType.backgroundColor = UIColor.cyan
+			}
+		}
+		
+	}
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .homecell, for: indexPath) as! HomeCollCell
-        
-        cell.backgroundColor = UIColor.white
-        
+		
         if (indexPath.row == 0)
         {
-            cell.imgCellType.image = UIImage(named: "Icon_Paper")
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[0]
-            cell.imgCellType.backgroundColor = Constants.themeYellow
             return cell
         }
         if (indexPath.row == 1)
         {
-            cell.imgCellType.image = UIImage(named: "Icon_Screws")
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[0]
-            cell.imgCellType.backgroundColor = UIColor(red: 244/255, green: 96/255, blue: 46/255, alpha: 1)
             return cell
         }
         if (indexPath.row == 2)
         {
-            cell.imgCellType.image = UIImage(named: "Icon_EWaste")
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[0]
-            cell.imgCellType.backgroundColor = UIColor(red: 107/255, green: 69/255, blue: 163/255, alpha: 1)
             return cell
             
         }
         if (indexPath.row == 3)
         {
-            cell.imgCellType.image = UIImage(named: "Icon_BulkItems")
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
             cell.lblCellSubTitle.text = arrPaymentOpt[1]
-            cell.lblCellSubTitle.textColor = UIColor.red
-            cell.imgCellType.backgroundColor = UIColor.cyan
             return cell
         }
-        
-        
         return cell
-        
     }
-    
+	
+	//------------------
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        let pagingVC = self.storyboard?.instantiateViewController(withIdentifier: .pagingVC) as! PagingVC
+        if self.isMenuOpen
+        {
+             toggleSideMenuView()
+        }
+        else
+        {
+            let pagingVC = self.storyboard?.instantiateViewController(withIdentifier: .pagingVC) as! PagingVC
+            
+            pagingVC.selecedIndex = indexPath.row
+            
+            self.navigationController?.pushViewController(pagingVC, animated: true)
+        }
         
-        pagingVC.selecedIndex = indexPath.row
-        
-        self.navigationController?.pushViewController(pagingVC, animated: true)
     }
+	
+	//-------------------
     @IBAction func showMenu(_ sender: Any)
     {
         toggleSideMenuView()
@@ -154,9 +184,12 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     
     func sideMenuDidClose() {
         print("sideMenuDidClose")
+        isMenuOpen = false
     }
     
     func sideMenuDidOpen() {
         print("sideMenuDidOpen")
+        isMenuOpen = true
     }
+    
 }

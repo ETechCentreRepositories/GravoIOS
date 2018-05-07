@@ -17,11 +17,11 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var tblProfile: UITableView!
     
 
-    let arrKey = ["Name","Email","Address"]
-    let arrValue = ["Ryme Hobbs","abernathy_marty@hotmail.com","814 Halley Lang Apt 2014"]
+    let arrKey 			= ["Name","Email","Address"]
+    let arrValue 		= ["Ryme Hobbs","abernathy_marty@hotmail.com","814 Halley Lang Apt 2014"]
     
-    let arrKeyOthers = ["Gravos","Logout"]
-    let arrValueOthers = ["Coins Earned: $4.0"," "]
+    let arrKeyOthers 	= 	["Gravos","Logout"]
+    let arrValueOthers 	= ["Coins Earned: $4.0"," "]
     
     
     override func viewDidLoad() {
@@ -51,19 +51,19 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         let rightMenu  = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(self.editProfile(sender:)))
         rightMenu.tintColor = UIColor.black
         self.navigationItem.rightBarButtonItem = rightMenu
-        
-        self.navigationController?.navigationBar.tintColor = UIColor.black
-        self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
-        self.navigationItem.setHidesBackButton(true, animated: true)
-        
-        
-        imgDisplayPic.layer.borderWidth = 0.1
-        imgDisplayPic.layer.masksToBounds = false
-        imgDisplayPic.layer.borderColor = UIColor.black.cgColor
-        imgDisplayPic.layer.cornerRadius = imgDisplayPic.frame.height/2
-        imgDisplayPic.clipsToBounds = true
+		
+		self.customiseUserInterface()
     }
-    
+	
+	
+	func customiseUserInterface()
+	{
+		imgDisplayPic.layer.borderWidth = 0.1
+		imgDisplayPic.layer.masksToBounds = false
+		imgDisplayPic.layer.borderColor = UIColor.black.cgColor
+		imgDisplayPic.layer.cornerRadius = imgDisplayPic.frame.height/2
+		imgDisplayPic.clipsToBounds = true
+	}
     @objc func toggleSideMenu(_ sender: Any)
     {
         toggleSideMenuView()
@@ -73,7 +73,7 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
         var destViewController : UIViewController
-        destViewController = mainStoryboard.instantiateViewController(withIdentifier: "EditProfileVC")
+        destViewController = mainStoryboard.instantiateViewController(withIdentifier: .editProfile)
         self.navigationController?.pushViewController(destViewController, animated: true)
     }
     /*
@@ -107,24 +107,24 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         if section == 0
         {
-            return "Account Information"
+            return .accountinfo
         }
         else
         {
-            return "Others"
+            return .others
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: .profilecell, for: indexPath) as! ProfileCell
+		
         if indexPath.section == 0
         {
             cell.lblKey.text = arrKey[indexPath.row]
             cell.lblValue.text = arrValue[indexPath.row]
             cell.accessoryType = .none
         }
-        if indexPath.section == 1
+        else if indexPath.section == 1
         {
             cell.lblKey.text = arrKeyOthers[indexPath.row]
             cell.lblValue.text = arrValueOthers[indexPath.row]
@@ -136,6 +136,12 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
                 cell.lblValue.textColor = UIColor.orange
             }
         }
+		else
+		{
+			cell.lblKey.text = arrKey[indexPath.row]
+			cell.lblValue.text = arrValue[indexPath.row]
+			cell.accessoryType = .none
+		}
         
         return cell
     }
@@ -159,3 +165,4 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
     }
 }
+

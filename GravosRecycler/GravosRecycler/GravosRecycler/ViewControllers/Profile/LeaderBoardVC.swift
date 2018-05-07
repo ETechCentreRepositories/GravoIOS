@@ -41,31 +41,26 @@ class LeaderBoardVC: UIViewController,UITableViewDelegate,UITableViewDataSource
 
         self.navigationItem.leftBarButtonItem = sideMenu
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
-        self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
-        self.navigationItem.setHidesBackButton(true, animated: true)
-    
-        self.btnShare.layer.cornerRadius = 10
-        self.btnInvite.layer.cornerRadius = 10
-        
-        self.navigationItem.leftBarButtonItem = sideMenu
-        
-        viwImageCover.addDiamondMask(cornerRadius: 1)
-        subViwImageCover.addDiamondMask(cornerRadius: 1)
-        imgProfile.addDiamondMask(cornerRadius: 1)
-        //imgProfile.layer.borderWidth = 3
-        //imgProfile.layer.masksToBounds = false
-        //imgProfile.layer.borderColor = UIColor.black.cgColor
-        //imgProfile.clipsToBounds = true
-        
-       self.navigationController?.navigationBar.barTintColor  = UIColor.black
-        //self.navigationController?.navigationBar.tintColor  = UIColor.white
-        
-        let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = UIColor.white
-        navigationBarAppearace.barTintColor = UIColor.white
-        // change navigation item title color
+    	self.navigationItem.leftBarButtonItem = sideMenu
+		
+		
+        self.customiseUserInterface()
+		
+        self.navigationController?.navigationBar.barTintColor  = UIColor.black
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
     }
+	
+	
+	func customiseUserInterface()
+	{
+		//-------
+		self.btnShare.layer.cornerRadius = 10
+		self.btnInvite.layer.cornerRadius = 10
+	
+		self.viwImageCover.addDiamondMask(cornerRadius: 1)
+		subViwImageCover.addDiamondMask(cornerRadius: 1)
+		imgProfile.addDiamondMask(cornerRadius: 1)
+	}
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

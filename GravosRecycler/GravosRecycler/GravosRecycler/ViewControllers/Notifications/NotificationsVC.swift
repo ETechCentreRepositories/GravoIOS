@@ -46,12 +46,39 @@ class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         let sideMenu  = UIBarButtonItem(image: UIImage(named:"Icon_SideMenu"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
         sideMenu.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem = sideMenu
+		
+		
+		let help  = UIBarButtonItem(image: UIImage(named:"Icon_Help"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.showHelp(_:)))
+		help.tintColor = UIColor.black
+		
+		let cart  = UIBarButtonItem(image: UIImage(named:"Icon_Cart"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.showCart(_:)))
+		help.tintColor = UIColor.black
+		self.navigationItem.rightBarButtonItems = [cart,help]
+		
+		self.navigationItem.setHidesBackButton(true, animated: true)
     }
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+	
+	@objc func showHelp(_ sender: Any)
+	{
+		if let helpVC = self.storyboard?.instantiateViewController(withIdentifier: "HelpVC")
+		{
+			self.navigationController?.pushViewController(helpVC, animated: true)
+		}
+	}
+	
+	
+	@objc func showCart(_ sender: Any)
+	{
+		if let helpVC = self.storyboard?.instantiateViewController(withIdentifier: "CartVC")
+		{
+			self.navigationController?.pushViewController(helpVC, animated: true)
+		}
+	}
 
     override func viewDidLayoutSubviews()
     {

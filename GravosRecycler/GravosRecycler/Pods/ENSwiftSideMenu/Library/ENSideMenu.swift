@@ -131,7 +131,7 @@ open class ENSideMenu : NSObject, UIGestureRecognizerDelegate {
         }
     }
     fileprivate var menuPosition:ENSideMenuPosition = .left
-    fileprivate var blurStyle: UIBlurEffectStyle = .light
+    fileprivate var blurStyle: UIBlurEffectStyle = .dark
     ///  A Boolean value indicating whether the bouncing effect is enabled. The default value is TRUE.
     open var bouncingEnabled :Bool = true
     /// The duration of the slide animation. Used only when `bouncingEnabled` is FALSE.
@@ -159,7 +159,7 @@ open class ENSideMenu : NSObject, UIGestureRecognizerDelegate {
 
     :returns: An initialized `ENSideMenu` object, added to the specified view.
     */
-    public init(sourceView: UIView, menuPosition: ENSideMenuPosition, blurStyle: UIBlurEffectStyle = .light) {
+    public init(sourceView: UIView, menuPosition: ENSideMenuPosition, blurStyle: UIBlurEffectStyle = .dark) {
         super.init()
         self.sourceView = sourceView
         self.menuPosition = menuPosition
@@ -202,7 +202,7 @@ open class ENSideMenu : NSObject, UIGestureRecognizerDelegate {
 
     :returns: An initialized `ENSideMenu` object, added to the specified view, containing the specified menu view controller.
     */
-    public convenience init(sourceView: UIView, menuViewController: UIViewController, menuPosition: ENSideMenuPosition, blurStyle: UIBlurEffectStyle = .light) {
+    public convenience init(sourceView: UIView, menuViewController: UIViewController, menuPosition: ENSideMenuPosition, blurStyle: UIBlurEffectStyle = .dark) {
         self.init(sourceView: sourceView, menuPosition: menuPosition, blurStyle: blurStyle)
         self.menuViewController = menuViewController
         menuViewController.view.frame = sideMenuContainerView.bounds

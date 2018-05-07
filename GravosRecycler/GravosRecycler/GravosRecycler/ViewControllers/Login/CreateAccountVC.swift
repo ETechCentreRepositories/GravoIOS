@@ -17,7 +17,6 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
     @IBOutlet weak var txtContactNumber: TextViewWithLeftImage!
     @IBOutlet weak var txtPassword: TextViewWithLeftImage!
     @IBOutlet weak var imgViwCheckMark: UIImageView!
-    @IBOutlet weak var txtViewContent: UIScrollView!
     
     var isTermsChecked = false
     var activeField: UITextField?
@@ -47,9 +46,9 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
     
     
     @objc func keyboardWillBeHidden(aNotification: NSNotification) {
-        let contentInsets: UIEdgeInsets = UIEdgeInsets.zero
-        self.txtViewContent.contentInset = contentInsets
-        self.txtViewContent.scrollIndicatorInsets = contentInsets
+        //let contentInsets: UIEdgeInsets = UIEdgeInsets.zero
+       // self.txtViewContent.contentInset = contentInsets
+        //self.txtViewContent.scrollIndicatorInsets = contentInsets
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -62,7 +61,7 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
     
     @objc func keyboardWillShow(aNotification: NSNotification)
     {
-        if let keyboardFrame: NSValue = aNotification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue
+        /*if let keyboardFrame: NSValue = aNotification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue
         {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let kbSize: CGSize =  keyboardRectangle.size
@@ -75,7 +74,7 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
                 self.txtViewContent.scrollRectToVisible(activeField!.frame, animated: true)
             }
              self.txtViewContent.scrollRectToVisible(activeField!.frame, animated: true)
-        }
+        }*/
         
         
     }
@@ -112,12 +111,17 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
     
     @IBAction func showTermsConditions(_ sender: Any)
     {
-        self.txtViewContent.isHidden = false
+		let tnc = self.storyboard?.instantiateViewController(withIdentifier: "TNCAccount") as! TNCAccount
+		//addItemVC.delegate = self
+		self.addChildViewController(tnc)
+		tnc.view.frame = self.view.frame
+		self.view.addSubview((tnc.view)!)
+		tnc.didMove(toParentViewController: self)
     }
     
     @IBAction func dismissTermsConditions(_ sender: Any)
     {
-        self.txtViewContent.isHidden = true
+		
     }
     
     
@@ -159,7 +163,7 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
     {
-        txtViewContent.setContentOffset(textField.bounds.origin, animated: true)
+        //txtViewContent.setContentOffset(textField.bounds.origin, animated: true)
         return true
     }
     

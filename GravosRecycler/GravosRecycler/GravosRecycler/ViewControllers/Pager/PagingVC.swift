@@ -32,53 +32,88 @@ class PagingVC: UIViewController
 
     override func viewWillAppear(_ animated: Bool)
     {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let firstViewController = storyboard.instantiateViewController(withIdentifier: "ChildPageVC")
-        let secondViewController = storyboard.instantiateViewController(withIdentifier: "ChildPageVC")
-        let thirdViewController = storyboard.instantiateViewController(withIdentifier: "ChildPageVC")
-        let forthViewController = storyboard.instantiateViewController(withIdentifier: "BulkChildVC")
-        
-        
-        firstViewController.title   = "Paper"
-        secondViewController.title  = "E-Waste"
-        thirdViewController.title   = "Metals"
-        forthViewController.title   = "Bulk Items"
-        
-        firstViewController.view.backgroundColor    = Constants.themeYellow
-        secondViewController.view.backgroundColor   = UIColor(red: 107/255, green: 69/255, blue: 163/255, alpha: 1)
-        thirdViewController.view.backgroundColor    = UIColor(red: 244/255, green: 96/255, blue: 46/255, alpha: 1)
-        forthViewController.view.backgroundColor    = UIColor.white
-        
-        
-        let pagingViewController = FixedPagingViewController(viewControllers: [
-            firstViewController,
-            secondViewController,
-            thirdViewController,
-            forthViewController
-            ])
-        
-        // controller and contrain it to the edges of the view.
-        
-        pagingViewController.textColor = UIColor(red: 95/255, green: 102/255, blue: 108/255, alpha: 1)
-        pagingViewController.selectedTextColor = UIColor(red: 117/255, green: 111/255, blue: 216/255, alpha: 1)
-        pagingViewController.font = UIFont(name: "Quicksand", size: 30)!
-        pagingViewController.selectedFont = UIFont(name: "Quicksand", size: 30)!
-        pagingViewController.borderColor = UIColor.gray
-        
-        addChildViewController(pagingViewController)
-        view.addSubview(pagingViewController.view)
-        view.constrainToEdges(pagingViewController.view)
-        
-        pagingViewController.didMove(toParentViewController: self)
-        
-        pagingViewController.select(index: selecedIndex)
-        
-        let sideMenu  = UIBarButtonItem(image: UIImage(named:"BackArrow"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
-        sideMenu.tintColor = UIColor.black
-        self.navigationItem.leftBarButtonItem = sideMenu
-       
+		self.setupPagingVC()
+		self.customiseUserInterface()
+		
     }
-    
+	
+	@objc func showHelp(_ sender: Any)
+	{
+		if let helpVC = self.storyboard?.instantiateViewController(withIdentifier: "HelpVC")
+		{
+			self.navigationController?.pushViewController(helpVC, animated: true)
+		}
+	}
+	
+	
+	@objc func showCart(_ sender: Any)
+	{
+		if let helpVC = self.storyboard?.instantiateViewController(withIdentifier: "CartVC")
+		{
+			self.navigationController?.pushViewController(helpVC, animated: true)
+		}
+	}
+	
+	func setupPagingVC()
+	{
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let firstViewController = storyboard.instantiateViewController(withIdentifier: "ChildPageVC")
+		let secondViewController = storyboard.instantiateViewController(withIdentifier: "ChildPageVC")
+		let thirdViewController = storyboard.instantiateViewController(withIdentifier: "ChildPageVC")
+		let forthViewController = storyboard.instantiateViewController(withIdentifier: "BulkChildVC")
+		
+		
+		firstViewController.title   = "Paper"
+		secondViewController.title  = "E-Waste"
+		thirdViewController.title   = "Metals"
+		
+		firstViewController.view.backgroundColor    = Constants.themeYellow
+		secondViewController.view.backgroundColor   = Constants.themePurple
+		thirdViewController.view.backgroundColor    = Constants.themeOrange
+		forthViewController.view.backgroundColor    = UIColor.white
+		
+		
+		let pagingViewController = FixedPagingViewController(viewControllers: [
+			firstViewController,
+			secondViewController,
+			thirdViewController,
+			forthViewController
+			])
+		
+		// controller and contrain it to the edges of the view.
+		
+		pagingViewController.textColor = UIColor.black
+		pagingViewController.selectedTextColor = Constants.themePurple
+		pagingViewController.font = UIFont(name: .quicksandReg, size: 30)!
+		pagingViewController.selectedFont = UIFont(name: .quicksandReg, size: 30)!
+		pagingViewController.borderColor = UIColor.gray
+		
+		addChildViewController(pagingViewController)
+		view.addSubview(pagingViewController.view)
+		view.constrainToEdges(pagingViewController.view)
+		
+		pagingViewController.didMove(toParentViewController: self)
+		
+		pagingViewController.select(index: selecedIndex)
+	}
+	
+	
+	func customiseUserInterface()
+	{
+		let sideMenu  = UIBarButtonItem(image: UIImage(named:"BackArrow"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
+		sideMenu.tintColor = UIColor.black
+		self.navigationItem.leftBarButtonItem = sideMenu
+		//----------------------------
+		let help  = UIBarButtonItem(image: UIImage(named:"Icon_Help"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.showHelp(_:)))
+		help.tintColor = UIColor.black
+		//----------------------------
+		let cart  = UIBarButtonItem(image: UIImage(named:"Icon_Cart"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.showCart(_:)))
+		help.tintColor = UIColor.black
+		self.navigationItem.rightBarButtonItems = [cart,help]
+		
+		self.navigationItem.setHidesBackButton(true, animated: true)
+		
+	}
     @objc func toggleSideMenu(_ sender: Any)
     {
         self.navigationController?.popViewController(animated: true)

@@ -48,7 +48,7 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
             let lblDesc = UILabel()
             lblDesc.text = .loginBanner
             lblDesc.textColor = UIColor.white
-            lblDesc.font = UIFont(name: .quicksandF, size: 15)
+			lblDesc.font = UIFont(name: .quicksandBoldF, size: 15)
             lblDesc.numberOfLines = 0
             lblDesc.textAlignment = .center
             //--------------------------

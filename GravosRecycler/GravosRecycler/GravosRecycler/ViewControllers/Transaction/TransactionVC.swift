@@ -31,10 +31,13 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource,
         
         let help  = UIBarButtonItem(image: UIImage(named:"Icon_Help"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.showHelp(_:)))
         help.tintColor = UIColor.black
-        self.navigationItem.rightBarButtonItem = help
-        
+		
+		let cart  = UIBarButtonItem(image: UIImage(named:"Icon_Cart"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.showCart(_:)))
+		help.tintColor = UIColor.black
+		self.navigationItem.rightBarButtonItems = [cart,help]
+		
         self.navigationItem.setHidesBackButton(true, animated: true)
-        
+		
     }
     
     @objc func toggleSideMenu(_ sender: Any)
@@ -49,6 +52,15 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource,
             self.navigationController?.pushViewController(helpVC, animated: true)
         }
     }
+	
+	
+	@objc func showCart(_ sender: Any)
+	{
+		if let helpVC = self.storyboard?.instantiateViewController(withIdentifier: "CartVC")
+		{
+			self.navigationController?.pushViewController(helpVC, animated: true)
+		}
+	}
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

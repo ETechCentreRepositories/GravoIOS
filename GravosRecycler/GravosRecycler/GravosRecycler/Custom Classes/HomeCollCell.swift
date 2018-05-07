@@ -21,7 +21,7 @@ class HomeCollCell: UICollectionViewCell
     {
         super.awakeFromNib()
         // Initialization code
-        
+	
         self.configureTitleProgressBar()
     }
     

@@ -42,7 +42,16 @@ class CalenderVC: UIViewController,JBDatePickerViewDelegate,UITableViewDelegate,
         self.navigationItem.leftBarButtonItem = sideMenu
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
-        
+		
+		let help  = UIBarButtonItem(image: UIImage(named:"Icon_Help"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.showHelp(_:)))
+		help.tintColor = UIColor.black
+		
+		let cart  = UIBarButtonItem(image: UIImage(named:"Icon_Cart"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.showCart(_:)))
+		help.tintColor = UIColor.black
+		self.navigationItem.rightBarButtonItems = [cart,help]
+		
+		self.navigationItem.setHidesBackButton(true, animated: true)
+		
         self.navCalender.title = datePicker.presentedMonthView?.monthDescription
     }
     
@@ -50,7 +59,24 @@ class CalenderVC: UIViewController,JBDatePickerViewDelegate,UITableViewDelegate,
     {
         toggleSideMenuView()
     }
-    
+	
+	@objc func showHelp(_ sender: Any)
+	{
+		if let helpVC = self.storyboard?.instantiateViewController(withIdentifier: "HelpVC")
+		{
+			self.navigationController?.pushViewController(helpVC, animated: true)
+		}
+	}
+	
+	
+	@objc func showCart(_ sender: Any)
+	{
+		if let helpVC = self.storyboard?.instantiateViewController(withIdentifier: "CartVC")
+		{
+			self.navigationController?.pushViewController(helpVC, animated: true)
+		}
+	}
+	
     @IBAction func showNextMonth(_ sender: Any)
     {
         datePicker.loadNextView()

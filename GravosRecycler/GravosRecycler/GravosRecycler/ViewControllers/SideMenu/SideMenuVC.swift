@@ -16,9 +16,12 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var lblProfileName: UILabel!
     @IBOutlet weak var imgProfile: UIImageView!
     
-     var selectedMenuItem : Int = 0
-    let arrSideMenuTitle = ["Home","Notifications","Transactions","Calender","About Us","Share","Invite"]
-    let arrSideMenuIcons = ["Icon_Home","Icon_Notifications","Icon_Transactions","Icon_Calender","Icon_Settings","Icon_Settings","Icon_Settings"]
+    var selectedMenuItem : Int = 0
+    let arrSideMenuTitle = ["Home","Notifications","Transactions","Calender","About Us"]
+    let arrSideMenuIcons = ["Icon_Home","Icon_Notifications","Icon_Transactions","Icon_Calender","Icon_Settings"]
+    
+    let arrOthers        = ["Share","Invite"]
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -68,16 +71,25 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return arrSideMenuTitle.count
+        return arrSideMenuTitle.count + arrOthers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SideMenuCell", for: indexPath) as! SideMenuCell
+        if indexPath.row < 5
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SideMenuCell", for: indexPath) as! SideMenuCell
+            cell.imgIcon.image = UIImage(named: arrSideMenuIcons[indexPath.row])
+            cell.lblTitle.text = arrSideMenuTitle[indexPath.row]
+            return cell
+        }
+        else
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath)
+            cell.textLabel?.text = arrOthers[indexPath.row - arrSideMenuTitle.count]
+            return cell
+        }
         
-        cell.imgIcon.image = UIImage(named: arrSideMenuIcons[indexPath.row])
-        cell.lblTitle.text = arrSideMenuTitle[indexPath.row]
-        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)

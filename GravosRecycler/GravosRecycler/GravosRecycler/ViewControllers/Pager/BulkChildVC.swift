@@ -59,7 +59,7 @@ class BulkChildVC: UIViewController,UIImagePickerControllerDelegate, UINavigatio
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            btnImagePicker.setImage(pickedImage, for: .normal)
+            btnImagePicker.setBackgroundImage(pickedImage, for: .normal)
         }
         
         dismiss(animated: true, completion: nil)
