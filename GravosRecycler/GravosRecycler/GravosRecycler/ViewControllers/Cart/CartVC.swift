@@ -11,9 +11,10 @@ import UIKit
 class CartVC: UIViewController, UITableViewDataSource,UITableViewDelegate
 {
 
-    @IBOutlet weak var tblCart: UITableView!
-    
-    
+	@IBOutlet weak var datePickerConstraint: NSLayoutConstraint!
+	@IBOutlet weak var tblCart: UITableView!
+    @IBOutlet weak var dtTransaction: UIDatePicker!
+    @IBOutlet weak var viwDatePicker: UIView!
     
     override func viewDidLoad()
     {
@@ -58,7 +59,6 @@ class CartVC: UIViewController, UITableViewDataSource,UITableViewDelegate
         cell.lblItemPrice.text = "$0.6"
         cell.stepperWeight.value = 2
         
-        //cell.btnNavigate.addTarget(self, action: #selector(self.performNavigation)    , for: .touchUpInside)
         
         
         return cell
@@ -72,5 +72,14 @@ class CartVC: UIViewController, UITableViewDataSource,UITableViewDelegate
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func savePickedDate(_ sender: Any)
+    {
+        
+    }
+    
+    @IBAction func cancelPickedDate(_ sender: Any)
+    {
+        
+    }
+    
 }

@@ -17,18 +17,19 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var imgBackground: UIImageView!
     
     lazy var totalBannerPages = 2
+	
     override func viewDidLoad()
     {
         super.viewDidLoad()
         scrollLoginBanner.delegate = self
+		self.customiseInterface()
         // Do any additional setup after loading the view.
         
     }
 
     override func viewWillAppear(_ animated: Bool)
     {
-         scrollLoginBanner.reloadInputViews()
-         self.customiseInterface()
+         scrollLoginBanner.scrollsToTop = true
     }
     
     func customiseInterface()

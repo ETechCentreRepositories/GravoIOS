@@ -12,8 +12,9 @@ class LoginActionVC: UIViewController {
 
     @IBOutlet weak var txtUsername: TextViewWithLeftImage!
     @IBOutlet weak var txtPassword: TextViewWithLeftImage!
+	
     @IBOutlet weak var imgTest: UIImageView!
-    
+    let datePicker = UIDatePicker()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,8 +26,9 @@ class LoginActionVC: UIViewController {
                                                                attributes: [NSAttributedStringKey.foregroundColor: UIColor.gray])
         txtPassword.attributedPlaceholder = NSAttributedString(string: .placePass,
                                                                attributes: [NSAttributedStringKey.foregroundColor: UIColor.gray])
-        
-         self.navigationController?.navigationBar.barTintColor = UIColor.white
+		self.navigationController?.navigationBar.barTintColor = UIColor.white
+		
+		
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -59,5 +61,16 @@ class LoginActionVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
        
     }
-    
+	
+	/*
+	let toolbar = UIToolbar()
+	toolbar.sizeToFit()
+
+	let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(performLogin))
+	
+	toolbar.setItems([doneButton], animated: false)
+	//txtUsername.textInputMode = UITextInputMode.
+	txtUsername.inputAccessoryView = toolbar
+	txtUsername.inputView = datePicker
+	*/
 }
