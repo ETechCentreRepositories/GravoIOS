@@ -7,9 +7,10 @@ target 'GravosRecycler' do
 
   # Pods for GravosRecycler
   platform :ios, '10.0'
-  #pod 'Alamofire', '~> 4.7'
+  pod 'Alamofire', '~> 4.7'
   # Pods for GravosCollector
   pod 'GMStepper'
+  pod 'FMDB'
   pod 'SwiftyGif'
   pod 'Parchment'
   pod 'JBDatePicker'

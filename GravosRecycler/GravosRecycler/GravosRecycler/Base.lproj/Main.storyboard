@@ -2453,7 +2453,7 @@ DOOR STEP! JUST SEND US AN IMAGE NOW.</string>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="yes" textContentType="username"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="yes" textContentType="username"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="IconImage" value="Icon_person"/>
                                         </userDefinedRuntimeAttributes>
@@ -2503,7 +2503,6 @@ DOOR STEP! JUST SEND US AN IMAGE NOW.</string>
                                         </state>
                                         <connections>
                                             <action selector="performLogin:" destination="7CB-3k-LNx" eventType="touchUpInside" id="bWp-RK-s9M"/>
-                                            <segue destination="t6f-4E-4UQ" kind="presentation" id="cux-NZ-Pyu"/>
                                         </connections>
                                     </button>
                                 </subviews>

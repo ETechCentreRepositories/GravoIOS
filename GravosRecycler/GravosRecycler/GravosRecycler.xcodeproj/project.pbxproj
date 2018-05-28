@@ -35,6 +35,8 @@
 		7C4F291D2089A7B2006B9A30 /* DeliveryAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F291C2089A7B2006B9A30 /* DeliveryAddressCell.swift */; };
 		7C4F291F2089B553006B9A30 /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F291E2089B553006B9A30 /* CalenderCell.swift */; };
 		7C4F29212089D317006B9A30 /* TransactionScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F29202089D317006B9A30 /* TransactionScheduleCell.swift */; };
+		7C6FC9E420BBAA0800234DFA /* LocalDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6FC9E320BBAA0800234DFA /* LocalDataHandler.swift */; };
+		7C6FC9E620BBAB4200234DFA /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6FC9E520BBAB4200234DFA /* DBManager.swift */; };
 		7C7C05EE20885A44004C556D /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7C05ED20885A44004C556D /* SettingsVC.swift */; };
 		7C7C05F020886DA7004C556D /* AccountDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7C05EF20886DA7004C556D /* AccountDetailsVC.swift */; };
 		7C7C05F320887372004C556D /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7C05F220887372004C556D /* CartVC.swift */; };
@@ -129,6 +131,8 @@
 		7C4F291C2089A7B2006B9A30 /* DeliveryAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressCell.swift; sourceTree = "<group>"; };
 		7C4F291E2089B553006B9A30 /* CalenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
 		7C4F29202089D317006B9A30 /* TransactionScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScheduleCell.swift; sourceTree = "<group>"; };
+		7C6FC9E320BBAA0800234DFA /* LocalDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataHandler.swift; sourceTree = "<group>"; };
+		7C6FC9E520BBAB4200234DFA /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		7C7C05ED20885A44004C556D /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		7C7C05EF20886DA7004C556D /* AccountDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsVC.swift; sourceTree = "<group>"; };
 		7C7C05F220887372004C556D /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
@@ -426,6 +430,8 @@
 			isa = PBXGroup;
 			children = (
 				7C8FA0D6207C4A5B009FA8E6 /* DataHandler.swift */,
+				7C6FC9E320BBAA0800234DFA /* LocalDataHandler.swift */,
+				7C6FC9E520BBAB4200234DFA /* DBManager.swift */,
 			);
 			path = DataHandler;
 			sourceTree = "<group>";
@@ -481,7 +487,6 @@
 				7C8FA092207C4733009FA8E6 /* Resources */,
 				DF84CAA518E95A6398FDD56C /* [CP] Embed Pods Frameworks */,
 				7C342064208EF1210022A929 /* Embed Frameworks */,
-				7CE72177209C48A10010E2AD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -600,19 +605,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7CE72177209C48A10010E2AD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
-		};
 		B2164FC404DD9971C6F611DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -638,7 +630,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ENSwiftSideMenu/ENSwiftSideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
 				"${BUILT_PRODUCTS_DIR}/JBDatePicker/JBDatePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/JKSteppedProgressBar/JKSteppedProgressBar.framework",
@@ -647,7 +641,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ENSwiftSideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JBDatePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JKSteppedProgressBar.framework",
@@ -656,7 +652,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "time \"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -674,6 +670,7 @@
 				7C8FA09A207C4734009FA8E6 /* ViewController.swift in Sources */,
 				7C8FA0E2207C4A5C009FA8E6 /* LoginVC.swift in Sources */,
 				7C8FA0EE207C71EE009FA8E6 /* HomeVC.swift in Sources */,
+				7C6FC9E420BBAA0800234DFA /* LocalDataHandler.swift in Sources */,
 				7CFA63C0207F4798005CC1A9 /* MyMenuTableViewController.swift in Sources */,
 				7C4F291D2089A7B2006B9A30 /* DeliveryAddressCell.swift in Sources */,
 				7C8FA0E0207C4A5C009FA8E6 /* CreateAccountVC.swift in Sources */,
@@ -685,6 +682,7 @@
 				7C7C05F52088854A004C556D /* SuccessCartVC.swift in Sources */,
 				7C8FA0EB207C4A5C009FA8E6 /* DataHandler.swift in Sources */,
 				7CFA63C2207F50FA005CC1A9 /* SideMenuVC.swift in Sources */,
+				7C6FC9E620BBAB4200234DFA /* DBManager.swift in Sources */,
 				7C9E5BCC209FF6EC00A19A90 /* TNCAccount.swift in Sources */,
 				7CD01A7820889B62005EFBC1 /* CalenderVC.swift in Sources */,
 				7C8FA098207C4734009FA8E6 /* AppDelegate.swift in Sources */,

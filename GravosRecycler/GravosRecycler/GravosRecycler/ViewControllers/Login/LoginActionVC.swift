@@ -48,10 +48,39 @@ class LoginActionVC: UIViewController {
 
     @IBAction func performLogin(_ sender: Any)
     {
-        /*if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC")
-        {
-            self.present(homeVC, animated: true)
-        }*/
+		
+		let objDataHandler = DataHandler()
+		
+		if let emailvalue = self.txtUsername.text
+		{
+			if let passwordValue = self.txtPassword.text
+			{
+				objDataHandler.postRemoteData(inputAddress: Constants.kLogin, inputParameters: ["email":emailvalue,"password":passwordValue], completion:
+					{result  in
+						if let response = result as? LoggedInUsers
+						{
+							if response.errormessage == ""
+							{
+								print(response.firstname)
+								//do db operation
+								
+								if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "MyNavigationController")
+								{
+									self.present(homeVC, animated: true)
+								}
+							}
+							else
+							{
+								//show error message
+							}
+						}
+						
+						
+				})
+				
+			}
+		}
+		
         //Helper.showLoader(onView: self.view)
         // Helper.hideLoader(fromView: self.view)
     }
