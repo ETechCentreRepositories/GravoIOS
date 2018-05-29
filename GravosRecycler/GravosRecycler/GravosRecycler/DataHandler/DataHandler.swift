@@ -82,12 +82,33 @@ class DataHandler: NSObject
 				let result = self.parseLoginDetails(inputJSON: inputJSON)
 				print(result)
 				return result
+			case APIaddress.signup.rawValue:
+				let result = self.parseSignUpDetails(inputJSON: inputJSON)
+				print(result)
+				return result
 			default:
 				print("")
 				return ""
 			}
 	}
 	
+	func parseSignUpDetails(inputJSON : [String:Any]) -> Bool
+	{
+		let status = inputJSON[UserResponseKeys.status.rawValue] as! Int
+		let message = inputJSON[UserResponseKeys.message.rawValue] as! String
+		print(message)
+		switch status
+		{
+		case 200:
+			
+			return true
+		case 404:
+			return false
+		default:
+			break
+		}
+		return true
+	}
 	
 	func parseLoginDetails(inputJSON : [String:Any]) -> LoggedInUsers
 	{
@@ -305,6 +326,7 @@ enum APIaddress: String
 {
     case categories     = "getCategories"
     case login          = "login"
+	case signup          = "signup"
 }
 //-------------------------------------------------------------------------------------------------
 enum UserResponseKeys: String, CodingKey
@@ -320,4 +342,5 @@ enum UserResponseKeys: String, CodingKey
 	case email		= "email"
 	case contact	= "contact_number"
 	case address 	= "address"
+	case password	= "password"
 }

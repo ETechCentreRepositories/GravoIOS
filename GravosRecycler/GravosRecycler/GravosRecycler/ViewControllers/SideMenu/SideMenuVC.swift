@@ -21,11 +21,17 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     let arrSideMenuIcons = ["Icon_Home","Icon_Notifications","Icon_Transactions","Icon_Calender","Icon_Settings"]
     
     let arrOthers        = ["Share","Invite"]
-    
+    var loggedInUser	= LoggedInUsers()
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
+		let users = DBManager.shared.getUserDetails()
+		loggedInUser = users[0]
+		if loggedInUser.firstname != ""
+		{
+			self.lblProfileName.text = loggedInUser.firstname
+		}
         // Do any additional setup after loading the view.
     }
 
@@ -62,10 +68,12 @@ class SideMenuVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBAction func showProfile(_ sender: Any)
     {
          let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
-         var destViewController : UIViewController
-         destViewController = mainStoryboard.instantiateViewController(withIdentifier: "ProfileVC")
+         let destViewController = mainStoryboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
+		 destViewController.loggedInUser =  loggedInUser
          sideMenuController()?.setContentViewController(destViewController)
     }
+	
+	
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60.0
     }

@@ -16,6 +16,7 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
     @IBOutlet weak var txtLastName: TextViewWithLeftImage!
     @IBOutlet weak var txtContactNumber: TextViewWithLeftImage!
     @IBOutlet weak var txtPassword: TextViewWithLeftImage!
+	@IBOutlet weak var txtaddress: TextViewWithLeftImage!
     @IBOutlet weak var imgViwCheckMark: UIImageView!
     
     var isTermsChecked = false
@@ -105,7 +106,34 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
     
     @IBAction func createAccount(_ sender: Any)
     {
-        
+		var dictParameters = [String : String]()
+		
+		if self.txtEmail.text != "" && self.txtFirstName.text != "" && self.txtLastName.text != ""
+		{
+			if self.txtPassword.text != ""
+			{
+				dictParameters[UserResponseKeys.firstname.rawValue] = self.txtFirstName.text!
+				dictParameters[UserResponseKeys.lastname.rawValue]	= self.txtLastName.text!
+				dictParameters[UserResponseKeys.email.rawValue]		= self.txtEmail.text!
+				dictParameters[UserResponseKeys.contact.rawValue]	= self.txtContactNumber.text!
+				dictParameters[UserResponseKeys.address.rawValue]	= self.txtaddress.text!
+				dictParameters[UserResponseKeys.password.rawValue]	= self.txtPassword.text!
+				
+				/*dictParameters[UserResponseKeys.firstname.rawValue] = "Jon"
+				dictParameters[UserResponseKeys.lastname.rawValue]	= "Yo"
+				dictParameters[UserResponseKeys.email.rawValue]		= "Jon@jony.com"
+				dictParameters[UserResponseKeys.contact.rawValue]	= "12345678"
+				dictParameters[UserResponseKeys.address.rawValue]	= "States"
+				dictParameters[UserResponseKeys.password.rawValue]	= "password"*/
+				let objDataHandler = DataHandler()
+				
+				objDataHandler.postRemoteData(inputAddress: Constants.kSignup, inputParameters: dictParameters, completion:
+					{result  in
+						
+						print(result)
+				})
+			}
+		}
     }
     
     

@@ -2835,6 +2835,7 @@ DOOR STEP! JUST SEND US AN IMAGE NOW.</string>
                         <outlet property="txtFirstName" destination="JoG-6N-imu" id="A8i-Yq-0bc"/>
                         <outlet property="txtLastName" destination="a8t-jK-jrX" id="v8o-Vo-wub"/>
                         <outlet property="txtPassword" destination="sgo-dy-aBK" id="P25-GZ-SaQ"/>
+                        <outlet property="txtaddress" destination="liY-Wt-yjT" id="6Yk-ZB-9jt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJ5-c9-H5N" userLabel="First Responder" sceneMemberID="firstResponder"/>

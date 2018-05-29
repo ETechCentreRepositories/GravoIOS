@@ -116,7 +116,7 @@ class DBManager: NSObject
 		{
 			print(pathToDatabase)
 			var query = ""
-			query += "DELETE FROM users WHERE firstname='abhijit';"
+			query += "DELETE FROM users WHERE field_UserID='1';"
 			
 			if !database.executeStatements(query)
 			{
@@ -128,8 +128,36 @@ class DBManager: NSObject
 		database.close()
 	}
 	
-	func getUserDetails()
+	func getUserDetails() -> [LoggedInUsers]
 	{
+		let user = LoggedInUsers()
+		if openDatabase()
+		{
+			print(pathToDatabase)
+			var query = ""
+			query += "SELECT * FROM users;"
+			
+			do {
+				print(database)
+				let results = try database.executeQuery(query, values: nil)
+				
+				while results.next()
+				{
+					user.id = "\(results.int(forColumn: field_UserID))"
+					user.firstname = (results.string(forColumn: field_UserFirstName))!
+					user.lastname = (results.string(forColumn: field_UserLastName))!
+					user.contact = (results.string(forColumn: field_UserContact))!
+					user.email = (results.string(forColumn: field_Email))!
+					user.address = (results.string(forColumn: field_UserAddress))!
+					
+				}
+				
+			}
+			catch {
+				print(error.localizedDescription)
+			}
+		}
 		
+		return [user]
 	}
 }

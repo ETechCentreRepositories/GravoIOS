@@ -18,15 +18,21 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     
 
     let arrKey 			= ["Name","Email","Address"]
-    let arrValue 		= ["Ryme Hobbs","abernathy_marty@hotmail.com","814 Halley Lang Apt 2014"]
+    var arrValue 		= ["Ryme Hobbs","abernathy_marty@hotmail.com","814 Halley Lang Apt 2014"]
     
     let arrKeyOthers 	= 	["Gravos","Logout"]
     let arrValueOthers 	= ["Coins Earned: $4.0"," "]
-    
+    var loggedInUser	= LoggedInUsers()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		
+		if loggedInUser.firstname != ""
+		{
+			arrValue.removeAll()
+			arrValue = [loggedInUser.firstname,loggedInUser.email,loggedInUser.address]
+			lblTitle.text = loggedInUser.firstname
+		}
         // Do any additional setup after loading the view.
     }
 
