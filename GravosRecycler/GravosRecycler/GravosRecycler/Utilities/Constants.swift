@@ -13,6 +13,8 @@ struct Constants
     static let kRemoteAddress 	= "https://www.greenravolution.com/API/"
 	static let kLogin			= "login"
 	static let kSignup			= "signup"
+	static let kCategory		= "getCategories"
+	
     static let themeGreen  = UIColor.init(red: 66.0/255.0, green: 187.0/255.0, blue: 142.0/255.0, alpha: 1)
     static let themeYellow = UIColor.init(red: 255.0/255.0, green: 219.0/255.0, blue: 73.0/255.0, alpha: 1)
     static let themePurple = UIColor(red: 107/255, green: 69/255, blue: 163/255, alpha: 1)

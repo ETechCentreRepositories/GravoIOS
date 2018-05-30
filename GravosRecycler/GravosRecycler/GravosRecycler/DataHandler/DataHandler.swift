@@ -34,11 +34,16 @@ class DataHandler: NSObject
                 guard let value = response.result.value as? [String: Any],
                     let _ = value["result"] as? [[String: Any]] else
                 {
-                    print("Malformed data ")
-                    completion("Malformed data")
-                    print(response.description)
-                    return
+					let result = self.parse(inputJSON: response.result.value as! [String : Any] , inputAdress: inputAddress)
+					completion(result)
+					return
                 }
+				guard response.result.isFailure else
+				{
+					let result = self.parse(inputJSON: response.result.value as! [String : Any] , inputAdress: inputAddress)
+					completion(result)
+					return
+				}
                 
             }
     }
@@ -86,10 +91,42 @@ class DataHandler: NSObject
 				let result = self.parseSignUpDetails(inputJSON: inputJSON)
 				print(result)
 				return result
+			case APIaddress.categories.rawValue:
+				let result = self.parseCategoeriesDetails(inputJSON: inputJSON)
+				print(result)
+				return result
 			default:
 				print("")
 				return ""
 			}
+	}
+	
+	func parseCategoeriesDetails(inputJSON : [String:Any]) -> Bool
+	{
+		let status = inputJSON[UserResponseKeys.status.rawValue] as! Int
+		let message = inputJSON[UserResponseKeys.message.rawValue] as! String
+		print(message)
+		switch status
+		{
+			case 200:
+				if inputJSON["result"] != nil
+				{
+					let arr = inputJSON["result"] as!  NSArray
+					
+					for obj in arr
+					{
+						print(obj)
+					}
+					
+					
+				}
+				return true
+			case 404:
+				return false
+			default:
+				break
+		}
+		return true
 	}
 	
 	func parseSignUpDetails(inputJSON : [String:Any]) -> Bool
@@ -170,6 +207,14 @@ class LoggedInUsers : NSObject
 	var email : String = ""
 	var contact : String = ""
 	var address : String = ""
+	var errormessage : String = ""
+}
+//------------------------------------------------------------------
+class Categories : NSObject
+{
+	var id : String 	= ""
+	var type : String	= ""
+	var rate : String	= ""
 	var errormessage : String = ""
 }
 //-------------------------------------------------------------------------------------------------

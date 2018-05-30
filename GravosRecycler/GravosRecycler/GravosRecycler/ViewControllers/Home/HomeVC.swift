@@ -30,7 +30,9 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         screenWidth = screenSize.width
         screenHeight = screenSize.height
         self.sideMenuController()?.sideMenu?.delegate = self
-    
+		
+		//get categories
+		self.getCategories()
         // Do any additional setup after loading the view.
     }
 
@@ -38,7 +40,7 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     override func viewWillAppear(_ animated: Bool)
     {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -68,6 +70,34 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     }
     */
 
+	func getCategories()
+	{
+		let objDataHandler = DataHandler()
+		
+		objDataHandler.fetchRemoteData(inputAddress: Constants.kCategory, completion:
+					{result  in
+						if let response = result as? LoggedInUsers
+						{
+							if response.errormessage == ""
+							{
+								print(response.firstname)
+								//do db operation
+								
+								if let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "MyNavigationController")
+								{
+									self.present(homeVC, animated: true)
+								}
+							}
+							else
+							{
+								//show error message
+							}
+						}
+						
+						
+				})
+		
+	}
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return 4
