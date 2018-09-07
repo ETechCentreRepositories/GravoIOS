@@ -12,11 +12,13 @@
 		054ABE738363D44BDD840E65E0DA2783 /* Pods-GravosRecycler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA1FEA99E4C8ED70A7EDDC67E10B6F7 /* Pods-GravosRecycler-dummy.m */; };
 		05C1BE3B63388A85F8E66283C821C636 /* PagingViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C4E96168B7DF2A3AA9552BD2E9E69E /* PagingViewControllerDataSource.swift */; };
 		082234B8D6E62B4726D7D461CC2DECE3 /* Tween.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D8C21DB7C93759DA7602F4D6702628 /* Tween.swift */; };
+		0867CC2603B2B97C7CD414B08C07F244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		098714C4F7DD93AB483735FF9E37C7A9 /* GMStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C25D82681BA4E617B5291EA00DB1CE /* GMStepper.swift */; };
 		0A257411461E4ABF4EF37C2417723B7F /* PagingIndicatorOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA614F122C777D2FD342B84ABDA89C8 /* PagingIndicatorOptions.swift */; };
 		0EE9BF1A392D7FD4CA7BE62AF682870B /* PagingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9CA98AE70BEFE6C07A5E909BA16B26 /* PagingCell.swift */; };
 		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E33B14065E2804D393C4C3FA866DD /* Timeline.swift */; };
 		118CFE0AAF1AE251D69C8AC1775FAB55 /* JBDatePickerEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DA75D0281F447F8EB512C0E20C0D5 /* JBDatePickerEnums.swift */; };
+		11D1148EC869812164E64B0B38DFE12E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		146661DAA790C18C6FD756AEAFE42503 /* JBDatePickerWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC31E6E4D21E6B720985E1D7DDB78F6 /* JBDatePickerWeekView.swift */; };
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D04CE0D1E06F60CFD4A91741DE113FB9 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D47F3C5E8F080529DD6F255AC7EB51E /* SwiftyGifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC15EDD04B5E7509322354D67857F03E /* SwiftyGifManager.swift */; };
@@ -32,9 +34,7 @@
 		266DE0A813CE465574D1595647AB1CA2 /* JBDatePickerDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03990C7DCF337B0F8801770B0F7EEF /* JBDatePickerDayView.swift */; };
 		26AA45A1AD6CE09E3C11156F390B641F /* PagingViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A34A4A184967F2688B819DC6E966D /* PagingViewControllerDelegate.swift */; };
 		26C2907A27A51AE2E2B2C78C8339C8E9 /* Parchment-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D23C339A513BBC4148D688AAB86057 /* Parchment-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B1899BCF4BAE2C4CB3601058E32169E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		2DEAA2FC7CA49FF6EF86A4635AA81214 /* JBFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408379300DFB1D07E575D138084A364 /* JBFont.swift */; };
-		2FFD349C12396C3174EF14B37193B513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		3083BD91180747F8AF53D61745133F29 /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954F70717F2F6718C312B111422DA298 /* UIImage+SwiftyGif.swift */; };
 		330C3479B93A6F57E05CF9DDE3B6577A /* PagingViewControllerInfiniteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3715A5794F80153B55BB1EC615990730 /* PagingViewControllerInfiniteDataSource.swift */; };
 		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55510AC92A56DBFD5A6085CF2E870F0 /* TaskDelegate.swift */; };
@@ -47,13 +47,11 @@
 		43733C0F87B2F751539D2E709FEF5EE8 /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9833B453A55E31876A1B48F6F3886 /* PagingViewController.swift */; };
 		4774C90E25F17F30EFFFB730E16569ED /* PagingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5980ED930C6C1C1290B0FF68193F2861 /* PagingItems.swift */; };
 		498EA9E9E95F0A7EF6F6280CCD8845C8 /* Parchment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C61C1ADAE972808881743FD24E2CD5 /* Parchment-dummy.m */; };
-		4C27C6AF0668881D64E722B5F7FC0B0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		4E582B2E712345D1DD7451274B8FA2C3 /* PagingMenuItemSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE3F2D0799CEF43D2D9CB43ACF29B11 /* PagingMenuItemSize.swift */; };
-		4EE0A86B88D2F153FAA07930D1621379 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		50F53D64B5BD263A1CA2F55051EAD2E3 /* PagingTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81928CA4AD4AC5CCC6BDAF294F4BBFEE /* PagingTitleCell.swift */; };
 		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371359008FD5B01AADF844FBF17C85A /* Request.swift */; };
-		559CAEEED4AFE52987EA98CABCE74040 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
 		586D264451933E7EA38304B58FCE2C2B /* PagingContentInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25341748347146A4C14C5E0830564401 /* PagingContentInteraction.swift */; };
+		59637B2FFD76D3043956D1548EA61396 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		59D2E01C5C229CA54BE5DCE9C4881AF0 /* JBDatePickerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648BA3028120E8125026DA0C4184AA4 /* JBDatePickerSelectionView.swift */; };
 		5CC02F2DBD5BC0AE8A2A38B035B3A90E /* JKSteppedProgressBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21D2F95F4564A265C3A80AAE04E22F19 /* JKSteppedProgressBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EDB84346D7143FBFA0151160C416793 /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747C98FCE8F62FFE344101FCC53613B /* PagingView.swift */; };
@@ -65,20 +63,20 @@
 		693B1111D09E21AF775BC34B4E8AD455 /* PagingStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79800AFE9FFE918968B8BF59676F0813 /* PagingStateMachine.swift */; };
 		6BBD3DCC5CF89DB458B90AB3CAC1B7F8 /* PagingMenuHorizontalAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A7FF3576DEA1459A2DB7AD551318A /* PagingMenuHorizontalAlignment.swift */; };
 		6CDEB95A4B2FE8E70A1C27FB588CADA2 /* GMStepper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E81C55478E63782789A11A06247C2E3 /* GMStepper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D0BE8C2216F72F093B91B2B6FEAD400 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		6DA7B45FA7EC87FD6304377B3881BE25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		6FDB2F19FF9CF44ABCE94B84237C91F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		71011C9C5D422DB07D9BEEF2422227B0 /* JBDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A074B28073A695228CE12514007834 /* JBDateExtension.swift */; };
-		72563ADE99DC9E753B27D48B16AA3654 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		74350CAEA259C644B74C9B8C65A3957E /* EMPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F46D839F0E9CFD561A5B2908B16D /* EMPageViewController.swift */; };
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA48B921DA88F77C01ABFB2B3581B64E /* SessionDelegate.swift */; };
 		7B729E08F2B668F52654F4C5922153FE /* PagingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC5AB5B8684789202A0BE402E2916C /* PagingLayout.swift */; };
 		7C96F09A338321D08622BA7112DF58FD /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F0672A0E8494621D34621624F4D7A7 /* ENSideMenuNavigationController.swift */; };
 		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE20D070936239AE98735BBEF82BB13B /* Result.swift */; };
+		834F4D9819C6010E611A7E151B8899C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		87ECA447DB887426665260651B7F147E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A2FF0081EC0F30637546920C10DFF /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		882483B8D08982387B8779286D75670C /* PagingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96776ADDFBF714FE366CBA5BD52D5E98 /* PagingCellViewModel.swift */; };
-		898F6B09EE2A5388ED982CEC7C02CC6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		89A744DD6D7FA59C5B865F642FCB1143 /* ENSwiftSideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D820204D9F7A6ACAD1DD36432D319A44 /* ENSwiftSideMenu-dummy.m */; };
 		8A35437C954379DCC66EB7EC01AAC5AA /* Pods-GravosRecyclerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC278089A58211534EAA0E66DB7E27 /* Pods-GravosRecyclerTests-dummy.m */; };
-		9585CFCF7F9E9E55D208A9DAB8AEB115 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		96E70B43FC04BC99AED1BBD4FB1D7581 /* FMDB-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2DC5BEDC30CE7D03187AE6DAD431B9F /* FMDB-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		98242DA84D452279E9EDE64241E10201 /* PagingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E551DFDEEA6114491A41033296702 /* PagingIndicatorView.swift */; };
 		9B8D84996694C541CD3434386E0A081A /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DCF15AA24848664143D9BEFF2A289CB /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -87,6 +85,7 @@
 		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D66638BD1EB198FBCAD73B59E149A22 /* AFError.swift */; };
 		A1B5D80A8998311B8C9043E6942925E6 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 128F32E6BFC7592D7B546FEC94C5DEE4 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54CA2814DD61562109050F975922F15 /* NetworkReachabilityManager.swift */; };
+		A2AC6DC801E30DB516CE5B1A56290485 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		A548833BE5FAD40830428F36E77D0F52 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B601DBD481541AF805DB8AF4BC96929 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8B37F1620780CBE849D28D2EF57CC4A /* PagingMenuTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395072FD0F1B542494A5D53EA76DDE8E /* PagingMenuTransition.swift */; };
 		A8DBB12839501008B4FA86410A3169EE /* PagingBorderLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30895FEA2A70E226616556F063DA131A /* PagingBorderLayoutAttributes.swift */; };
@@ -100,11 +99,13 @@
 		B5B4DB906036A162E07163E4779D022F /* PagingDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F31E643EFDCB6D7A30147FA499F5F /* PagingDistance.swift */; };
 		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14E87F5929ADA08694FB0627E75C76C /* MultipartFormData.swift */; };
 		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0371AE2CD93671A0AC3BE52B65C9BB /* Validation.swift */; };
+		BCFFACEEEB6B920F2A0300B7B99E60AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
 		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFD6A2328213FDC848C6EF1BB5DB52 /* ParameterEncoding.swift */; };
 		BF5A07AF661693A4B11DA8C20A8768FA /* PagingSelectedScrollPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BDF35EDCB23DA37FDF68FC5822393 /* PagingSelectedScrollPosition.swift */; };
 		C0384B074997F0198ACE67C7F36E923E /* ENSwiftSideMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A7B016594543FE84B4050E748DAD577 /* ENSwiftSideMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0CC28070E9FE546D0B3D475E6B344BA /* PagingBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA8D8C2579654C42B4F7967B782A48 /* PagingBorderView.swift */; };
 		C37A3A9842FC6D80BE5DB9F3B4061D85 /* JBDatePickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B443805554D017FF7CA28EC0EE91B /* JBDatePickerViewDelegate.swift */; };
+		C3EC591CDD165734E4498563CB25167B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		C605A44DF96E7FCACF7D6E37B62F795D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74871D9FE7FC6AFA6AA10F1C3497B8 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		C8322E0BC07822A7C25DA3A16ED11633 /* PagingIndicatorLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD5F36BF268F06EDC680B22067B701C /* PagingIndicatorLayoutAttributes.swift */; };
 		CB4A45A353048C5434C51DF7CC33ACA9 /* PagingCellLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B678A434CC132EC03C1D52741268C /* PagingCellLayoutAttributes.swift */; };
@@ -123,14 +124,13 @@
 		F11FAB91014130EE233A3429439D38D7 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 75C072FBC62E9DD6F4F6DEC8C662298B /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1B1ED7B6A820856D76A875B6734AAC0 /* JBDatePickerContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81BFA60C592932F5BF1671309EAE9E4 /* JBDatePickerContentVC.swift */; };
 		F2B2E9D25ACCEB9435D41983603E9F7A /* PagingBorderOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40623B45427D41932DC4FCFBDC34621 /* PagingBorderOptions.swift */; };
-		F6A4C0268CFBB55EF94354493DEA33AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C38968BA6C548A9499FA505EC1B97 /* ResponseSerialization.swift */; };
 		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F9A5E5AECC2811642C64D7A34F225A /* Alamofire.swift */; };
 		F8F210BA2587934BB204364C36DAF9D7 /* PagingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F94FF0510EF556D4CFEAE282E43B70 /* PagingTransition.swift */; };
 		F933850220B87310A5B063425C7F74E4 /* PagingIndicatorMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E4FA8B5447437255732DA7FB4CE54 /* PagingIndicatorMetric.swift */; };
 		F9EB5603BA22EB5E572F859BCAB92045 /* JBDatePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02071597683BBE80261A4A6C43FFD905 /* JBDatePicker-dummy.m */; };
 		F9F60E54082685C75223F08A6D78E6E3 /* JBDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70234F91DBB92FEB736D2A3FF6C61F7 /* JBDatePickerView.swift */; };
-		FA1BB33E22746742547E9577C6C0D5E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		FA8897E9DDA618CECFB18AAC9D5C6B2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		FAAA2B9029AB4916752A729905EF4C42 /* JBDatePickerMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FEADDB5A311F3AE02835A58276156 /* JBDatePickerMonthView.swift */; };
 		FEB2E9AECEE9184B3CCCFC7B5E8F527F /* SteppedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBE2BF7D4DF64E2B42D43DC8E81ADBB /* SteppedProgressBar.swift */; };
 /* End PBXBuildFile section */
@@ -302,6 +302,7 @@
 		855C14CBD9AAED78B2D543E0E1F0EACE /* Pods_GravosRecycler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GravosRecycler.framework; path = "Pods-GravosRecycler.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C026D134A93C59CCA493445D76061D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EC9833B453A55E31876A1B48F6F3886 /* PagingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingViewController.swift; path = Parchment/Classes/PagingViewController.swift; sourceTree = "<group>"; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9319F46D839F0E9CFD561A5B2908B16D /* EMPageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EMPageViewController.swift; path = Parchment/Classes/EMPageViewController.swift; sourceTree = "<group>"; };
 		934C1D763B9C1BA36026C442D04C4F88 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -335,9 +336,9 @@
 		B14E87F5929ADA08694FB0627E75C76C /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		B55510AC92A56DBFD5A6085CF2E870F0 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		B5A1A3C2B525F05804785AD221CAFAB4 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B7A074B28073A695228CE12514007834 /* JBDateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDateExtension.swift; path = JBDatePicker/Classes/JBDateExtension.swift; sourceTree = "<group>"; };
 		BC15EDD04B5E7509322354D67857F03E /* SwiftyGifManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyGifManager.swift; path = SwiftyGif/SwiftyGifManager.swift; sourceTree = "<group>"; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C0D8F5D51E899B3C822B4E0DF7F3781F /* PagingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingState.swift; path = Parchment/Enums/PagingState.swift; sourceTree = "<group>"; };
 		C2DFD763D755E7BB58CBBB4E260AB62E /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+SwiftyGif.swift"; path = "SwiftyGif/UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
 		C3E594C18749AEBE22E2F51F8893BEC2 /* Pods-GravosRecycler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GravosRecycler.release.xcconfig"; sourceTree = "<group>"; };
@@ -358,7 +359,6 @@
 		D5C25D82681BA4E617B5291EA00DB1CE /* GMStepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GMStepper.swift; path = GMStepper/GMStepper.swift; sourceTree = "<group>"; };
 		D820204D9F7A6ACAD1DD36432D319A44 /* ENSwiftSideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ENSwiftSideMenu-dummy.m"; sourceTree = "<group>"; };
 		D8231C3336E33411340486E936646E5D /* PagingDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingDirection.swift; path = Parchment/Enums/PagingDirection.swift; sourceTree = "<group>"; };
-		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D9E486ADC0022477469404C008119C25 /* SwiftyGif-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-prefix.pch"; sourceTree = "<group>"; };
 		DBB8C0FB198537D8C508708886A98C24 /* IndexedPagingItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndexedPagingItem.swift; path = Parchment/Structs/IndexedPagingItem.swift; sourceTree = "<group>"; };
 		DDA25CD78CB56759EFF5746A59D805C6 /* JBDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JBDatePicker.framework; path = JBDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -385,7 +385,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9585CFCF7F9E9E55D208A9DAB8AEB115 /* Foundation.framework in Frameworks */,
+				FA8897E9DDA618CECFB18AAC9D5C6B2C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +393,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EE0A86B88D2F153FAA07930D1621379 /* Foundation.framework in Frameworks */,
+				6D0BE8C2216F72F093B91B2B6FEAD400 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +401,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6A4C0268CFBB55EF94354493DEA33AE /* Foundation.framework in Frameworks */,
+				6DA7B45FA7EC87FD6304377B3881BE25 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,8 +409,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FFD349C12396C3174EF14B37193B513 /* Foundation.framework in Frameworks */,
-				559CAEEED4AFE52987EA98CABCE74040 /* UIKit.framework in Frameworks */,
+				0867CC2603B2B97C7CD414B08C07F244 /* Foundation.framework in Frameworks */,
+				BCFFACEEEB6B920F2A0300B7B99E60AD /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +418,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				898F6B09EE2A5388ED982CEC7C02CC6C /* Foundation.framework in Frameworks */,
+				11D1148EC869812164E64B0B38DFE12E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +426,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */,
+				834F4D9819C6010E611A7E151B8899C3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +434,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C27C6AF0668881D64E722B5F7FC0B0D /* Foundation.framework in Frameworks */,
+				59637B2FFD76D3043956D1548EA61396 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +442,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B1899BCF4BAE2C4CB3601058E32169E /* Foundation.framework in Frameworks */,
+				A2AC6DC801E30DB516CE5B1A56290485 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +450,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA1BB33E22746742547E9577C6C0D5E0 /* Foundation.framework in Frameworks */,
+				C3EC591CDD165734E4498563CB25167B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +458,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72563ADE99DC9E753B27D48B16AA3654 /* Foundation.framework in Frameworks */,
+				6FDB2F19FF9CF44ABCE94B84237C91F5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +541,15 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		1BACFBC89982D991117A560012C06B82 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -589,18 +598,9 @@
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
-				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		445B2FC7041BF8DC0CAF162F12E86533 /* Pods-GravosRecyclerTests */ = {

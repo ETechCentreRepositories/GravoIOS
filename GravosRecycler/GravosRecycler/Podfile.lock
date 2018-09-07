@@ -21,7 +21,7 @@ DEPENDENCIES:
   - SwiftyGif
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - FMDB
     - GMStepper
@@ -52,4 +52,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 3997b0722848b5756731d05c827b16ec4b67a6e3
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

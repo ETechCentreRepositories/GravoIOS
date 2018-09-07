@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GMStepper
 
 class CreateAccountVC: UIViewController,UITextFieldDelegate
 {
@@ -68,18 +69,20 @@ class CreateAccountVC: UIViewController,UITextFieldDelegate
     @IBAction func createAccount(_ sender: Any)
     {
         
+         
+        
     }
     
     
-    @IBAction func showTermsConditions(_ sender: Any)
-    {
-        self.txtViewContent.isHidden = false
-    }
-    
-    @IBAction func dismissTermsConditions(_ sender: Any)
-    {
-        self.txtViewContent.isHidden = true
-    }
+//    @IBAction func showTermsConditions(_ sender: Any)
+//    {
+//        self.txtViewContent.isHidden = false
+//    }
+//    
+//    @IBAction func dismissTermsConditions(_ sender: Any)
+//    {
+//        self.txtViewContent.isHidden = true
+//    }
     
     
     @IBAction func swapTCCheckMark(_ sender: Any)

@@ -7,7 +7,7 @@ target 'GravosCollector' do
   platform :ios, '10.0'
   pod 'Alamofire', '~> 4.7'
   # Pods for GravosCollector
-  pod "GMStepper"
+  pod 'GMStepper'
   pod 'SwiftyGif'
   pod 'Alamofire', '~> 4.7'
   target 'GravosCollectorTests' do

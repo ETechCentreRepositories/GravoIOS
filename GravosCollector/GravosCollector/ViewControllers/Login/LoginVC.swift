@@ -20,14 +20,14 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        scrollLoginBanner.delegate = self
+//        scrollLoginBanner.delegate = self
         // Do any additional setup after loading the view.
         self.customiseInterface()
     }
 
     override func viewWillAppear(_ animated: Bool)
     {
-         scrollLoginBanner.reloadInputViews()
+//         scrollLoginBanner.reloadInputViews()
     }
     func customiseInterface()
     {
@@ -42,12 +42,12 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
             lblDesc.textAlignment = .center
             
             
-            let xCordinate = viewScrollContent.frame.midX + viewScrollContent.frame.width * CGFloat(label)
-            contentWidth += viewScrollContent.frame.width
-            scrollLoginBanner.addSubview(lblDesc)
-            lblDesc.frame = CGRect(x: xCordinate - 120, y: (viewScrollContent.frame.height/2) - 50, width: viewScrollContent.frame.width * 0.7, height: 120)
+//            let xCordinate = viewScrollContent.frame.midX + viewScrollContent.frame.width * CGFloat(label)
+//            contentWidth += viewScrollContent.frame.width
+//            scrollLoginBanner.addSubview(lblDesc)
+//            lblDesc.frame = CGRect(x: xCordinate - 120, y: (viewScrollContent.frame.height/2) - 50, width: viewScrollContent.frame.width * 0.7, height: 120)
         }
-        scrollLoginBanner.contentSize = CGSize(width: contentWidth, height: viewScrollContent.frame.height)
+//        scrollLoginBanner.contentSize = CGSize(width: contentWidth, height: viewScrollContent.frame.height)
        
         
         let imgLoginBg = UIImage(gifName: "recycle_cinemagraph_2.gif")
@@ -59,10 +59,10 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
     }
     
 
-    func scrollViewDidScroll(_ scrollView: UIScrollView)
-    {
-        pgCtrlLogin.currentPage = (Int(scrollLoginBanner.contentOffset.x/214))
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView)
+//    {
+//        pgCtrlLogin.currentPage = (Int(scrollLoginBanner.contentOffset.x/214))
+//    }
     /*
     // MARK: - Navigation
 
