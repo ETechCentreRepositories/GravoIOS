@@ -10,6 +10,13 @@ target 'GravosCollector' do
   pod 'GMStepper'
   pod 'SwiftyGif'
   pod 'Alamofire', '~> 4.7'
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
+  pod 'GoogleMaps'
+  pod 'GooglePlacesSearchController'
+  pod 'MaterialComponents/Tabs'
+  
+  
   target 'GravosCollectorTests' do
     inherit! :search_paths
     # Pods for testing

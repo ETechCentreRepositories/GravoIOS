@@ -8,7 +8,7 @@
 
 import UIKit
 import ENSwiftSideMenu
-class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,ENSideMenuDelegate
+class HomeVC: BaseViewController,UICollectionViewDelegate,UICollectionViewDataSource,ENSideMenuDelegate
 {
     
     @IBOutlet weak var colViwHome: UICollectionView!
@@ -18,14 +18,15 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
     
-    var arrTypeOfMaterials = ["Paper","Metals","E-Waste","Bulk Items"]
-    var arrPaymentOpt = ["Get Paid", "Pay Us"]
+    var arrTypeOfMaterials = ["PAPER","METALS","E-WASTE","BIG ITEMS"]
+    var arrPaymentOpt = ["Gravo rewards you", "Gravos quotes you"]
     
     var isMenuOpen      = false
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+		addSlideMenuButton()
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height

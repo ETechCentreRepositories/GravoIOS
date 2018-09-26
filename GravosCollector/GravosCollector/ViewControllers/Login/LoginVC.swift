@@ -1,3 +1,4 @@
+
 //
 //  LoginVC.swift
 //  GravosCollector
@@ -11,9 +12,7 @@ import SwiftyGif
 
 class LoginVC: UIViewController,UIScrollViewDelegate {
 
-    @IBOutlet weak var pgCtrlLogin: UIPageControl!
-    @IBOutlet weak var scrollLoginBanner: UIScrollView!
-    @IBOutlet weak var viewScrollContent: UIView!
+  
     @IBOutlet weak var imgBackground: UIImageView!
     
     

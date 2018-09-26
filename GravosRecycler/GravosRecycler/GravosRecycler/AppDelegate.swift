@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+		
+		GMSPlacesClient.provideAPIKey("AIzaSyDMr7DNXUL0A5Q6Pp1H2Iq_C1ZPBAqbba4")
+		UIApplication.shared.statusBarStyle = .lightContent
+	
         return true
     }
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyGif
+
 
 class LoginVC: UIViewController,UIScrollViewDelegate {
 
@@ -16,7 +16,7 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var viewScrollContent: UIView!
     @IBOutlet weak var imgBackground: UIImageView!
     
-    lazy var totalBannerPages = 2
+    lazy var totalBannerPages = 3
 	
     override func viewDidLoad()
     {
@@ -47,7 +47,18 @@ class LoginVC: UIViewController,UIScrollViewDelegate {
         for label in 0...totalBannerPages
         {
             let lblDesc = UILabel()
-            lblDesc.text = .loginBanner
+            
+            if(label == 1){
+                lblDesc.text = .loginBanner2
+            } else if(label == 2){
+                
+                 lblDesc.text = .loginBanner3
+                
+			} else {
+				 lblDesc.text = .loginBanner
+			}
+        
+           
             lblDesc.textColor = UIColor.white
 			lblDesc.font = UIFont(name: .quicksandBoldF, size: 15)
             lblDesc.numberOfLines = 0

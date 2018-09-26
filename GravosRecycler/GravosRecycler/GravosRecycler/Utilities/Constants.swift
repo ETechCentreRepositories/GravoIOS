@@ -40,7 +40,11 @@ extension String
 	static let quicksandReg		= "Quicksand"
     
     //Welcome
-    static let loginBanner  = "GRAVO is also a platform through which environmental information and educational material can be accessed with ease for all subscribers."
+    static let loginBanner  = "Tip 1\n Different recycle bins have different uses! Do look before you throw!"
+	
+	 static let loginBanner2  = "Tip 2\n Always Reuse items whenever you can!"
+	
+	static let loginBanner3  = "Tip 3\n Try to bring a tupperware when you are buying food back"
     static let loginGIF     = "recycle_cinemagraph_2.gif"
     
     //Login

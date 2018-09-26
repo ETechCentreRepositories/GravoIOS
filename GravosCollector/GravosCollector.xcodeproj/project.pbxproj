@@ -21,7 +21,6 @@
 		7C430921206C8C9100385696 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C430920206C8C9100385696 /* AddItemVC.swift */; };
 		7C430927206CA8AC00385696 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C430926206CA8AC00385696 /* DataHandler.swift */; };
 		7C4309292073165000385696 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4309282073165000385696 /* Constants.swift */; };
-		7C74CED52060B7B5004595A5 /* PickupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED42060B7B5004595A5 /* PickupsVC.swift */; };
 		7C74CED72060BC17004595A5 /* PickupCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED62060BC17004595A5 /* PickupCustomCell.swift */; };
 		7C74CED92060CAA1004595A5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CED82060CAA1004595A5 /* Helper.swift */; };
 		7C74CEDB2060CBB5004595A5 /* ParserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74CEDA2060CBB5004595A5 /* ParserJSON.swift */; };
@@ -35,6 +34,9 @@
 		7C7BF9A1205B8288005FFAE6 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7BF9A0205B8288005FFAE6 /* CreateAccountVC.swift */; };
 		7C88CEE12068927A00251CC0 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C88CEE02068927A00251CC0 /* TransactionVC.swift */; };
 		7C88CEE52068CE4A00251CC0 /* TransactionCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C88CEE42068CE4A00251CC0 /* TransactionCustomCell.swift */; };
+		841E06E22150B12800163FCD /* EditPersonalDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E06E12150B12800163FCD /* EditPersonalDetailsVC.swift */; };
+		84539D4B214BABF100903A5B /* PickupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84539D4A214BABF100903A5B /* PickupsVC.swift */; };
+		84539D4D214BBC7700903A5B /* PersonalDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84539D4C214BBC7700903A5B /* PersonalDetailsVC.swift */; };
 		84863A69B7E12BA07EAFA7FE /* Pods_GravosCollector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1975A0AE7AEFA0382B072E9 /* Pods_GravosCollector.framework */; };
 		99E5F48909FACB9E926BBF1F /* Pods_GravosCollectorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250D3D7BB48FFFE91469AB83 /* Pods_GravosCollectorTests.framework */; };
 /* End PBXBuildFile section */
@@ -75,7 +77,6 @@
 		7C430920206C8C9100385696 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
 		7C430926206CA8AC00385696 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		7C4309282073165000385696 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		7C74CED42060B7B5004595A5 /* PickupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupsVC.swift; sourceTree = "<group>"; };
 		7C74CED62060BC17004595A5 /* PickupCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupCustomCell.swift; sourceTree = "<group>"; };
 		7C74CED82060CAA1004595A5 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		7C74CEDA2060CBB5004595A5 /* ParserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserJSON.swift; sourceTree = "<group>"; };
@@ -85,6 +86,9 @@
 		7C7BF9A0205B8288005FFAE6 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		7C88CEE02068927A00251CC0 /* TransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
 		7C88CEE42068CE4A00251CC0 /* TransactionCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCustomCell.swift; sourceTree = "<group>"; };
+		841E06E12150B12800163FCD /* EditPersonalDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonalDetailsVC.swift; sourceTree = "<group>"; };
+		84539D4A214BABF100903A5B /* PickupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupsVC.swift; sourceTree = "<group>"; };
+		84539D4C214BBC7700903A5B /* PersonalDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsVC.swift; sourceTree = "<group>"; };
 		B35080C9C3EEA49844B698DB /* Pods-GravosCollectorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosCollectorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravosCollectorTests/Pods-GravosCollectorTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1975A0AE7AEFA0382B072E9 /* Pods_GravosCollector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GravosCollector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7696F68D677841E9B3716E3 /* Pods-GravosCollector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosCollector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GravosCollector/Pods-GravosCollector.debug.xcconfig"; sourceTree = "<group>"; };
@@ -245,7 +249,9 @@
 		7C74CED32060B762004595A5 /* DailyPickups */ = {
 			isa = PBXGroup;
 			children = (
-				7C74CED42060B7B5004595A5 /* PickupsVC.swift */,
+				84539D4A214BABF100903A5B /* PickupsVC.swift */,
+				84539D4C214BBC7700903A5B /* PersonalDetailsVC.swift */,
+				841E06E12150B12800163FCD /* EditPersonalDetailsVC.swift */,
 			);
 			path = DailyPickups;
 			sourceTree = "<group>";
@@ -411,12 +417,18 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-GravosCollector/Pods-GravosCollector-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
+				"${BUILT_PRODUCTS_DIR}/GooglePlacesSearchController/GooglePlacesSearchController.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesSearchController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,9 +460,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GravosCollector/Pods-GravosCollector-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -512,12 +531,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84539D4B214BABF100903A5B /* PickupsVC.swift in Sources */,
 				7C1D34392063569800CF8644 /* entPickUpItem.swift in Sources */,
 				7C43091F206C7A4B00385696 /* entTransactionItem.swift in Sources */,
 				7C7BF997205A5791005FFAE6 /* TextViewWithLeftImage.swift in Sources */,
 				7C7BF994205A49B3005FFAE6 /* LoginActionVC.swift in Sources */,
 				7C430927206CA8AC00385696 /* DataHandler.swift in Sources */,
-				7C74CED52060B7B5004595A5 /* PickupsVC.swift in Sources */,
 				7C3C291C2091CEA2007C31B4 /* BulkTransactionVC.swift in Sources */,
 				7C1E6B75205A2A030078E66C /* LoginVC.swift in Sources */,
 				7C4309292073165000385696 /* Constants.swift in Sources */,
@@ -526,9 +545,11 @@
 				7C88CEE52068CE4A00251CC0 /* TransactionCustomCell.swift in Sources */,
 				7C08690A205A0B58009F2DE6 /* AppDelegate.swift in Sources */,
 				7C88CEE12068927A00251CC0 /* TransactionVC.swift in Sources */,
+				841E06E22150B12800163FCD /* EditPersonalDetailsVC.swift in Sources */,
 				7C74CED72060BC17004595A5 /* PickupCustomCell.swift in Sources */,
 				7C74CED92060CAA1004595A5 /* Helper.swift in Sources */,
 				7C430921206C8C9100385696 /* AddItemVC.swift in Sources */,
+				84539D4D214BBC7700903A5B /* PersonalDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

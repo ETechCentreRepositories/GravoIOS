@@ -17,6 +17,7 @@ class HelpVC: UIViewController,UITextViewDelegate
     @IBOutlet weak var txtViwMessage: UITextView!
     @IBOutlet weak var scrollHelp: UIScrollView!
     
+    @IBOutlet weak var webview: UIWebView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -24,6 +25,10 @@ class HelpVC: UIViewController,UITextViewDelegate
         let sideMenu  = UIBarButtonItem(image: UIImage(named:"BackArrow"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
         sideMenu.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem = sideMenu
+        
+        webview.allowsInlineMediaPlayback = true
+        
+        webview.loadHTMLString("<iframe width=\"\(webview.frame.width)\" height=\"\(webview.frame.height)\" src=\"https://www.youtube.com/embed/ksbl_Yues4A\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
         // Do any additional setup after loading the view.
     }
 
