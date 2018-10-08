@@ -49,8 +49,9 @@ class ProfileVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.black]
         
         self.tblProfile.tableFooterView = UIView()
-        let sideMenu  = UIBarButtonItem(image: UIImage(named:"Icon_SideMenu"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
+        let sideMenu  = UIBarButtonItem(image: UIImage(named:"BackArrow"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
         sideMenu.tintColor = UIColor.black
+        
         self.navigationItem.leftBarButtonItem = sideMenu
         
         

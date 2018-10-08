@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSource
+class NotificationsVC: BaseViewController,UITableViewDelegate,UITableViewDataSource
 {
     
     @IBOutlet weak var htConstraintContainer: NSLayoutConstraint!
@@ -19,12 +19,13 @@ class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         super.viewDidLoad()
         tblNotifications.tableFooterView = UIView()
         
+       
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool)
     {
-        
+         addSlideMenuButton()
         self.htConstraintContainer.constant = self.tblNotifications.contentSize.height
         containerView.backgroundColor = UIColor.clear
         containerView.layer.shadowColor = UIColor.darkGray.cgColor
@@ -43,10 +44,7 @@ class NotificationsVC: UIViewController,UITableViewDelegate,UITableViewDataSourc
         
         tblNotifications.separatorStyle = .none
         
-        let sideMenu  = UIBarButtonItem(image: UIImage(named:"Icon_SideMenu"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
-        sideMenu.tintColor = UIColor.black
-        self.navigationItem.leftBarButtonItem = sideMenu
-		
+    
 		
 		let help  = UIBarButtonItem(image: UIImage(named:"Icon_Help"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.showHelp(_:)))
 		help.tintColor = UIColor.black

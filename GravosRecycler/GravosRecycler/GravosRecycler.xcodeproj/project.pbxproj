@@ -76,6 +76,7 @@
 		7CFA63BE207F42F5005CC1A9 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA63BD207F42F4005CC1A9 /* MyNavigationController.swift */; };
 		7CFA63C0207F4798005CC1A9 /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA63BF207F4798005CC1A9 /* MyMenuTableViewController.swift */; };
 		7CFA63C2207F50FA005CC1A9 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA63C1207F50FA005CC1A9 /* SideMenuVC.swift */; };
+		84438113215C6AAA00AC6434 /* Modals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84438112215C6AAA00AC6434 /* Modals.swift */; };
 		844453E9215A15A800264B21 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844453E8215A15A800264B21 /* BaseViewController.swift */; };
 		844453ED215A165600264B21 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844453EC215A165600264B21 /* MenuViewController.swift */; };
 		84EAE680215A38D30060008D /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EAE67F215A38D30060008D /* MenuTableViewCell.swift */; };
@@ -179,6 +180,7 @@
 		7CFA63BD207F42F4005CC1A9 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		7CFA63BF207F4798005CC1A9 /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
 		7CFA63C1207F50FA005CC1A9 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		84438112215C6AAA00AC6434 /* Modals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modals.swift; sourceTree = "<group>"; };
 		844453E8215A15A800264B21 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		844453EC215A165600264B21 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		84EAE67F215A38D30060008D /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 			children = (
 				7C8FA0BC207C4A5A009FA8E6 /* entPickUpItem.swift */,
 				7C8FA0BD207C4A5A009FA8E6 /* entTransactionItem.swift */,
+				84438112215C6AAA00AC6434 /* Modals.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 				7C3C291E2091E378007C31B4 /* ScheduleStatusCell.swift in Sources */,
 				7C4F29032088D1E2006B9A30 /* LeaderBoardCell.swift in Sources */,
 				844453E9215A15A800264B21 /* BaseViewController.swift in Sources */,
+				84438113215C6AAA00AC6434 /* Modals.swift in Sources */,
 				7C8FA09A207C4734009FA8E6 /* ViewController.swift in Sources */,
 				7C8FA0E2207C4A5C009FA8E6 /* LoginVC.swift in Sources */,
 				7C8FA0EE207C71EE009FA8E6 /* HomeVC.swift in Sources */,

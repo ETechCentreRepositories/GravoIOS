@@ -10,13 +10,28 @@ import UIKit
 protocol  SlideMenuDelegate {
 	func slideMenuItemSelectedAtIndex(_ index : Int32)
 }
+struct Headline{
+    var title: String
+    var image: String
+}
 
-
-class MenuViewController: UIViewController{
+class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
     @IBOutlet weak var txtName: UILabel!
     var btnMenu: UIButton!
     var delegate : SlideMenuDelegate?
+    
+    var headlines = [
+        Headline (title:"Home", image:"iconHome"),
+        Headline (title:"Notification", image:"iconNotification"),
+        Headline (title:"Transactions", image:"Icon_Transactions"),
+        Headline (title:"Calendar", image:"iconCalendar"),
+        Headline (title:"About us", image:"icon_aboutus"),
+        Headline (title:"Invite", image:""),
+        
+        
+        ]
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
         
@@ -26,6 +41,64 @@ class MenuViewController: UIViewController{
         }
 		
 	}
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return headlines.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! MenuTableViewCell
+        
+        let headline = headlines[indexPath.row]
+        cell.textLabel?.text = headline.title
+        
+        cell.imageView?.image = UIImage(named: headline.image)
+        return cell
+    }
+    
+    @IBAction func btnProfileTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var headline = indexPath.row
+        print(headline)
+    
+        if(headline == 1){
+            let storyboard: UIStoryboard =  UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "NotificationsVC") as! NotificationsVC
+			
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if (headline == 2){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "TransactionVC") as! TransactionVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if(headline == 3){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "CalenderVC") as! CalenderVC
+            self.navigationController?.pushViewController(vc, animated: true)
+		} else if(headline == 4){
+			let storyboard = UIStoryboard(name: "Main", bundle: nil)
+			let vc = storyboard.instantiateViewController(withIdentifier: "AboutUsVC") as! AboutUsVC
+			self.navigationController?.pushViewController(vc, animated: true)
+		} else if(headline == 5) {
+			
+		} else{
+			let storyboard = UIStoryboard(name: "Main", bundle: nil)
+			let vc = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+			self.navigationController?.pushViewController(vc, animated: true)
+		}
+        
+        
+       
+        
+    }
+    
     @IBOutlet weak var btnCloseMenuOverlay: UIButton!
     
     

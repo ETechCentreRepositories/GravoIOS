@@ -118,30 +118,52 @@ class HomeVC: BaseViewController,UICollectionViewDelegate,UICollectionViewDataSo
 			
 			if (indexPath.row == 0)
 			{
-				homeCell.imgCellType.image = UIImage(named: "Icon_Paper")
+				homeCell.imgCellType.image = UIImage(named: "Paper | Newspaper")
 				homeCell.imgCellType.backgroundColor = Constants.themeYellow
 			}
 			if (indexPath.row == 1)
 			{
-				homeCell.imgCellType.image = UIImage(named: "Icon_Screws")
+				homeCell.imgCellType.image = UIImage(named: "metals_main")
 				homeCell.imgCellType.backgroundColor = Constants.themeOrange
 			}
 			if (indexPath.row == 2)
 			{
-				homeCell.imgCellType.image = UIImage(named: "Icon_EWaste")
+				homeCell.imgCellType.image = UIImage(named: "ewaste_main")
 				homeCell.imgCellType.backgroundColor = Constants.themePurple
 				
 			}
 			if (indexPath.row == 3)
 			{
-				homeCell.imgCellType.image = UIImage(named: "Icon_BulkItems")
+				homeCell.imgCellType.image = UIImage(named: "bulk_fridge")
 				homeCell.lblCellSubTitle.textColor = UIColor.red
-				homeCell.imgCellType.backgroundColor = UIColor.cyan
+                homeCell.imgCellType.backgroundColor = hexStringToUIColor(hex: "#33C0C4")
 			}
 		}
 		
 	}
     
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .homecell, for: indexPath) as! HomeCollCell

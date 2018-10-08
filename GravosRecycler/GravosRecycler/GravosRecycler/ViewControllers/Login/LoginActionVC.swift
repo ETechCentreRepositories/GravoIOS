@@ -97,15 +97,19 @@ class LoginActionVC: UIViewController {
                                 
                                 
                                 let getresultresponse = response.result.value as! NSDictionary
-                                let getresult = getresultresponse.value(forKey: "result")as! NSArray
+								 let getresult = getresultresponse.value(forKey: "result")
+								
+								
                                 print(" GET Result : \(getresult)")
 								
-								let testing =  getresult[0];
-								print(testing);
+							
 								
-								
+//								let testing =  getresult[0];
+//								print(testing);
+							
 								defaultValues.set(getresult, forKey: "getresult")
 								defaultValues.synchronize()
+								
 								
 //								let totalObject = defaultValues.array(forKey: "getresult")
 //								let gettotalArray = defaultValues.stringArray(forKey: "getresult")

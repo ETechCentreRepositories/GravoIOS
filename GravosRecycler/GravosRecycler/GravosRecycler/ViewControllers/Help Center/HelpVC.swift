@@ -28,7 +28,7 @@ class HelpVC: UIViewController,UITextViewDelegate
         
         webview.allowsInlineMediaPlayback = true
         
-        webview.loadHTMLString("<iframe width=\"\(webview.frame.width)\" height=\"\(webview.frame.height)\" src=\"https://www.youtube.com/embed/ksbl_Yues4A\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
+        webview.loadHTMLString("<iframe width=\"\(webview.frame.width)\" height=\"\(webview.frame.height)\" src=\"https://www.youtube.com/embed/LrkMH_EnRas\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
         // Do any additional setup after loading the view.
     }
 

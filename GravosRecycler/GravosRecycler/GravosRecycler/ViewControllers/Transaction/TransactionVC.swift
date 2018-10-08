@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource
+class TransactionVC: BaseViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource
 {
     
     
@@ -23,9 +23,7 @@ class TransactionVC: UIViewController,UITableViewDelegate,UITableViewDataSource,
 
     override func viewWillAppear(_ animated: Bool)
     {
-        let sideMenu  = UIBarButtonItem(image: UIImage(named:"Icon_SideMenu"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
-        sideMenu.tintColor = UIColor.black
-        self.navigationItem.leftBarButtonItem = sideMenu
+       addSlideMenuButton()
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
         

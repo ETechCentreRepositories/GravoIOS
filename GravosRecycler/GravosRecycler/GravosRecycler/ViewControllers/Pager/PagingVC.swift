@@ -64,12 +64,12 @@ class PagingVC: UIViewController
 		
 		
 		firstViewController.title   = "Paper"
-		secondViewController.title  = "E-Waste"
-		thirdViewController.title   = "Metals"
+		secondViewController.title  = "Metals"
+		thirdViewController.title   = "E-Waste"
 		
 		firstViewController.view.backgroundColor    = Constants.themeYellow
-		secondViewController.view.backgroundColor   = Constants.themePurple
-		thirdViewController.view.backgroundColor    = Constants.themeOrange
+		secondViewController.view.backgroundColor   = Constants.themeOrange
+		thirdViewController.view.backgroundColor    = Constants.themePurple
 		forthViewController.view.backgroundColor    = UIColor.white
 		
 		

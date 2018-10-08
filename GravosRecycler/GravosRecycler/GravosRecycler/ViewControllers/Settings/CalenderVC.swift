@@ -9,7 +9,7 @@
 import UIKit
 import JBDatePicker
 
-class CalenderVC: UIViewController,JBDatePickerViewDelegate,UITableViewDelegate,UITableViewDataSource
+class CalenderVC: BaseViewController,JBDatePickerViewDelegate,UITableViewDelegate,UITableViewDataSource
 {
     
     
@@ -37,9 +37,7 @@ class CalenderVC: UIViewController,JBDatePickerViewDelegate,UITableViewDelegate,
     
     override func viewWillAppear(_ animated: Bool)
     {
-        let sideMenu  = UIBarButtonItem(image: UIImage(named:"Icon_SideMenu"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
-        sideMenu.tintColor = UIColor.black
-        self.navigationItem.leftBarButtonItem = sideMenu
+            addSlideMenuButton()
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController?.navigationItem.setHidesBackButton(true, animated: true)
 		
