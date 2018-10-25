@@ -7,59 +7,75 @@
 //
 
 import UIKit
-import WebKit
 
-class AboutUsVC: UIViewController,WKUIDelegate {
+struct newHeadline{
+    
+    var  title: String
+    var image: String
+}
+class AboutUsVC: BaseViewController,UITableViewDataSource,UITableViewDelegate{
+    
+    @IBOutlet weak var tableView: UITableView!
+    
 
-    @IBOutlet weak var wkviewAboutUs: WKWebView!
+    var headlines = [
+        newHeadline (title: "Terms And Conditions",image: ""),
+        newHeadline(title: "Privacy Policy",image: ""),
+        newHeadline(title: "About Gravo",image: ""),
+    
+    ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        wkviewAboutUs.uiDelegate = self
-        
-        let abouturl = URL(string: .aboutusURL)
-        let aboutRequest = URLRequest(url: abouturl!)
-        wkviewAboutUs.load(aboutRequest)
-        
-        //add observer to get estimated progress value
-        self.wkviewAboutUs.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil);
-        
         // Do any additional setup after loading the view.
+            addSlideMenuButton()
+        tableView.tableFooterView = UIView()
+    
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return headlines.count
+       
         
-        let sideMenu  = UIBarButtonItem(image: UIImage(named:"BackArrow"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.toggleSideMenu(_:)))
-        sideMenu.tintColor = UIColor.black
-        self.navigationItem.leftBarButtonItem = sideMenu
-    }
-
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "estimatedProgress" {
-            print(self.wkviewAboutUs.estimatedProgress);
-           // self.progressView.progress = Float(self.webView.estimatedProgress);
-        }
     }
     
-    @objc func toggleSideMenu(_ sender: Any)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
+        let  headline = headlines[indexPath.row]
+       
+        cell.textLabel?.text = headline.title
+        
+        return cell
+        
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        self.navigationController?.popViewController(animated: true)
+        return 50;
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var headline = indexPath.row
+        
+        if(headline == 0){
+            let storyboard: UIStoryboard =  UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "TNCVC") as! TNCVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if(headline == 1){
+            let vc = storyboard!.instantiateViewController(withIdentifier: "PrivacyPolicyVC") as! PrivacyVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vc = storyboard!.instantiateViewController(withIdentifier: "AboutGravoVC") as! AboutGravoVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    
 
 }

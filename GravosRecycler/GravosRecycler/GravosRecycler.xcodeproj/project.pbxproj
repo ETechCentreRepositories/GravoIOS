@@ -46,7 +46,6 @@
 		7C8FA09D207C4734009FA8E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA09B207C4734009FA8E6 /* Main.storyboard */; };
 		7C8FA09F207C4734009FA8E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA09E207C4734009FA8E6 /* Assets.xcassets */; };
 		7C8FA0A2207C4734009FA8E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8FA0A0207C4734009FA8E6 /* LaunchScreen.storyboard */; };
-		7C8FA0AD207C4736009FA8E6 /* GravosRecyclerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0AC207C4736009FA8E6 /* GravosRecyclerTests.swift */; };
 		7C8FA0D7207C4A5C009FA8E6 /* PickupCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0B8207C4A5A009FA8E6 /* PickupCustomCell.swift */; };
 		7C8FA0D8207C4A5C009FA8E6 /* TextViewWithLeftImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0B9207C4A5A009FA8E6 /* TextViewWithLeftImage.swift */; };
 		7C8FA0D9207C4A5C009FA8E6 /* TransactionCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8FA0BA207C4A5A009FA8E6 /* TransactionCustomCell.swift */; };
@@ -76,9 +75,13 @@
 		7CFA63BE207F42F5005CC1A9 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA63BD207F42F4005CC1A9 /* MyNavigationController.swift */; };
 		7CFA63C0207F4798005CC1A9 /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA63BF207F4798005CC1A9 /* MyMenuTableViewController.swift */; };
 		7CFA63C2207F50FA005CC1A9 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA63C1207F50FA005CC1A9 /* SideMenuVC.swift */; };
+		8430C0E521744FCB006A1A77 /* AboutGravoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430C0E421744FCB006A1A77 /* AboutGravoVC.swift */; };
 		84438113215C6AAA00AC6434 /* Modals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84438112215C6AAA00AC6434 /* Modals.swift */; };
 		844453E9215A15A800264B21 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844453E8215A15A800264B21 /* BaseViewController.swift */; };
 		844453ED215A165600264B21 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844453EC215A165600264B21 /* MenuViewController.swift */; };
+		844456C9216DD5A700173396 /* SponsorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844456C8216DD5A700173396 /* SponsorVC.swift */; };
+		844456CB216DD7C500173396 /* SponsorCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844456CA216DD7C500173396 /* SponsorCollCell.swift */; };
+		844456CD216DDC7D00173396 /* SponsorWebPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844456CC216DDC7D00173396 /* SponsorWebPage.swift */; };
 		84EAE680215A38D30060008D /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EAE67F215A38D30060008D /* MenuTableViewCell.swift */; };
 		CF0EF9F9C6154D26FC16F08E /* Pods_GravosRecycler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD077130F7AA4E36A5E77111 /* Pods_GravosRecycler.framework */; };
 /* End PBXBuildFile section */
@@ -149,7 +152,6 @@
 		7C8FA0A1207C4734009FA8E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C8FA0A3207C4734009FA8E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C8FA0A8207C4736009FA8E6 /* GravosRecyclerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GravosRecyclerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C8FA0AC207C4736009FA8E6 /* GravosRecyclerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravosRecyclerTests.swift; sourceTree = "<group>"; };
 		7C8FA0AE207C4736009FA8E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C8FA0B8207C4A5A009FA8E6 /* PickupCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupCustomCell.swift; sourceTree = "<group>"; };
 		7C8FA0B9207C4A5A009FA8E6 /* TextViewWithLeftImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewWithLeftImage.swift; sourceTree = "<group>"; };
@@ -180,9 +182,13 @@
 		7CFA63BD207F42F4005CC1A9 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		7CFA63BF207F4798005CC1A9 /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
 		7CFA63C1207F50FA005CC1A9 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		8430C0E421744FCB006A1A77 /* AboutGravoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGravoVC.swift; sourceTree = "<group>"; };
 		84438112215C6AAA00AC6434 /* Modals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modals.swift; sourceTree = "<group>"; };
 		844453E8215A15A800264B21 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		844453EC215A165600264B21 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		844456C8216DD5A700173396 /* SponsorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorVC.swift; sourceTree = "<group>"; };
+		844456CA216DD7C500173396 /* SponsorCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorCollCell.swift; sourceTree = "<group>"; };
+		844456CC216DDC7D00173396 /* SponsorWebPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorWebPage.swift; sourceTree = "<group>"; };
 		84EAE67F215A38D30060008D /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		A2DE92211024511A7F886301 /* Pods-GravosRecycler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosRecycler.release.xcconfig"; path = "Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler.release.xcconfig"; sourceTree = "<group>"; };
 		AA60D27FD922661EAE0ACA36 /* Pods-GravosRecycler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GravosRecycler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler.debug.xcconfig"; sourceTree = "<group>"; };
@@ -252,12 +258,15 @@
 		7C7C05EC208859F5004C556D /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				844456C8216DD5A700173396 /* SponsorVC.swift */,
 				7C7C05ED20885A44004C556D /* SettingsVC.swift */,
 				7C7C05EF20886DA7004C556D /* AccountDetailsVC.swift */,
 				7CD01A7720889B61005EFBC1 /* CalenderVC.swift */,
 				7C3C291F2092C868007C31B4 /* AboutUsVC.swift */,
 				7C4AC00420997D410087213F /* TNCVC.swift */,
 				7C4AC00620997D590087213F /* PrivacyVC.swift */,
+				844456CC216DDC7D00173396 /* SponsorWebPage.swift */,
+				8430C0E421744FCB006A1A77 /* AboutGravoVC.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -316,7 +325,6 @@
 		7C8FA0AB207C4736009FA8E6 /* GravosRecyclerTests */ = {
 			isa = PBXGroup;
 			children = (
-				7C8FA0AC207C4736009FA8E6 /* GravosRecyclerTests.swift */,
 				7C8FA0AE207C4736009FA8E6 /* Info.plist */,
 			);
 			path = GravosRecyclerTests;
@@ -342,6 +350,7 @@
 				7C342067208F31650022A929 /* TransactionListCell.swift */,
 				7C3C291D2091E377007C31B4 /* ScheduleStatusCell.swift */,
 				7C3C29212092EA69007C31B4 /* TransItemImagesColCell.swift */,
+				844456CA216DD7C500173396 /* SponsorCollCell.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -538,7 +547,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Abhijit;
 				TargetAttributes = {
 					7C8FA093207C4733009FA8E6 = {
@@ -681,7 +690,11 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GravosRecycler/Pods-GravosRecycler-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/ENSwiftSideMenu/ENSwiftSideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
 				"${BUILT_PRODUCTS_DIR}/GooglePlacesPicker/GooglePlacesPicker.framework",
@@ -694,7 +707,11 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ENSwiftSideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesPicker.framework",
@@ -744,6 +761,7 @@
 				7C8FA0EE207C71EE009FA8E6 /* HomeVC.swift in Sources */,
 				7C6FC9E420BBAA0800234DFA /* LocalDataHandler.swift in Sources */,
 				7CFA63C0207F4798005CC1A9 /* MyMenuTableViewController.swift in Sources */,
+				8430C0E521744FCB006A1A77 /* AboutGravoVC.swift in Sources */,
 				7C4F291D2089A7B2006B9A30 /* DeliveryAddressCell.swift in Sources */,
 				7C8FA0E0207C4A5C009FA8E6 /* CreateAccountVC.swift in Sources */,
 				7C8FA0DC207C4A5C009FA8E6 /* ParserJSON.swift in Sources */,
@@ -777,11 +795,14 @@
 				7C4DB3A0208835D800ED29AF /* HomeTypeCell.swift in Sources */,
 				7C8FA0D7207C4A5C009FA8E6 /* PickupCustomCell.swift in Sources */,
 				7CD01A7D2088BD0C005EFBC1 /* EditProfileVC.swift in Sources */,
+				844456CD216DDC7D00173396 /* SponsorWebPage.swift in Sources */,
 				7C8FA0F0207C7405009FA8E6 /* HomeCollCell.swift in Sources */,
 				7C3F5BFA2080923300B9619D /* NotificationsVC.swift in Sources */,
+				844456CB216DD7C500173396 /* SponsorCollCell.swift in Sources */,
 				7C7C05EE20885A44004C556D /* SettingsVC.swift in Sources */,
 				7CD01A7F2088C015005EFBC1 /* TransactionVC.swift in Sources */,
 				7CD01A7B2088B4A0005EFBC1 /* ProfileVC.swift in Sources */,
+				844456C9216DD5A700173396 /* SponsorVC.swift in Sources */,
 				7C8FA0DD207C4A5C009FA8E6 /* Constants.swift in Sources */,
 				7C4F291B20899B1F006B9A30 /* TransactionDetailCell.swift in Sources */,
 				7C3F5BF4208050BC00B9619D /* SideMenuCell.swift in Sources */,
@@ -795,7 +816,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C8FA0AD207C4736009FA8E6 /* GravosRecyclerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -843,6 +863,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -850,6 +871,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -900,6 +922,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -907,6 +930,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

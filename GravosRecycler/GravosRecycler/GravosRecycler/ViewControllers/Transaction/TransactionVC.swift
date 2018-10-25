@@ -103,16 +103,15 @@ class TransactionVC: BaseViewController,UITableViewDelegate,UITableViewDataSourc
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionListCell", for: indexPath) as! TransactionListCell
         
-        cell.colItemsImages.dataSource = self 
+      
         
         if indexPath.section == 0
         {
             cell.contentView.backgroundColor = UIColor.white
             cell.btnStatus.setTitle("WAITING FOR COLLECTION", for: .normal)
-            cell.lblScheduleDate.text = "26 Apr 2018"
             cell.btnStatus.backgroundColor = UIColor.lightGray
             cell.btnStatus.setTitleColor(UIColor.white, for: .normal)
-            cell.colItemsImages.backgroundColor = UIColor.white
+			
             
         }
         else
@@ -121,8 +120,8 @@ class TransactionVC: BaseViewController,UITableViewDelegate,UITableViewDataSourc
             cell.btnStatus.setTitle("Completed", for: .normal)
             cell.btnStatus.backgroundColor = UIColor.white
             cell.btnStatus.setTitleColor(Constants.themeGreen, for: .normal)
-            cell.lblScheduleDate.text = "20 Apr 2018"
-            cell.colItemsImages.backgroundColor = Constants.themeGreen
+//            cell.lblScheduleDate.text = "20 Apr 2018"
+           
         }
         
         cell.bottomView.backgroundColor = cell.contentView.backgroundColor

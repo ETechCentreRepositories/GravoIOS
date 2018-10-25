@@ -62,16 +62,18 @@ class PagingVC: UIViewController
 		let thirdViewController = storyboard.instantiateViewController(withIdentifier: "ChildPageVC")
 		let forthViewController = storyboard.instantiateViewController(withIdentifier: "BulkChildVC")
 		
+		firstViewController.title  = "PAPER"
+		secondViewController.title  = "METALS"
+		thirdViewController.title   = "E-WASTE"
+		forthViewController.title   = "BIG ITEMS"
 		
-		firstViewController.title   = "Paper"
-		secondViewController.title  = "Metals"
-		thirdViewController.title   = "E-Waste"
+		
+		
 		
 		firstViewController.view.backgroundColor    = Constants.themeYellow
 		secondViewController.view.backgroundColor   = Constants.themeOrange
 		thirdViewController.view.backgroundColor    = Constants.themePurple
 		forthViewController.view.backgroundColor    = UIColor.white
-		
 		
 		let pagingViewController = FixedPagingViewController(viewControllers: [
 			firstViewController,
@@ -81,7 +83,8 @@ class PagingVC: UIViewController
 			])
 		
 		// controller and contrain it to the edges of the view.
-		
+	
+	
 		pagingViewController.textColor = UIColor.black
 		pagingViewController.selectedTextColor = Constants.themePurple
 		pagingViewController.font = UIFont(name: .quicksandReg, size: 30)!

@@ -1,10 +1,22 @@
 PODS:
-  - Alamofire (4.7.0)
+  - Alamofire (4.7.3)
+  - AlamofireImage (3.4.1):
+    - Alamofire (~> 4.7)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
   - ENSwiftSideMenu (0.1.1)
-  - FMDB (2.7.2):
-    - FMDB/standard (= 2.7.2)
-  - FMDB/standard (2.7.2)
-  - GMStepper (2.1)
+  - FBSDKCoreKit (4.38.0):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.38.0):
+    - FBSDKCoreKit
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - GMStepper (2.2)
   - GoogleMaps (2.7.0):
     - GoogleMaps/Maps (= 2.7.0)
   - GoogleMaps/Base (2.7.0)
@@ -16,12 +28,14 @@ PODS:
   - GooglePlacesSearchController (0.2.1)
   - JBDatePicker (1.2.5)
   - JKSteppedProgressBar (0.3.0)
-  - Parchment (1.1.0)
+  - Parchment (1.4.1)
   - SwiftyGif (4.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - AlamofireImage
   - ENSwiftSideMenu (from `https://github.com/evnaz/ENSwiftSideMenu.git`, tag `0.1.3`)
+  - FBSDKLoginKit
   - FMDB
   - GMStepper
   - GoogleMaps
@@ -31,7 +45,7 @@ DEPENDENCIES:
   - JBDatePicker
   - JKSteppedProgressBar
   - Parchment
-  - SwiftyGif
+  - SwiftyGif (~> 4.1.0)
 
 EXTERNAL SOURCES:
   ENSwiftSideMenu:
@@ -44,19 +58,23 @@ CHECKOUT OPTIONS:
     :tag: 0.1.3
 
 SPEC CHECKSUMS:
-  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   ENSwiftSideMenu: c6acd4d9507e198044cddb316b06c350ee259a75
-  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
-  GMStepper: 8994824040d57d952134e409b7724d05a1a41c18
+  FBSDKCoreKit: 2ab7fdbf600dc6b628ba7a49aa29d357a7b4c74e
+  FBSDKLoginKit: 634fa27e72e33620eb6389253337342c03d4a407
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  GMStepper: 89fb106944dfcc3aa3add7164e3ebd463ea2104b
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   GooglePlacesPicker: 7fc917a2b8800d7d5a46ff1bfc4c0939c0e4e12e
   GooglePlacesSearchController: e53b61b7497cf40cb18ec296b1d3314c11c0a1c0
   JBDatePicker: 0e791c8a79c49b0d37decea28ba147515bf5cfca
   JKSteppedProgressBar: c74bf22f355cbb42aef584e941c2abbbba0504eb
-  Parchment: 88f4b2642a09f37ee314a7492067a9ce04edc3b8
+  Parchment: e6c2a3a0063739382dd207e21d48fe5e81f3324a
   SwiftyGif: d36c6dfb52e2ca1e48fe349d225f50ec4123ec85
 
-PODFILE CHECKSUM: 308d7454a2aa153500500d1c7462e0da93991039
+PODFILE CHECKSUM: 14ea94c5cdfecde57ea04bf6830139205498eb91
 
 COCOAPODS: 1.4.0

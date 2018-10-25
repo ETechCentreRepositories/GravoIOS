@@ -171,6 +171,7 @@ class HomeVC: BaseViewController,UICollectionViewDelegate,UICollectionViewDataSo
         if (indexPath.row == 0)
         {
             cell.lblCellTitle.text = arrTypeOfMaterials[indexPath.row]
+           
             cell.lblCellSubTitle.text = arrPaymentOpt[0]
             return cell
         }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyGif
 
 class LoginVC: UIViewController,UIScrollViewDelegate {
 

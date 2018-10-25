@@ -12,9 +12,12 @@ class LeaderBoardCell: UITableViewCell {
 
     @IBOutlet weak var lblGreenTitle: UILabel!
     @IBOutlet weak var lblSerial: UILabel!
-    @IBOutlet weak var viwProgress: UIView!
+	
     @IBOutlet weak var imgGreenType: UIImageView!
-    @IBOutlet weak var constProgressView: NSLayoutConstraint!
+  
+    @IBOutlet weak var lblpoints: UILabel!
+    
+    @IBOutlet weak var progressBar: UIProgressView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -17,6 +17,8 @@ struct Headline{
 
 class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
+   
+    @IBOutlet weak var imgLogo: UIImageView!
     @IBOutlet weak var txtName: UILabel!
     var btnMenu: UIButton!
     var delegate : SlideMenuDelegate?
@@ -27,6 +29,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         Headline (title:"Transactions", image:"Icon_Transactions"),
         Headline (title:"Calendar", image:"iconCalendar"),
         Headline (title:"About us", image:"icon_aboutus"),
+        Headline(title:"Sponsor",image:"iconSponsor"),
         Headline (title:"Invite", image:""),
         
         
@@ -39,8 +42,40 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if let getFullname = defaultValues.string(forKey: "full_name"){
             txtName.text = getFullname
         }
+        
+		let urlImage = NSURL(string : UserDefaults.standard.value(forKey: "photo")! as! String)
+		print(urlImage as Any)
+		
+		
+		let data = NSData(contentsOf: urlImage! as URL)
+		
+		if data != nil{
+			
+			imgLogo.image = UIImage(data: data! as Data)
+		}
 		
 	}
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let defaultValues = UserDefaults.standard
+        if let getFullname = defaultValues.string(forKey: "full_name"){
+            txtName.text = getFullname
+        }
+        
+		let urlImage = NSURL(string : UserDefaults.standard.value(forKey: "photo")! as! String)
+		print(urlImage as Any)
+		
+		
+		let data = NSData(contentsOf: urlImage! as URL)
+       
+        if data != nil{
+
+            imgLogo.image = UIImage(data: data! as Data)
+        }
+        
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return headlines.count
@@ -66,7 +101,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var headline = indexPath.row
+        let headline = indexPath.row
         print(headline)
     
         if(headline == 1){
@@ -87,6 +122,9 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 			let vc = storyboard.instantiateViewController(withIdentifier: "AboutUsVC") as! AboutUsVC
 			self.navigationController?.pushViewController(vc, animated: true)
 		} else if(headline == 5) {
+			//sponsor tab
+			
+		} else if(headline == 6 ){
 			
 		} else{
 			let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -102,7 +140,6 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet weak var btnCloseMenuOverlay: UIButton!
     
     
-    @IBOutlet weak var btnCloseTapped: UIButton!
     
 
     @IBAction func btnClosedTapped(_ sender: UIButton) {

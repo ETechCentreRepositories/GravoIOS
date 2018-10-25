@@ -7,10 +7,8 @@
 //
 
 import UIKit
+import GMStepper
 
-//struct Post {
-//	<#fields#>
-//}
 
 
 
@@ -18,11 +16,16 @@ import UIKit
 class HomeTypeCell: UITableViewCell
 {
     @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblWeight: UILabel!
+   
+    @IBOutlet weak var stepper: GMStepper!
+    
     @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var imgMaterialType: UIImageView!
     
+   
     @IBOutlet weak var btnAdd: UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

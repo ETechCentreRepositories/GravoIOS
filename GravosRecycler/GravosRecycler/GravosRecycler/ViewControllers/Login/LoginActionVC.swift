@@ -8,22 +8,198 @@
 
 import UIKit
 import Alamofire
-
+import AlamofireImage
+import FBSDKCoreKit
+import FBSDKLoginKit
 class LoginActionVC: UIViewController {
     
     let URL_USER_LOGIN = "http://ehostingcentre.com/gravo/login.php"
     let URL_GET_Categories = "http://ehostingcentre.com/gravo/getCategories.php?type=all"
+	
+    
+    let URL_FORGET_PASSWORD = "http://ehostingcentre.com/gravo/forgetpassword.php"
+	//let URL_GET_ACHIEVEMENT = "http://ehostingcentre.com/gravo/getachievements.php?id=\(UserDefaults.standard.value(forKey: "id")!)"
     
     @IBOutlet weak var txtUsername: TextViewWithLeftImage!
     @IBOutlet weak var txtPassword: TextViewWithLeftImage!
     
-    @IBOutlet weak var imgTest: UIImageView!
+   
+    @IBOutlet weak var btnFB: UIButton!
+    
+    @IBOutlet weak var txtForgetPassword: UIButton!
+    
     let datePicker = UIDatePicker()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        btnFB.addTarget(self, action:  #selector(facebookLogin), for: .touchUpInside)
+        
+       
+        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginActionVC.forgetPassword))
+        
+        txtForgetPassword.isUserInteractionEnabled = true
+        txtForgetPassword.addGestureRecognizer(tap)
     }
     
+    
+    
+    @objc func facebookLogin(){
+        FBSDKLoginManager().logIn(withReadPermissions: ["email","public_profile"], from: self)
+        { (Result, error) in
+            if error != nil{
+                print("Login Failed")
+                return
+            }
+            self.showDetails()
+        }
+    }
+    func showDetails(){
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields" : "name,  email, id" ]).start{
+            (connection, result , error ) in
+            if error != nil{
+                print("Failed get Details")
+                return
+            }
+            //print(result)
+            let results : [String: String] = result as! [String: String]
+            let email = results["email"]!
+            let name = results["name"]!
+            let id = results["id"]!
+            
+            let parameters: Parameters = [
+            
+            "facebook_id" : id,
+            "fullname": name,
+            "email": email,
+            
+            ]
+			print("parameters \(parameters)")
+            
+            
+            Alamofire.request("http://ehostingcentre.com/gravo/facebookloginsignup.php",method: .post,parameters: parameters).responseJSON{
+                response in
+				
+				print("FB RESPONSE : \(response)")
+                if response.result.isSuccess{
+					
+	
+                    
+                    let defaultValues = UserDefaults.standard
+                    let convertResponse = response.result.value as!NSDictionary
+                
+                        let user  = convertResponse.value(forKey: "result")! as! NSArray
+                        let id = user.value(forKey: "id")as![String]
+                        let email = user.value(forKey: "email")as! [String]
+                        let first_name = user.value(forKey: "first_name")as! [String]
+                        let last_name = user.value(forKey: "last_name")as! [String]
+                        let contact_number = user.value(forKey: "contact_number")as! [String]
+                        let full_name  = user.value(forKey: "full_name")as![String]
+                        let address = user.value(forKey: "address")as! [String]
+                        let rank_name = user.value(forKey: "rank_name")as! [String]
+                        let total_points = user.value(forKey: "total_points")as! [String]
+                        let unit = user.value(forKey: "unit")as! [String]
+                        let photo = user.value(forKey: "photo")as! [String]
+                        defaultValues.set(id[0], forKey: "id")
+                        defaultValues.set(email[0], forKey: "email")
+                        defaultValues.set(first_name[0], forKey: "first_name")
+                        defaultValues.set(last_name[0], forKey: "last_name")
+                        defaultValues.set(full_name[0], forKey: "full_name")
+                        defaultValues.set(contact_number[0], forKey: "contact_number")
+                        defaultValues.set(address[0], forKey: "address")
+                        defaultValues.set(rank_name[0],forKey: "rank_name")
+                        defaultValues.set(total_points[0],forKey:"total_points")
+                        defaultValues.set(unit[0],forKey: "unit")
+                        defaultValues.set(photo[0],forKey: "photo")
+					
+					
+					Alamofire.request(self.URL_GET_Categories, method: .get
+						, parameters: nil).responseJSON{
+							response in
+							print("GET Categories : \(response)")
+							
+							let getresultresponse = response.result.value as! NSDictionary
+							let getresult = getresultresponse.value(forKey: "result") as! NSArray
+							
+							
+							defaultValues.set(getresult, forKey: "getresult")
+							
+					}
+		
+					
+					Alamofire.request("http://ehostingcentre.com/gravo/getachievements.php?id=\(id[0])", method: .get
+						, parameters: nil).responseJSON{
+							response in
+						print("GET THE RESPONSE  for LeaderBoard: \(response)")
+							
+							let getResultLeaderboard = response.result.value as! NSDictionary
+							let getresult = getResultLeaderboard.value(forKey: "result")! as! NSArray
+							defaultValues.set(getresult,forKey: "getResultLeaderboard")
+							
+					}
+					
+                   
+                    
+                    defaultValues.synchronize()
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    
+                } else {
+                    
+                    let alert = UIAlertController(title: "Alert!!!", message: "Unable to Sign In", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+            }
+            
+            
+            
+        }
+            
+    }
+    
+    
+    
+    @objc func forgetPassword (sender: UITapGestureRecognizer){
+        if(txtUsername.text! == ""){
+            let alert = UIAlertController(title: "Alert!!!", message: "Please Enter Your Email", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+           
+            
+        }else{
+            
+            if(isValidEmail(testStr: txtUsername.text!)){
+                
+                let parameters : Parameters = [
+                    "email" : txtUsername.text!,
+                    "role" : "recycler",
+                    ]
+                
+                Alamofire.request(self.URL_FORGET_PASSWORD, method: .post
+                    , parameters: parameters).responseJSON{
+                        response in
+                        if response.result.isSuccess{
+                            let alert = UIAlertController(title: "Alert!!!", message: "Please Check Your Email", preferredStyle: UIAlertControllerStyle.alert)
+                            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
+                            
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    }
+                
+                
+            } else {
+                let alert = UIAlertController(title: "Alert!!!", message: "Invalid Email", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
+                
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+    }
+}
     override func viewWillAppear(_ animated: Bool)
     {
         txtUsername.attributedPlaceholder = NSAttributedString(string: .placeEmail,
@@ -50,6 +226,26 @@ class LoginActionVC: UIViewController {
      }
      */
     
+    
+    
+    
+    func isValidEmail(testStr:String) -> Bool {
+        print("validate emilId: \(testStr)")
+        let emailRegEx = "^(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?(?:(?:(?:[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+(?:\\.[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+)*)|(?:\"(?:(?:(?:(?: )*(?:(?:[!#-Z^-~]|\\[|\\])|(?:\\\\(?:\\t|[ -~]))))+(?: )*)|(?: )+)\"))(?:@)(?:(?:(?:[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)(?:\\.[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)*)|(?:\\[(?:(?:(?:(?:(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))\\.){3}(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))))|(?:(?:(?: )*[!-Z^-~])*(?: )*)|(?:[Vv][0-9A-Fa-f]+\\.[-A-Za-z0-9._~!$&'()*+,;=:]+))\\])))(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?$"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let result = emailTest.evaluate(with: testStr)
+        return result
+    }
+    
+    
+    
+    
+    @IBAction func btnFb(_ sender: FBSDKLoginButton) {
+        
+        
+    }
+    
+    
     @IBAction func performLogin(_ sender: Any)
     {
         
@@ -62,7 +258,7 @@ class LoginActionVC: UIViewController {
                 ]
             Alamofire.request(URL_USER_LOGIN,method:.post,parameters:parameters).responseJSON{
                 response in
-                print(response)
+               //print(response)
                 
                 
                 if response.result.isSuccess{
@@ -70,60 +266,61 @@ class LoginActionVC: UIViewController {
                     let convertResponse = response.result.value as!NSDictionary
                     let getStatus = convertResponse.value(forKey:"status")! as!Int
                     if(getStatus == 200){
-                        print("Status 200")
+                        //print("Status 200")
+					
                         let user  = convertResponse.value(forKey: "users")! as! NSArray
+						let id = user.value(forKey: "id")as![String]
                         let email = user.value(forKey: "email")as! [String]
                         let first_name = user.value(forKey: "first_name")as! [String]
                         let last_name = user.value(forKey: "last_name")as! [String]
                         let contact_number = user.value(forKey: "contact_number")as! [String]
 						let full_name  = user.value(forKey: "full_name")as![String]
                         let address = user.value(forKey: "address")as! [String]
+						let rank_name = user.value(forKey: "rank_name")as! [String]
 						let total_points = user.value(forKey: "total_points")as! [String]
+						let unit = user.value(forKey: "unit")as! [String]
+                        let photo = user.value(forKey: "photo")as! [String]
+						defaultValues.set(id[0], forKey: "id")
                         defaultValues.set(email[0], forKey: "email")
                         defaultValues.set(first_name[0], forKey: "first_name")
                         defaultValues.set(last_name[0], forKey: "last_name")
                         defaultValues.set(full_name[0], forKey: "full_name")
                         defaultValues.set(contact_number[0], forKey: "contact_number")
                         defaultValues.set(address[0], forKey: "address")
+						defaultValues.set(rank_name[0],forKey: "rank_name")
 						defaultValues.set(total_points[0],forKey:"total_points")
-						
+						defaultValues.set(unit[0],forKey: "unit")
+                        defaultValues.set(photo[0],forKey: "photo")
                         
                         //getCategories
                         
                         Alamofire.request(self.URL_GET_Categories, method: .get
                             , parameters: nil).responseJSON{
                                 response in
-                                print("GET Categories : \(response)")
-                                
-                                
+							print("GET Categories : \(response)")
+								
                                 let getresultresponse = response.result.value as! NSDictionary
-								 let getresult = getresultresponse.value(forKey: "result")
-								
-								
-                                print(" GET Result : \(getresult)")
-								
-							
-								
-//								let testing =  getresult[0];
-//								print(testing);
+								 let getresult = getresultresponse.value(forKey: "result") as! NSArray
+						
 							
 								defaultValues.set(getresult, forKey: "getresult")
-								defaultValues.synchronize()
-								
-								
-//								let totalObject = defaultValues.array(forKey: "getresult")
-//								let gettotalArray = defaultValues.stringArray(forKey: "getresult")
-//								print("totalObject :\(String(describing: totalObject![0]))")
-//								print("gettotalArray :\(String(describing: gettotalArray))")
-								
-								
                                 
                         }
+					
+						Alamofire.request("http://ehostingcentre.com/gravo/getachievements.php?id=\(id[0])", method: .get
+							, parameters: nil).responseJSON{
+								response in
+//								print("GET THE RESPONSE  for LeaderBoard: \(response)")
+								
+								let getResultLeaderboard = response.result.value as! NSDictionary
+								let getresult = getResultLeaderboard.value(forKey: "result")! as! NSArray
+								defaultValues.set(getresult,forKey: "getResultLeaderboard")
+						
+						}
 						
 						
-                       
-                        
-                        
+						
+                        defaultValues.synchronize()
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let vc = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
                         self.navigationController?.pushViewController(vc, animated: true)
